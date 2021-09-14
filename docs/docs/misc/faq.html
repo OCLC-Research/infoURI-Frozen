@@ -1,0 +1,1977 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="generator" content="HTML Tidy, see www.w3.org" />
+
+    <title>About "info" URIs - Frequently Asked Questions</title>
+
+    <link href="oclc.css" type="text/css" rel="stylesheet" />
+
+</head>
+<!-- Background white, links blue (unvisited), navy (visited), red (active) -->
+
+<body bgcolor="#FFFFFF" text="#000000"
+      link="#0000FF" vlink="#000080" alink="#FF0000">
+
+<h1 align="CENTER"><b>About "<i>INFO</i>" URIs</b></h1>
+<h1 align="CENTER">Frequently Asked Questions</h1>
+
+<center>
+    <p>
+        This version dated May 24, 2006 reflects
+        <a href="http://www.ietf.org/rfc/rfc4452.txt">RFC 4452</a>.<br />
+        (Supercedes earlier draft from February 28, 2004.)
+    <p />
+    (The latest version of this FAQ is always available from<br />
+    the <b><i>INFO</i></b> website:
+    &lt;<a
+        href="http://info-uri.info/"
+        rel="Help">http://info-uri.info/</a>&gt;.)
+    </p>
+    <p>
+        Feedback on this FAQ should be directed to
+        &lt;<a href="mailto:infoURI@oclc.org">mailto:infoURI@oclc.org</a>&gt;.
+    </p>
+    <p>
+        <i>Disclaimer:
+            This FAQ is provided for information purposes only<br />
+            and should be treated as a work in progress.
+        </i>
+    </p>
+</center>
+
+<!-- Notes about changes:                                           -->
+
+<h2>The Questions</h2>
+<!-- Stuff to Add:                                                  -->
+<ol type="A">
+
+    <li><a name="toc_A" href="#A"><strong>Background (I)</strong></a></li>
+    <li><a name="toc_B" href="#B"><strong>Background (II)</strong></a></li>
+    <li><a name="toc_C" href="#C"><strong><b><i>INFO</i></b> and Other URI Schemes</strong></a></li>
+    <li><a name="toc_D" href="#D"><strong>The <b><i>INFO</i></b> Registry</strong></a></li>
+    <li><a name="toc_E" href="#E"><strong>Syntax Considerations</strong></a></li>
+    <li><a name="toc_F" href="#F"><strong>Examples of Usage</strong></a></li>
+    <li><a name="toc_G" href="#G"><strong>Comparing <b><i>INFO</i></b> URIs</strong></a></li>
+    <li><a name="toc_H" href="#H"><strong>Historical Perspective</strong></a></li>
+</ol>
+
+<p />
+<hr />
+<p />
+
+
+<ol type="A">
+
+    <li value="1">
+        <a name="A">
+            <strong>Background (I)</strong></a>
+        &nbsp;<a href="#toc_A"><strong>&lt;&lt;</strong></a>
+
+        <ol>
+
+            <li><a name="toc_why_uri" href="#why_uri">
+                What is a URI scheme?
+            </a></li>
+
+            <li><a name="toc_info_doc" href="#info_doc">
+                Where is the specification for <b><i>INFO</i></b>?
+            </a></li>
+
+            <li><a name="toc_why_create" href="#why_create">
+                Why was it necessary to develop the <b><i>INFO</i></b> URI scheme?
+            </a></li>
+
+            <li><a name="toc_motivation" href="#motivation">
+                What was the motivation behind the <b><i>INFO</i></b> URI scheme?
+            </a></li>
+
+            <li><a name="toc_in_competition" href="#in_competition">
+                Does the <b><i>INFO</i></b> URI scheme compete with other URI schemes?
+            </a></li>
+
+            <li><a name="toc_burden" href="#burden">
+                Could the <b><i>INFO</i></b> URI scheme break Web applications?
+            </a></li>
+
+            <li><a name="toc_sponsor" href="#sponsor">
+                Who developed the <b><i>INFO</i></b> URI scheme?
+            </a></li>
+
+            <li><a name="toc_why_info" href="#why_info">
+                Why is the scheme called <b><i>INFO</i></b>?
+            </a></li>
+
+            <li><a name="toc_status" href="#status">
+                What is the status of the <b><i>INFO</i></b> URI scheme?
+            </a></li>
+
+        </ol>
+
+    </li>
+
+</ol>
+
+<ol type="A">
+
+    <li value="2">
+        <a name="B">
+            <strong>Background (II)</strong></a>
+        &nbsp;<a href="#toc_B"><strong>&lt;&lt;</strong></a>
+
+        <ol>
+
+            <li><a name="toc_value" href="#value">
+                What is the value proposition of the <b><i>INFO</i></b> URI scheme?
+            </a></li>
+
+            <li><a name="toc_usp" href="#usp">
+                What is unique about the <b><i>INFO</i></b> URI scheme?
+            </a></li>
+
+            <li><a name="toc_non_deref_uri" href="#non_deref_uri">
+                And just what is a non-globally dereferenceable URI?
+            </a></li>
+
+            <li><a name="toc_non_deref" href="#non_deref">
+                So, why are <b><i>INFO</i></b> URIs not globally dereferenceable?
+            </a></li>
+
+            <li><a name="toc_why_uris" href="#why_uris">
+                Why identify information assets with URIs anyway?
+            </a></li>
+
+            <li><a name="toc_who_can_use" href="#who_can_use">
+                Can anyone use their namespaces under <b><i>INFO</i></b>?
+            </a></li>
+
+            <li><a name="toc_who_can_register" href="#who_can_register">
+                Who is entitled to register under <b><i>INFO</i></b>?
+            </a></li>
+
+            <li><a name="toc_which_namespaces" href="#which_namespaces">
+                Which namespaces are eligible for registration under <b><i>INFO</i></b>?
+            </a></li>
+
+            <li><a name="toc_future_uri_reg" href="#future_uri_reg">
+                Does registration under <b><i>INFO</i></b> limit any future URI registration?
+            </a></li>
+
+        </ol>
+
+    </li>
+
+</ol>
+
+<ol type="A">
+
+    <li value="3">
+        <a name="C">
+            <strong><b><i>INFO</i></b> and Other URI Schemes</strong></a>
+        &nbsp;<a href="#toc_C"><strong>&lt;&lt;</strong></a>
+
+        <ol>
+
+            <li><a name="toc_general_uri" href="#general_uri">
+                What considerations are there regarding URIs?
+            </a></li>
+
+            <li><a name="toc_use_http" href="#use_http">
+                Why not just use HTTP URIs?
+            </a></li>
+
+            <li><a name="toc_use_urn" href="#use_urn">
+                Well then, why not just use URN URIs?
+            </a></li>
+
+            <li><a name="toc_other_uri" href="#other_uri">
+                Are there any other URI schemes that might be considered?
+            </a></li>
+
+            <li><a name="toc_use_data" href="#use_data">
+                So, why not use DATA URIs?
+            </a></li>
+
+            <li><a name="toc_use_tag" href="#use_tag">
+                Or else, why not use TAG URIs?
+            </a></li>
+
+        </ol>
+
+    </li>
+
+</ol>
+
+<ol type="A">
+
+    <li value="4">
+        <a name="D">
+            <strong>The <b><i>INFO</i></b> Registry</strong></a>
+        &nbsp;<a href="#toc_D"><strong>&lt;&lt;</strong></a>
+
+        <ol>
+
+            <li><a name="toc_what_is_reg" href="#what_is_reg">
+                What is the <b><i>INFO</i></b> Registry?
+            </a></li>
+
+            <li><a name="toc_where_is_reg" href="#where_is_reg">
+                Where is the <b><i>INFO</i></b> Registry located?
+            </a></li>
+
+            <li><a name="toc_who_owns_reg" href="#who_owns_reg">
+                Who maintains and operates the <b><i>INFO</i></b> Registry?
+            </a></li>
+
+            <li><a name="toc_what_policies" href="#what_policies">
+                What policies govern the <b><i>INFO</i></b> Registry?
+            </a></li>
+
+            <li><a name="toc_reg_procedure" href="#reg_procedure">
+                What is the registration procedure for an <b><i>INFO</i></b> namespace?
+            </a></li>
+
+            <li><a name="toc_reg_funcs" href="#reg_funcs">
+                What functionalities does the <b><i>INFO</i></b> Registry present?
+            </a></li>
+
+        </ol>
+
+    </li>
+
+</ol>
+
+<ol type="A">
+
+    <li value="5">
+        <a name="E">
+            <strong>Syntax Considerations</strong></a>
+        &nbsp;<a href="#toc_E"><strong>&lt;&lt;</strong></a>
+
+        <ol>
+
+            <li><a name="toc_simplifications" href="#simplifications">
+                What are the syntax highlights for an <b><i>INFO</i></b> URI?
+            </a></li>
+
+            <li><a name="toc_what_is_the_bnf" href="#what_is_the_bnf">
+                What is the full syntax for an <b><i>INFO</i></b> URI?
+            </a></li>
+
+            <li><a name="toc_what_is_the_frag" href="#what_is_the_frag">
+                What does the fragment signify for an <b><i>INFO</i></b> URI?
+            </a></li>
+
+        </ol>
+
+    </li>
+
+</ol>
+
+<ol type="A">
+
+    <li value="6">
+        <a name="F">
+            <strong>Examples of Usage</strong></a>
+        &nbsp;<a href="#toc_F"><strong>&lt;&lt;</strong></a>
+
+        <ol>
+
+            <li><a name="toc_examples" href="#examples">
+                What do <b><i>INFO</i></b> URIs look like?
+            </a></li>
+
+            <li><a name="toc_app_examples" href="#app_examples">
+                How are <b><i>INFO</i></b> URIs used in Web applications?
+            </a></li>
+
+        </ol>
+
+    </li>
+
+</ol>
+
+<ol type="A">
+
+    <li value="7">
+        <a name="G">
+            <strong>Comparing <b><i>INFO</i></b> URIs</strong></a>
+        &nbsp;<a href="#toc_G"><strong>&lt;&lt;</strong></a>
+
+        <ol>
+
+            <li><a name="toc_uri_comparison" href="#uri_comparison">
+                Why is comparison of URIs important?
+            </a></li>
+
+            <li><a name="toc_what_steps" href="#what_steps">
+                What steps should be taken to compare two <b><i>INFO</i></b> URIs?
+            </a></li>
+
+            <li><a name="toc_info_comparison" href="#info_comparison">
+                Is there an example of comparing <b><i>INFO</i></b> URIs?
+            </a></li>
+
+        </ol>
+
+    </li>
+
+</ol>
+
+<ol type="A">
+
+    <li value="8">
+        <a name="H">
+            <strong>Historical Perspective</strong></a>
+        &nbsp;<a href="#toc_H"><strong>&lt;&lt;</strong></a>
+
+        <ol>
+
+            <li><a name="toc_background" href="#background">
+                What is the historical background to <b><i>INFO</i></b>?
+            </a></li>
+
+            <li><a name="toc_consultation" href="#consultation">
+                What consultations preceded the development of <b><i>INFO</i></b>?
+            </a></li>
+
+            <li><a name="toc_next_steps" href="#next_steps">
+                What were the next steps in the development of <b><i>INFO</i></b>?
+            </a></li>
+
+            <li><a name="toc_current" href="#current">
+                What is the current position of <b><i>INFO</i></b>?
+            </a></li>
+
+        </ol>
+
+    </li>
+
+</ol>
+
+<hr />
+
+<h2>The Answers</h2>
+
+
+<h3>A. Background (I)</h3>
+
+<ol>
+
+    <li>
+        <a id="why_uri" name="why_uri"><strong>
+            What is a URI scheme?</strong></a>
+        &nbsp;<a href="#toc_why_uri"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            A Uniform Resource Identifier (URI) provides a simple and extensible
+            means for identifying a resource within the
+            World Wide Web global information architecture.
+            Each URI begins with a scheme name that refers to a specification for
+            assigning identifiers within that scheme. As such, the URI syntax is
+            a federated and extensible naming system wherein each scheme's
+            specification may further restrict the syntax and semantics of
+            identifiers using that scheme.
+        </p>
+    </li>
+
+
+    <li>
+        <a id="info_doc" name="info_doc"><strong>
+            Where is the specification for <b><i>INFO</i></b>?</strong></a>
+        &nbsp;<a href="#toc_info_doc"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            The final specification for <b><i>INFO</i></b> is
+            <a href="http://www.ietf.org/rfc/rfc4452.txt">RFC 4452</a>. (The five
+            Internet-Drafts that were published to support the <b><i>INFO</i></b>
+            URI scheme application are
+            available <a href="http://info-uri.info/registry/standards.html">here</a>
+            on the <b><i>INFO</i></b> website.)</li>
+    </p>
+    </li>
+
+
+    <li>
+        <a id="why_create" name="why_create"><strong>
+            Why was it necessary to develop the <b><i>INFO</i></b> URI scheme?</strong></a>
+        &nbsp;<a href="#toc_why_create"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            The <b><i>INFO</i></b> URI scheme was developed from within the library and publishing communities to expedite the referencing by URIs of information assets that have identifiers in public namespaces but have no representation within the URI allocation.
+        </p>
+        <p>
+            For various reasons (both cultural and technical) the creation and registration of a new URI scheme or URN namespace to
+            support a given public namespace under the URI allocation may not have been attempted by the authority for that namespace. It is precisely to facilitate
+            the representation of these public namespaces within the URI allocation that the
+            <b><i>INFO</i></b> URI scheme was developed.
+        </p>
+    </li>
+
+
+    <li>
+        <a id="motivation" name="motivation"><strong>
+            What was the motivation behind the <b><i>INFO</i></b> URI scheme?</strong></a>
+        &nbsp;<a href="#toc_motivation"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            The motivation behind developing the <b><i>INFO</i></b> URI
+            scheme was
+            to allow legacy identification systems to become part of the World Wide Web global information
+            architecture so that the information assets they identify can be referenced
+            by Web-based description technologies such as XLink, RDF or Topic Maps. Note that we are
+            concerned with "information assets", not "digital assets" <i>per se</i>
+            - the information assets may be variously digital, physical or conceptual.
+        </p>
+    </li>
+
+
+    <li>
+        <a id="in_competition" name="in_competition"><strong>
+            Does the <b><i>INFO</i></b> URI scheme compete with other URI schemes?</strong></a>
+        &nbsp;<a href="#toc_in_competition"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            No. The <b><i>INFO</i></b> URI scheme does not compete with independent URI registrations but rather cooperates with independent URI registrations by providing a lightweight early URI registration mechanism to support referencing of public information assets ahead of any possible subsequent URI scheme or URN namespace application. Note that in the majority of cases no subsequent URI scheme or URN namespace application will be made by a
+            <a href="#who_can_register">Namespace Authority</a>
+            as the <b><i>INFO</i></b> resource identifier alone will be sufficient
+            in providing an identification service. Only if additional services are
+            required would a Namespace Authority seek to register a URI scheme independently.
+        </p>
+    </li>
+
+
+    <li>
+        <a id="burden" name="burden"><strong>
+            Could the <b><i>INFO</i></b> URI scheme break Web applications?</strong></a>
+        &nbsp;<a href="#toc_burden"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            No. <b><i>INFO</i></b> URIs exist primarily to support the representation of identity and comparison with other <b><i>INFO</i></b> URIs, and therefore any Web applications that can recognize a URI within a URI usage context should not break with this additional URI scheme. <b><i>INFO</i></b> URIs are conformant to the general syntax requirements of URIs as laid out in
+            <a href="http://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a>
+            and as such are readily parseable and recognizable as legitimate URI strings.
+            Any dereference capabilities associated with any particular
+            <b><i>INFO</i></b> namespace are outside the scope of <b><i>INFO</i></b>
+            itself.
+        </p>
+    </li>
+
+
+    <li>
+        <a id="sponsor" name="sponsor"><strong>
+            Who developed the <b><i>INFO</i></b> URI scheme?</strong></a>
+        &nbsp;<a href="#toc_sponsor"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            The <b><i>INFO</i></b> URI scheme was developed by members of
+            the library and publishing communities working together under the auspices of ANSI/NISO.
+        <p />
+        Representing the library communities are Herbert Van de Sompel of
+        <a href="http://lib-www.lanl.gov/">LANL</a>
+        (Los Alamos National Laboratory) Research Library
+        and Stu Weibel of
+        <a href="http://www.oclc.org">OCLC</a>
+        (Online Computer Library Center),
+        while representing the publishing communities are Tony Hammond of
+        <a href="http://npg.nature.com">Nature Publishing Group</a>
+        and Eamonn Neylon of
+        <a href="http://www.manifestsolutions.com">Manifest Solutions</a>,
+        a publishing technology consultancy.
+        <p />
+        <a href="http://www.niso.org/">NISO</a>,
+        the National Information Standards Organization, is a standards
+        developing organization accredited to the International Organization for
+        Standards (ISO) by the American National Standards Institute (<a
+            href="http://www.ansi.org/">ANSI</a>), the sole US representative to <a
+            href="http://www.iso.org/">ISO</a>.
+        </p>
+    </li>
+
+
+    <li>
+        <a id="why_info" name="why_info"><strong>
+            Why is the scheme called <b><i>INFO</i></b>?</strong></a>
+        &nbsp;<a href="#toc_why_info"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            The scheme is called  <b><i>INFO</i></b> as a shorthand for the information asset that
+            it references by means of a URI.
+        </p>
+        <p>
+            Another reading of <b><i>INFO</i></b> is that <b><i>INFO</i></b>
+            exists primarily to provide information about an information asset, the information
+            disclosed being confined to identity alone. Richer sets of information,
+            such as authority metadata, would require resolution services which are
+            not directly supported by <b><i>INFO</i></b> and hence
+            would require a corresponding independent URI scheme or URN namespace application.
+        </p>
+    </li>
+
+    <li>
+        <a id="status" name="status"><strong>
+            What is the status of the <b><i>INFO</i></b> URI scheme?</strong></a>
+        &nbsp;<a href="#toc_status"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            An Internet-Draft
+            for the <b><i>INFO</i></b> URI scheme was first announced
+            September 30<sup>th</sup>, 2003 (<a
+                href="http://info-uri.info/registry/docs/drafts/draft-vandesompel-info-uri-00.txt">-00</a>).
+            Subsequent revisions to this draft are available <a
+                href="http://info-uri.info/registry/standards.html">here</a> and were
+            issued in December 2003 (<a
+                href="http://info-uri.info/registry/docs/drafts/draft-vandesompel-info-uri-01.txt">-01</a>),
+            July 2004 (<a
+                href="http://info-uri.info/registry/docs/drafts/draft-vandesompel-info-uri-02.txt">-02</a>),
+            January 2005 (<a
+                href="http://info-uri.info/registry/docs/drafts/draft-vandesompel-info-uri-03.txt">-03</a>), and
+            August 2005 (<a
+                href="http://info-uri.info/registry/docs/drafts/draft-vandesompel-info-uri-04.txt">-04</a>).
+            <a href="http://www.ietf.org/rfc/rfc4452.txt">RFC 4452</a> was published
+            in April 2006.
+        </p>
+        <p>
+            The <b><i>INFO</i></b> URI scheme has already been fully
+            embraced by a number of
+            Web description technologies: the
+            <a
+                    href="http://www.niso.org/standards/z39-88-2004/">OpenURL
+                Framework</a>
+            and the
+            <a href="http://www.loc.gov/standards/sru/">SRU/W</a>
+            information retrieval initiative.
+        </p>
+    </li>
+
+</ol>
+
+<h3>B. Background (II)</h3>
+
+<ol>
+
+    <li>
+        <a id="value" name="value"><strong>
+            What is the value proposition of the <b><i>INFO</i></b> URI scheme?</strong></a>
+        &nbsp;<a href="#toc_value"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            The value proposition of <b><i>INFO</i></b> URIs is to facilitate
+            Namespace Authorities in representing
+            identifiers from their namespaces in URI form and so to make
+            those identifiers available
+            for public use in Web-based description technologies
+            independently of any Web infrastructure considerations on behalf of the
+            Namespace Authorities.
+        </p>
+        <p>
+            As such, <b><i>INFO</i></b> URIs are designed to be simple to deploy, both in terms of namespace registration and in the creation and general usage of these identifiers. These simplifications are fully in line with the <b><i>INFO</i></b> URI remit of providing a lightweight URI registration mechanism to facilitate the referencing of information assets under the URI allocation.
+        </p>
+    </li>
+
+
+    <li>
+        <a id="usp" name="usp"><strong>
+            What is unique about the <b><i>INFO</i></b> URI scheme?</strong></a>
+        &nbsp;<a href="#toc_usp"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            <b><i>INFO</i></b> URIs are not globally dereferenceable, nor is
+            there any implication that they may be, although individual Namespace
+            Authorities may register dereference methods on a per-namespace basis. The
+            prime purpose of <b><i>INFO</i></b> is the disclosure of the
+            identity of an information asset from a public namespace within the
+            World Wide Web global information architecture.
+        </p>
+    </li>
+
+
+    <li>
+        <a id="non_deref_uri" name="non_deref_uri"><strong>
+            And just what is a non-globally dereferenceable URI?</strong></a>
+        &nbsp;<a href="#toc_non_deref_uri"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            A non-globally dereferenceable URI is one that supports no
+            global resolution method, although per-namespace methods may exist as
+            declared by the relevant Namespace Authorities.
+        </p>
+    </li>
+    <li>
+        <a id="non_deref" name="non_deref"><strong>
+            So, why are <b><i>INFO</i></b> URIs not globally dereferenceable?</strong></a>
+        &nbsp;<a href="#toc_non_deref"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            <b><i>INFO</i></b> is focused exclusively on supporting
+            identity. As such, this focus on the prime functionality of
+            <b><i>INFO</i></b> URIs to supporting identity leads to the following considerations:
+        </p>
+        <ul>
+            <li>
+                Dramatically simplifies <b><i>INFO</i></b> operational behaviours, and
+                consequently the operational expectations of an <b><i>INFO</i></b> URI,
+                which are primarily limited to URI string presentation and comparison.
+            </li>
+            <li>
+                Avoids overhead in new <b><i>INFO</i></b> namespace registrations by
+                downplaying the possibility of resolution mechanisms.
+                <br />
+                (Note that public namespaces may
+                have functionality associated with them which is
+                accessible on the Internet, but <b><i>INFO</i></b> does not support a
+                global
+                access route into these functionalities. Applications wishing to tap into this
+                functionalitiesy must consult the <b><i>INFO</i></b> Registry on a
+                per-namespace basis.)
+            </li>
+            <li>
+                Avoids overhead in the management of a global resolution infrastructure and maintenance of resolution targets for <b><i>INFO</i></b> URIs.
+            </li>
+            <li>
+                Does not run foul of the mantra "<i>many URI schemes considered
+                harmful</i>" as this is primarily concerned with the need for
+                applications to support global resolution mechanisms.
+            </li>
+        </ul>
+        <p />
+        Note that this stance on non-dereference is in contrast to other URI schemes
+        which are generally dereferenceable
+        (or otherwise actionable by applications), even if not all examples within a
+        particular scheme are actually dereferenceable. This holds true for both location-dependent URIs (e.g. HTTP URIs) as well as for location-independent URIs (e.g. URN URIs).
+    </li>
+
+    <li>
+        <a id="why_uris" name="why_uris"><strong>
+            Why identify information assets with URIs anyway?</strong></a>
+        &nbsp;<a href="#toc_why_uris"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            The real need for presenting legacy identifiers in URI form is that many
+            Web-based description technologies (e.g. XLink, RDF, Topic Maps,
+            OpenURL, SRU/W) recognize URIs as the only form of globally unique identifier.
+        </p>
+        <p>
+            Besides this, the URI naming architecture offers to identifiers a common base syntax, a common base semantics, and a common nomenclature for talking about identifier constructs (e.g. URIs reference "resources" while generally identifiers for information
+            assets will reference diverse kinds of things - objects, records, etc.). The URI thus
+            provides a uniform (and unifying) naming architecture for identifiers.
+        </p>
+        <p>
+            The <a href="#examples">examples</a> FAQ included here might afford some insight into
+            the desirability of rendering identifiers as URIs, cf. the identifiers in their native form and as rendered in URI form.
+        </p>
+    </li>
+
+
+    <li>
+        <a id="who_can_use" name="who_can_use"><strong>
+            Can anyone use their namespaces under <b><i>INFO</i></b>?</strong></a>
+        &nbsp;<a href="#toc_who_can_use"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            No. Namespaces used under <b><i>INFO</i></b> must be registered
+            in the <b><i>INFO</i></b> Registry.
+        </p>
+    </li>
+
+
+    <li>
+        <a id="who_can_register" name="who_can_register"><strong>
+            Who is entitled to register under <b><i>INFO</i></b>?</strong></a>
+        &nbsp;<a href="#toc_who_can_register"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            A Namespace Authority
+            is entitled to register a recognized namespace after
+            suitable review.
+        <p />
+        A Namespace Authority is the body that owns and manages
+        a public namespace.
+        </p>
+    </li>
+
+
+    <li>
+        <a id="which_namespaces" name="which_namespaces"><strong>
+            Which namespaces are eligible for registration under <b><i>INFO</i></b>?</strong></a>
+        &nbsp;<a href="#toc_which_namespaces"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            The namespaces eligible for registration under <b><i>INFO</i></b> will
+            typically be those of interest to the publishing, library and media communities. These communities necessarily have a very wide purview. Candidate namespaces will
+            be those that are for public use only and that are not part of the URI allocation. Non-public namespaces are not eligible for registration.
+        </p>
+        <p>
+            For all registered namespaces the reader is advised to consult the
+            <b><i>INFO</i></b> <a href="http://info-uri.info/registry/">Registry</a>.
+            The following registered namespaces are typical:
+        <ul>
+            <li><b>bibcodes</b> -  NASA Astrophysics Data System Bibcodes (~3.5m)</li>
+            <li><b>doi</b> - International DOI Foundation Digital Object Identifiers (~20m)</li>
+            <li><b>lccn</b> - Library of Congress Control Numbers (~12m)</li>
+            <li><b>oclcnum</b> - Online Computer Library Center (OCLC) Numbers (~52m)</li>
+            <li><b>ofi</b> - NISO OpenURL Framework Identifiers (~40)</li>
+            <li><b>pmid</b> - National Library of Medicine PubMed Identifiers (~10m)</li>
+            <li><b>sid</b> - Source Identifiers (as used by the OpenURL Framework)</li>
+        </ul>
+        (Note: To put those numbers into perspective, as of an earlier writing the
+        accumulated totals represented some 2.6% of
+        <a href="http://www.google.com/">Google</a> space.)
+        </p>
+    </li>
+
+
+    <li>
+        <a id="future_uri_reg" name="forward_uri_reg"><strong>
+            Does registration under <b><i>INFO</i></b> limit any future URI registration?</strong></a>
+        &nbsp;<a href="#toc_future_uri_reg"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            No. On the contrary, by occupying its own toplevel URI scheme, <b><i>INFO</i></b> does not restrict a Namespace Authority from proceeding with registration under any portion of the URI allocation either as a toplevel URI scheme or as a URN namespace. In particular, an independent <b><i>INFO</i></b> URI scheme does not interfere with any of the existing URI namespaces which have their own defined semantics.
+        </p>
+    </li>
+
+
+</ol>
+
+
+<h3>C. Comparison with Other URI Schemes</h3>
+
+<ol>
+
+    <li>
+        <a id="general_uri" name="general_uri"><strong>
+            What considerations are there regarding URIs?</strong></a>
+        &nbsp;<a href="#toc_general_uri"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            Some general considerations regarding URIs are:
+        </p>
+        <ul>
+            <li><i>Generality</i> -
+                URI schemes are divided between generality and
+                speciality as regards their reliance upon an Internet transport protocol.</li>
+            <li><i>Location dependence</i> -
+                URI schemes are variously categorized as location-dependent or
+                location-independent with respect to whether the URI contains a network authority component.</li>
+            <li><i>Character set</i> -
+                The set of allowable characters within a URI is a subset of ASCII. Certain ASCII characters are excluded, while others are reserved within various contexts within the URI string according to the URI scheme in question. Excluded and reserved characters must be %-escaped as described in
+                <a href="http://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a>.</li>
+            The wider the character set that a given URI scheme supports, the more easily it
+            can function as  a substrate for legacy identifiers.
+        </ul>
+    </li>
+
+    <li>
+        <a id="use_http" name="use_http"><strong>
+            Why not just use HTTP URIs?</strong></a>
+        &nbsp;<a href="#toc_use_http"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            HTTP URIs
+            (<a href="http://www.ietf.org/rfc/rfc2616.txt">RFC 2616</a>)
+            are Internet protocol elements for referencing hypertext documents which can be retrieved from a network authority using the HTTP transfer protocol. There is a common expectation that HTTP URIs can be dereferenced.
+        </p>
+        <p>
+            The following considerations hold in respect of HTTP URIs:
+        </p>
+        <ul>
+            <li>
+                HTTP URIs are inappropriate for <b><i>INFO</i></b> namespaces because HTTP URIs provide:
+                <ul>
+                    <li>network transport</li>
+                    <li>network path (discovery obstacle)</li>
+                    <li>strong dereference expectation</li>
+                    <li>poor branding (network path overhead)</li>
+                </ul>
+            </li>
+            <li>
+                A transport mechanism adds meaningless semantic overhead to nondereferencable URIs.
+            </li>
+            <li>
+                Absolute HTTP URIs include a network path (comprised of an authority component and a hierarchical path component).
+                <b><i>INFO</i></b> namespaces may not have (or may not make) any network authority available. A central network authority would also be inappropriate as this would introduce a dependency between a third party namespace and a central network authority.
+                <p />
+                Further, were
+                <b><i>INFO</i></b> namespaces to make a network authority available
+                they would each have to
+                publish the particular hierarchical path syntax employed
+                by that network authority. A
+                central network authority would mitigate this requirement by providing a single
+                path syntax, although it
+                would still need to publish that path syntax.
+            </li>
+            <li>
+                Use of HTTP URIs might only encourage the provisioning of resource representations (e.g. metadata descriptions) which could conflict with representations provided under any possible future URI registration on the part of the Namespace Authority.
+                Further, if HTTP URIs were used to provide resource representations, it must be recognized that managing the namespace and infrastructure is a costly enterprise that may not be appropriate or cost effective in a given business context.
+            </li>
+            <li>
+                The network path of HTTP URIs adds unnecessary string overhead and consequent
+                loss of branding for legacy identifiers.
+            </li>
+        </ul>
+
+    </li>
+
+
+    <li>
+        <a id="use_urn" name="use_urn"><strong>
+            Well then, why not just use URN URIs?</strong></a>
+        &nbsp;<a href="#toc_use_urn"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            URN URIs
+            (<a href="http://www.ietf.org/rfc/rfc2141.txt">RFC 2141</a>)
+            are Internet protocol elements for referencing resources using persistent and location-independent identifiers, representations of which may be retrieved using various resolution mechanisms. There is a common expectation that URN URIs can be dereferenced, once suitable resolution mechanisms are defined (e.g. DDDS or other proprietary mechanisms). Indeed,
+            <a href="http://www.ietf.org/rfc/rfc1737.txt">RFC 1737</a>
+            goes so far as to make a strong recommendation that "<i>there be a mapping between the names generated by each naming authority and URLs</i>".
+        </p>
+        <p>
+            Use of URN URIs requires a URN namespace registration. An informal URN namespace is of limited utility because its numerical nature obliterates any branding or name recognition and effectively renders the namespace anonymous. A formal URN namespace, on the other hand, would require a more substantial review than a corresponding registration under the <b><i>INFO</i></b> Registry.
+            Based on experience with the initial <b><i>INFO</i></b> namespace target group,
+            it is unlikely that many Namespace Authorities will proceed with independent applications as the burden of registering a URN namespace is high, especially in the case of organizations that are not strongly steeped in technology.
+        </p>
+        <p>
+            One particular impediment in applying for a URN namespace for <b><i>INFO</i></b> is that
+            this would compromise any possible future URN namespace registration that a
+            Namespace Authority might seek to make in respect of
+            considerations of persistence, location independence and/or dereference
+            to resource representations.
+        </p>
+        <p>
+            The following considerations hold in respect of URN URIs:
+        </p>
+        <ul>
+            <li>
+                URN URIs are inappropriate for <b><i>INFO</i></b> namespaces because URN URIs provide:
+                <ul>
+                    <li>claims of persistence of resource identifiers</li>
+                    <li>dereference expectation</li>
+                    <li>no delegated naming responsibility</li>
+                    <li>restricted syntax (no hierarchy)</li>
+                    <li>no support for fragment identifiers</li>
+                    <li>poor branding and extra semantic layer (additional namespace tier)</li>
+                </ul>
+            </li>
+            <li>
+                <b><i>INFO</i></b> URIs make no claims on persistence. <b><i>INFO</i></b> URIs may be location independent and in consequence may enjoy some degree of persistence, but <b><i>INFO</i></b> does not make these assertions. Instead <b><i>INFO</i></b> is neutral with respect to identifier persistence.
+            </li>
+            <li>
+                Use of URN URIs might only encourage the provisioning of resource representations (e.g. metadata descriptions) which could conflict with representations provided under any possible future URI registration on the part of the Namespace Authority.
+                Further, if URN URIs were used to provide resource representations, it must be recognized that managing the namespace and infrastructure is a costly enterprise that may not be appropriate or cost effective in a given business context.
+            </li>
+            <li>
+                For <b><i>INFO</i></b> to operate as a URN namespace would require that
+                <b><i>INFO</i></b> be constituted as a delegated naming authority. It is
+                not clear that a URN namespace would be an appropriate choice for such
+                naming authority delegation.
+            </li>
+            <li>
+                Syntactically, URN URIs do not support hierarchy (in URI syntax hierarchy proceeds through the "/" character) and are thus more difficult to use with legacy identifiers because of their restricted character set. Other characters
+                reserved by URN URIs, but allowed by <b><i>INFO</i></b> URIs are "&amp;" and "~".
+                <p />
+                For a demonstration in the difficulty of mapping legacy identifiers the reader is referred to
+                <a href="http://www.ietf.org/rfc/rfc3151.txt">RFC 3151</a>
+                which provides a set of complex transcriptions for mapping SGML formal public identifiers onto the URN URI syntax. Formal public identifiers would have been more readily presented under the more expressive <b><i>INFO</i></b> syntax.
+            </li>
+            <li>
+                Additionally, URN URIs do not support fragment identifiers thus not
+                allowing the identification of secondary resources with respect to a
+                primary resource. This is a pratical requirement that <b><i>INFO</i></b>
+                supports.
+            </li>
+            <li>
+                With <b><i>INFO</i></b> as a URN namespace,
+                the <b><i>INFO</i></b> namespaces would then become sub-sub-namespaces, with a consequent loss of branding. This would also introduce three tiers of
+                semantic layers for an implementation to navigate.
+            </li>
+        </ul>
+
+    </li>
+
+    <li>
+        <a id="other_uri" name="other_uri"><strong>
+            Are there any other URI schemes that might be considered?</strong></a>
+        &nbsp;<a href="#toc_other_uri"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            Two other generic URI schemes that might be considered are DATA URIs and
+            TAG URIs.
+        </p>
+    </li>
+
+
+    <li>
+        <a id="use_data" name="use_data"><strong>
+            So, why not use DATA URIs?</strong></a>
+        &nbsp;<a href="#toc_use_data"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            DATA URIs
+            (<a href="http://www.ietf.org/rfc/rfc2397.txt">RFC 2397</a>)
+            are Internet protocol elements for the referencing of inline resources, i.e. the reference is an immediate address.
+        </p>
+        <p>
+            The following considerations hold in respect of DATA URIs:
+        </p>
+        <ul>
+            <li>
+                DATA URIs are inappropriate for <b><i>INFO</i></b> namespaces because DATA URIs provide:
+                <ul>
+                    <li>no authority mechanism (network authority or registry)</li>
+                    <li>no globally unique identifiers</li>
+                </ul>
+            </li>
+            <li>
+                The DATA URI provides a data resource inline without reference to
+                any network authority or registry. There is thus no record for the
+                namespaces that would need to be supported.
+            </li>
+            <li>
+                Without an authority there can be no guarantee that DATA URIs are
+                globally unique. This guarantee of uniqueness is the prime motivator
+                for the <b><i>INFO</i></b> URI scheme.
+            </li>
+        </ul>
+    </li>
+
+
+    <li>
+        <a id="use_tag" name="use_tag"><strong>
+            Or else, why not use TAG URIs?</strong></a>
+        &nbsp;<a href="#toc_use_tag"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            TAG URIs
+            (<a href="http://www.ietf.org/rfc/rfc4151.txt">RFC 4151</a>)
+            are Internet protocol elements for referencing resources that are globally unique across network space and time.
+            The basic premise is that
+            a specific identifier is prefixed with a TAG authority which is constructed from a fully qualified domain name (either used alone or embedded within an email address) and a date in ISO 8601 format. The TAG authority should thus guarantee that
+            the TAG URI is globally unique.
+            TAG URIs may or may not have resolution mechanisms, although those mechanisms are not specified.
+        </p>
+        <p>
+            The following considerations hold in respect of TAG URIs:
+        </p>
+        <ul>
+            <li>
+                TAG URIs are inappropriate for <b><i>INFO</i></b> namespaces because TAG URIs provide:
+                <ul>
+                    <li>network authority (discovery obstacle)</li>
+                    <li>redundant date component (requires adoption of a date convention)</li>
+                    <li>dereference expectation</li>
+                    <li>poor branding (string overhead from network authority and date components)</li>
+                </ul>
+            </li>
+            <li>
+                TAG URIs include a network authority component. <b><i>INFO</i></b> namespaces may not have (or may not make) any network authority available. A central network authority would also be inappropriate as this would introduce a dependency between a third party namespace and a central network authority.
+                Further, the form of disclosing the network authority component (either as an
+                independent string or embedded within an email address)  would need to be
+                published.
+            </li>
+            <li>
+                Another difficulty is that the TAG URI is designed for
+                minting new identifiers whereas <b><i>INFO</i></b> is
+                purely concerned with proxying legacy identifiers (i.e. already minted) onto the
+                URI namespace. Since there is a date component in the TAG URI the only means of making this
+                work as a basis for supporting legacy identifiers would be to adopt some convention whereby a known date would be used for all
+                the identifiers (which obviously obviates the need for a date component).
+            </li>
+            <li>
+                Use of TAG URIs might only encourage the provisioning of resource representations (e.g. metadata descriptions) which could conflict with representations provided under any possible future URI registration on the part of the Namespace Authority.
+                Further, if TAG URIs were used to provide resource representations, it must be recognized that managing the namespace and infrastructure is a costly enterprise that may not be appropriate or cost effective in a given business context.
+            </li>
+            <li>
+                The TAG authority of TAG URIs adds unnecessary string overhead and consequent
+                loss of branding for legacy identifiers.
+            </li>
+        </ul>
+
+    </li>
+
+</ol>
+
+<h3>D. The <b><i>INFO</i></b> Registry</h3>
+
+<ol>
+
+    <li>
+        <a id="what_is_reg" name="what_is_reg"><strong>
+            What is the <b><i>INFO</i></b> Registry?</strong></a>
+        &nbsp;<a href="#toc_what_is_reg"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            The <b><i>INFO</i></b> Registry provides a mechanism for the registration of
+            public namespaces that are used for the identification of
+            information assets, and that are not referenceable within the URI allocation.
+        </p>
+
+    </li>
+
+    <li>
+        <a id="where_is_reg" name="where_is_reg"><strong>
+            Where is the <b><i>INFO</i></b> Registry located?</strong></a>
+        &nbsp;<a href="#toc_where_is_reg"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            The <b><i>INFO</i></b> Registry is located on the
+            <b><i>INFO</i></b> website at:
+            &lt;<a href="http://info-uri.info/registry/">http://info-uri.info/registry/</a>&gt;
+        </p>
+
+    </li>
+
+    <li>
+        <a id="who_owns_reg" name="who_owns_reg"><strong>
+            Who maintains and operates the <b><i>INFO</i></b> Registry?</strong></a>
+        &nbsp;<a href="#toc_who_owns_reg"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            NISO is the Maintenance Agency for the <b><i>INFO</i></b> Registry and
+            may delegate operational responsibility to an operating body, or Registry Operator.
+        </p>
+
+    </li>
+
+    <li>
+        <a id="what_policies" name="what_policies"><strong>
+            What policies govern the <b><i>INFO</i></b> Registry?</strong></a>
+        &nbsp;<a href="#toc_what_policies"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            A
+            publicly articulated policy established under NISO governance will be made available on the <b><i>INFO</i></b> website
+            &lt;<a href="http://info-uri.info/">http://info-uri.info/</a>&gt;.
+            The <b><i>INFO</i></b> Registry policy defines a review process for candidate namespaces and provides measures of quality control and suitability for entry of namespaces
+        </p>
+
+    </li>
+
+    <li>
+        <a id="reg_procedure" name="reg_procedure"><strong>
+            What is the registration procedure for an <b><i>INFO</i></b> namespace?</strong></a>
+        &nbsp;<a href="#eoc_reg_procedure"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            The <b><i>INFO</i></b> Registry provides an online registration form which solicits
+            the relevant fields. This information will then be made available to a public
+            approval process. Subject to a favourable review the namespace will be added to the
+            <b><i>INFO</i></b> Registry.
+        </p>
+
+    </li>
+
+    <li>
+        <a id="reg_funcs" name="reg_funcs"><strong>
+            What functionalities does the <b><i>INFO</i></b> Registry present?</strong></a>
+        &nbsp;<a href="#toc_reg_funcs"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            The <b><i>INFO</i></b> Registry is publicly accessible and supports discovery (by both humans and machines) of:
+        <ul>
+            <li>String literals identifying the namespaces.</li>
+            <li>Names and contact information of Namespace Authorities.</li>
+            <li>Syntax requirement for identifiers maintained in such namespaces.</li>
+            <li>Normalization methodology for identifiers maintained in such namespaces.</li>
+            <li>Ancillary documentation.</li>
+        </ul>
+        Disclosure of Registry records will be both in a human presentational form as well as in structured markup form for machine automation. Currently
+        the Registry records are presented as XHTML documents but are also
+        available as
+        "oai_dc" XML records and are harvestable using the
+        <a href="http://www.openarchives.org/OAI/openarchivesprotocol.html">OAI-PMH</a>
+        protocol. Other presentations, such as RSS, may subsequently be made
+        available.
+
+    </li>
+
+</ol>
+
+<h3>E. Syntax Considerations</h3>
+
+<ol>
+
+    <li>
+        <a id="simplifications" name="simplifications"><strong>
+            What are the syntax highlights for an <b><i>INFO</i></b> URI?</strong></a>
+        &nbsp;<a href="#toc_simplifications"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            The <b><i>INFO</i></b> URI syntax is very straightforward:
+        <pre>    "info:" namespace "/" identifier [ "#" fragment ]</pre>
+        where <code>namespace</code> is a registered namespace token,
+        <code>identifier</code> is a %-escaped identifier, and
+        <code>fragment</code> is an optional %-escaped identifier to
+        a secondary resource.
+        </p>
+        <p>
+            The <b><i>INFO</i></b> URI syntax
+            introduces certain restrictions on the generic URI syntax:
+        </p>
+        <ul>
+            <li>
+                No network authority component allowed.
+            </li>
+            <li>
+                No query component allowed.
+            </li>
+            <li>
+                No absolute path allowed (although relative paths are admitted).
+            </li>
+            <li>
+                No relative URI references allowed.
+            </li>
+        </ul>
+
+    </li>
+
+
+    <li>
+        <a id="what_is_the_bnf" name="what_is_the_bnf"><strong>
+            What is the full syntax for an <b><i>INFO</i></b> URI?</strong></a>
+        &nbsp;<a href="#toc_what_is_the_bnf"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            The <b><i>INFO</i></b> URI syntax is fully conformant with the generic URI syntax
+            defined in
+            <a href="http://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a>.
+        <p />
+        This specification uses the Augmented Backus-Naur Form (ABNF) notation
+        of
+        <a href="http://www.ietf.org/rfc/rfc4234.txt">RFC 4234</a>
+        to define the URI.
+        The following core ABNF productions are used by this specification as
+        defined by Appendix B.1 of RFC 4234: ALPHA, DIGIT, HEXDIG.
+        <p />
+        The <b><i>INFO</i></b> URI syntax is presented in two parts. Part A contains productions specific to the <b><i>INFO</i></b> URI scheme:
+        </p> <p>
+        <center>
+        <table width=80% border=1 cellpadding=5>
+            <tr>
+                <td bgcolor=#dddddd align=left>
+<pre>
+
+  info-URI        = info-scheme ":" info-identifier [ "#" fragment ]
+
+  info-scheme     = "info"
+
+  info-identifier = namespace "/" identifier
+
+  namespace       = scheme
+
+  identifier      = *( pchar / "/" )
+
+</pre>
+                </td>
+            </tr>
+        </table>
+        </center>
+        </p>
+        <p>
+            Part B contains generic productions from
+            <a href="http://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a>
+            which are repeated here both for completeness and for reference.
+        </p>
+        <p>
+            <center>
+        <table width=80% border=1 cellpadding=5>
+            <tr>
+                <td bgcolor=#dddddd align=left>
+<pre>
+
+  scheme          = ALPHA *( ALPHA / DIGIT / "+" / "-" / "." )
+
+  pchar           = unreserved / pct-encoded / sub-delims / ":" / "@"
+
+  fragment        = *( pchar / "/" / "?" )
+
+  unreserved      = ALPHA / DIGIT / "-" / "." / "_" / "~"
+
+  pct-encoded     = "%" HEXDIG HEXDIG
+
+  sub-delims      = "!" / "$" / "&" / "'" / "(" / ")"
+                        / "*" / "+" / "," / ";" / "="
+
+</pre>
+                </td>
+            </tr>
+        </table>
+        </center>
+        </p>
+
+
+    </li>
+
+
+    <li>
+        <a id="what_is_the_frag" name="what_is_the_frag"><strong>
+            What does the fragment signify for an <b><i>INFO</i></b> URI?</strong></a>
+        &nbsp;<a href="#toc_what_is_the_frag"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            The fragment on an <b><i>INFO</i></b> URI signifies a secondary resource
+            with respect to the primary resource identified by an absolute
+            <b><i>INFO</i></b> URI without a fragment.
+    </li>
+
+</ol>
+
+
+<h3>F. Examples of Usage</h3>
+
+<ol>
+
+    <li>
+        <a id="examples" name="examples"><strong>
+            What do <b><i>INFO</i></b> URIs look like?</strong></a>
+        &nbsp;<a href="#toc_examples"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            Some examples of (syntactically) valid <b><i>INFO</i></b> URIs are given below
+            together with the identifiers they reference in their
+            native form and the information
+            assets that they identify:
+        </p>
+        <p>
+        <ol type="a">
+            <li><a name="toc_ex_ddc" href="#ex_ddc"><strong>Dewey Decimal Classification</strong></li></a>
+            <li><a name="toc_ex_lccn" href="#ex_lccn"><strong>Library of Congress Control Number</strong></li></a>
+            <li><a name="toc_ex_sici" href="#ex_sici"><strong>Serial Item and Contribution Identifier (SICI)</strong></li></a>
+            <li><a name="toc_ex_bibcode" href="#ex_bibcode"><strong>Astrophysics Data System Bibcode</strong></li></a>
+            <li><a name="toc_ex_pmid" href="#ex_pmid"><strong>PubMed Identifier</strong></li></a>
+        </ol>
+        </p>
+        <p>
+            <center>
+        <table width=80% border=1 cellpadding=5>
+            <thead>
+            <tr>
+                <td align=left>
+                    <b>a.</b>
+                    <a id="ex_ddc" name="ex_ddc"><strong>
+                        Dewey Decimal Classification</strong></a>
+                    &nbsp;<a href="#toc_ex_ddc"><strong>&lt;&lt;</strong></a>
+                </td>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <td class="white" align=left>
+                    <i>Notes:</i>
+                    <code><b>ddc</b></code> is the <b><i>INFO</i></b> namespace component for a Dewey Decimal Classification namespace and <code><b>22/eng//004.678</b></code> is the identifier component for an identifier of an information asset within that namespace.
+                </td>
+            </tr>
+            </tfoot>
+            <tbody>
+            <tr>
+                <td bgcolor=#dddddd align=left>
+<pre>
+
+  <b>info:ddc/22/eng//004.678</b>
+
+  22/eng//004.678
+
+  Information Asset: Vocabulary Term
+
+    "Internet"
+</pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        </center>
+        </p>
+        <p>
+            <center>
+        <table width=80% border=1 cellpadding=5>
+            <thead>
+            <tr>
+                <td align=left>
+                    <b>b.</b>
+                    <a id="ex_lccn" name="ex_lccn"><strong>
+                        Library of Congress Control Number</strong></a>
+                    &nbsp;<a href="#toc_ex_lccn"><strong>&lt;&lt;</strong></a>
+                </td>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <td class="white" align=left>
+                    <i>Notes:</i>
+                    <code><b>lccn</b></code> is the <b><i>INFO</i></b> namespace component for a Library of Congress Control Number namespace and <code><b>2002022641</b></code> is the identifier component for an identifier of an information asset within that namespace.
+                </td>
+            </tr>
+            </tfoot>
+            <tbody>
+            <tr>
+                <td bgcolor=#dddddd align=left>
+<pre>
+
+  <b>info:lccn/2002022641</b>
+
+  2002022641
+
+  Information Asset: Metadata Record
+
+    "Newcomer, Eric. Understanding Web services: XML, WSDL,
+     SOAP, and UDDI. Boston: Addison-Wesley, 2002."
+</pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        </center>
+        </p>
+        <p>
+            <center>
+        <table width=80% border=1 cellpadding=5>
+            <thead>
+            <tr>
+                <td align=left>
+                    <b>c.</b>
+                    <a id="ex_sici" name="ex_sici"><strong>
+                        Serial Item and Contribution Identifier (SICI)</strong></a>
+                    &nbsp;<a href="#toc_ex_sici"><strong>&lt;&lt;</strong></a>
+                </td>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <td class="white" align=left>
+                    <i>Notes:</i>
+                    <code><b>sici</b></code> is the <b><i>INFO</i></b> namespace component for a
+                    Serial Item and Contribution Identifier namespace and
+                    <code><b>0363-0277(19950315)120:5%3C%3E1.0.TX;2-V</b></code> is the identifier component for an identifier of an information asset in that namespace in escaped form, or in unescaped form <code><b>0363-0277(19950315)120:5&lt;&gt;1.0.TX;2-V</b></code>.
+                </td>
+            </tr>
+            </tfoot>
+            <tbody>
+            <tr>
+                <td bgcolor=#dddddd align=left>
+<pre>
+
+  <b>info:sici/0363-0277(19950315)120:5%3C%3E1.0.TX;2-V</b>
+
+  0363-0277(19950315)120:5&lt;&gt;1.0.TX;2-V
+
+  Information Asset: Journal Issue
+
+    "Library Journal, Vol. 120, no. 5. March 15, 1995."
+</pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        </center>
+        </p>
+        <p>
+            <center>
+        <table width=80% border=1 cellpadding=5>
+            <thead>
+            <tr>
+                <td align=left>
+                    <b>d.</b>
+                    <a id="ex_bibcode" name="ex_bibcode"><strong>
+                        Astrophysics Data System Bibcode</strong></a>
+                    &nbsp;<a href="#toc_ex_bibcode"><strong>&lt;&lt;</strong></a>
+                </td>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <td class="white" align=left>
+                    <i>Notes:</i>
+                    <code><b>bibcode</b></code> is the <b><i>INFO</i></b> namespace component for an Astrophysics Data System bibcode namespace and <code><b>2003Icar..163..263Z</b></code> is the identifier component for an identifier of an information asset within that namespace.
+                </td>
+            </tr>
+            </tfoot>
+            <tbody>
+            <tr>
+                <td bgcolor=#dddddd align=left>
+<pre>
+
+  <b>info:bibcode/2003Icar..163..263Z</b>
+
+  2003Icar..163..263Z
+
+  Information Asset: Abstract of Journal Article
+
+    "K. Zahnle, P. Schenk, H. Levison and L. Dones, Cratering rates
+     in the outer Solar System, Icarus, 163 (2003) pp. 263-289."
+</pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        </center>
+        </p>
+        <p>
+            <center>
+        <table width=80% border=1 cellpadding=5>
+            <thead>
+            <tr>
+                <td align=left>
+                    <b>e.</b>
+                    <a id="ex_pmid" name="ex_pmid"><strong>
+                        PubMed Identifier</strong></a>
+                    &nbsp;<a href="#toc_ex_pmid"><strong>&lt;&lt;</strong></a>
+                </td>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <td class="white" align=left>
+                    <i>Notes:</i>
+                    <code><b>pmid</b></code> is the <b><i>INFO</i></b> namespace component for a PubMed Identifier namespace and
+                    <code><b>12376099</b></code>
+                    is the identifier component for an identifier of an information asset within that namespace.
+                </td>
+            </tr>
+            </tfoot>
+            <tbody>
+            <tr>
+                <td bgcolor=#dddddd align=left>
+<pre>
+
+  <b>info:pmid/12376099</b>
+
+  12376099
+
+  Information Asset: Abstract of Journal Article
+
+    "Wijesuriya SD, Bristow J, Miller WL. Localization and analysis
+     of the principal promoter for human tenascin-X. Genomics. 2002
+     Oct;80(4):443-52."
+</pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        </center>
+        </p>
+
+    </li>
+
+    <p />
+    <li>
+        <a id="app_examples" name="app_examples"><strong>
+            How are <b><i>INFO</i></b> URIs used in Web applications?</strong></a>
+        &nbsp;<a href="#toc_app_examples"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            Some examples of (syntactically) valid <b><i>INFO</i></b> URIs are given below
+            as they would be used by applications:
+        </p>
+        <p>
+        <ol type="a">
+            <li><a name="toc_rdf_graph" href="#rdf_graph"><strong>RDF Graph</strong></li></a>
+            <li><a name="toc_topic_map" href="#topic_map"><strong>Topic Map</strong></li></a>
+            <li><a name="toc_xlink" href="#xlink"><strong>Extended XLink</strong></li></a>
+            <li><a name="toc_rss_feed" href="#rss_feed"><strong>RSS 1.0 Feed - ContextObject (1)</strong></li></a>
+            <li><a name="toc_openurl" href="#openurl"><strong>OpenURL Link - ContextObject (2)</strong></li></a>
+            <li><a name="toc_sru_record" href="#sru_record"><strong>SRU Record</strong></li></a>
+        </ol>
+        </p>
+
+        <p>
+            <center>
+        <table width=80% border=1 cellpadding=5>
+            <thead>
+            <tr>
+                <td align=left>
+                    <b>a.</b>
+                    <a id="rdf_graph" name="rdf_graph"><strong>
+                        RDF Graph</strong></a>
+                    &nbsp;<a href="#toc_rdf_graph"><strong>&lt;&lt;</strong></a>
+                </td>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <td class="white" align=left>
+                    <i>Notes:</i>
+                    This RDF graph asserts a set of statements about the resource
+                    referenced by the URI <code><b>info:pii/S0888-7543(02)96852-7</b></code> (which
+                    identifies the Publisher Item Identifier
+                    <code>S0888-7543(02)96852-7</code>) using the
+                    <a href="http://dublincore.org/documents/dces/">Dublin  Core</a>
+                    vocabulary.
+                </td>
+            </tr>
+            </tfoot>
+            <tbody>
+            <tr>
+                <td bgcolor=#dddddd align=left>
+<pre>
+
+  &lt;rdf:Description about="<b>info:pii/S0888-7543(02)96852-7</b>"&gt;
+    &lt;dc:creator&gt;Wijesuriya, S.D.&lt;/dc:creator&gt;
+    &lt;dc:title&gt;Localization and analysis of the principal promoter
+      for human tenascin-X.&lt;/dc:title&gt;
+    &lt;dc:identifier&gt;<b>info:doi/10.1006/geno.2002.6852</b>&lt;/dc:identifier&gt;
+  &lt;/rdf:Description&gt;
+</pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        </center>
+        </p>
+        <p>
+            <center>
+        <table width=80% border=1 cellpadding=5>
+            <thead>
+            <tr>
+                <td align=left>
+                    <b>b.</b>
+                    <a id="topic_map" name="topic_map"><strong>
+                        Topic Map</strong></a>
+                    &nbsp;<a href="#toc_topic_map"><strong>&lt;&lt;</strong></a>
+                </td>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <td class="white" align=left>
+                    <i>Notes:</i>
+                    This topic map entry defines the topic <code>internet</code> which has a public
+                    subject indicator as referenced by the URI
+                    <code><b>info:ddc/22/eng//004.678</b></code> (which identifies the
+                    Dewey Decimal Classification <code>Internet</code>) and a base name string of
+                    <code>Internet</code>.
+                </td>
+            </tr>
+            </tfoot>
+            <tbody>
+            <tr>
+                <td bgcolor=#dddddd align=left>
+<pre>
+
+  &lt;topic id="internet"&gt;
+    &lt;subjectIdentity&gt;
+      &lt;subjectIndicatorRef xlink:href="<b>info:ddc/22/eng//004.678</b>" /&gt;
+    &lt;/subjectIdentity&gt;
+    &lt;baseName id="_id123"&gt;
+      &lt;baseNameString&gt;Internet&lt;baseNameString&gt;
+    &lt;/baseName&gt;
+  &lt;/topic&gt;
+</pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        </center>
+        </p>
+        <p>
+            <center>
+        <table width=80% border=1 cellpadding=5>
+            <thead>
+            <tr>
+                <td align=left>
+                    <b>c.</b>
+                    <a id="xlink" name="xlink"><strong>
+                        Extended XLink</strong></a>
+                    &nbsp;<a href="#toc_xlink"><strong>&lt;&lt;</strong></a>
+                </td>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <td class="white" align=left>
+                    <i>Notes:</i>
+                </td>
+            </tr>
+            </tfoot>
+            <tbody>
+            <tr>
+                <td bgcolor=#dddddd align=left>
+<pre>
+
+  &lt;ce:inter-refs&gt;
+    &lt;ce:inter-refs-text id="interref8"&gt;Parts I and II&lt;/ce:inter-refs-text&gt;
+    &lt;ce:inter-ref-end xlink:href="<b>info:pii/S0167-8396(00)00009-1</b>"&gt;
+      &lt;ce:inter-ref-title&gt;Part I&lt;/ce:inter-ref-title&gt;
+    &lt;/ce:inter-ref-end&gt;
+    &lt;ce:inter-ref-end xlink:href="<b>info:pii/S0167-8396(00)00010-8</b>"&gt;
+      &lt;ce:inter-ref-title&gt;Part II&lt;/ce:inter-ref-title&gt;
+    &lt;/ce:inter-ref-end&gt;
+    &lt;ce:inter-refs-link/&gt;
+  &lt;/ce:inter-refs&gt;
+</pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        </center>
+        </p>
+        <p>
+            <center>
+        <table width=80% border=1 cellpadding=5>
+            <thead>
+            <tr>
+                <td align=left>
+                    <b>d.</b>
+                    <a id="rss_feed" name="rss_feed"><strong>
+                        RSS 1.0 Feed - ContextObject (1)</strong></a>
+                    &nbsp;<a href="#toc_rss_feed"><strong>&lt;&lt;</strong></a>
+                </td>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <td class="white" align=left>
+                    <i>Notes:</i>
+                    The ContextObject shown here in an RSS feed
+                    is making use of the <code>mod_context</code> RSS 1.0 module. This is
+                    the same ContextObject as shown below in Example e) but with a different
+                    serialization.
+                </td>
+            </tr>
+            </tfoot>
+            <tbody>
+            <tr>
+                <td bgcolor=#dddddd align=left>
+<pre>
+
+  &lt;channel rdf:about="http://rss.example.com/"&gt;
+    &lt;title&gt;My conetxt-sensitive RSS feed&lt;/title&gt;
+    &lt;link&gt;http://rss.example.com/"&lt;/link&gt;
+
+    &lt;!-- ContextObject => { --&gt;
+    &lt;ctx:ctx_ver>Z39.88-2004&lt;/ctx:ctx_ver&gt;
+    &lt;ctx:rft_id&gt;
+      <b>info:sici/0363-0277(19950315)120:5%3C%3E1.0.TX;2-V</b>
+    &lt;/ctx:rft_id&gt;
+    &lt;ctx:req_id&gt;
+      mailto:a.n.other@example.net
+    &lt;/ctx:req_id&gt;
+    &lt;!-- } --&gt;
+
+    &lt;items&gt;
+      &lt;rdf:Seq&gt;
+        &lt;rdf:li rdf:resource="http://rss.example.com/resource/1" /&gt;
+        &lt;rdf:li rdf:resource="http://rss.example.com/resource/2" /&gt;
+      &lt;/rdf:Seq&gt;
+    &lt;/items&gt;
+  &lt;/channel&gt;
+</pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        </center>
+        <p>
+            <center>
+        <table width=80% border=1 cellpadding=5>
+            <thead>
+            <tr>
+                <td align=left>
+                    <b>e.</b>
+                    <a id="openurl" name="openurl"><strong>
+                        OpenURL Link - ContextObject (2)</strong></a>
+                    &nbsp;<a href="#toc_openurl"><strong>&lt;&lt;</strong></a>
+                </td>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <td class="white" align=left>
+                    <i>Notes:</i>
+                    The ContextObject is shown here on an OpenURL which is requesting context-sensitive services from
+                    the link resolver &lt;http://link.example.com/resolver&gt; for the
+                    referent entity identified by the URI
+                    <code><b>info:sici/0363-0277(19950315)120:5%3C%3E1.0.TX;2-V</b></code>
+                    (which identifies the SICI code
+                    <code>0363-0277(19950315)120:5&lt;&gt;1.0.TX;2-V</code>)
+                    and the requester entity identified by the URI
+                    <code>mailto:a.n.other@example.net</code>. The example OpenURL is text
+                    wrapped with whitespace for readability.
+                </td>
+            </tr>
+            </tfoot>
+            <tbody>
+            <tr>
+                <td bgcolor=#dddddd align=left>
+<pre>
+
+  http://link.example.com/resolver?url_ver=Z39.88-2004
+     &rft_id=<b>info:sici/0363-0277(19950315)120:5%3C%3E1.0.TX;2-V</b>
+     &req_id=mailto:a.n.other@example.net
+</pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        </center>
+        </p>
+        <p>
+            <center>
+        <table width=80% border=1 cellpadding=5>
+            <thead>
+            <tr>
+                <td align=left>
+                    <b>f.</b>
+                    <a id="sru_record" name="sru_record"><strong>
+                        SRU Record</strong></a>
+                    &nbsp;<a href="#toc_sru_record"><strong>&lt;&lt;</strong></a>
+                </td>
+            </tr>
+            </thead>
+            <tfoot>
+            <tr>
+                <td class="white" align=left>
+                    <i>Notes:</i>
+                </td>
+            </tr>
+            </tfoot>
+            <tbody>
+            <tr>
+                <td bgcolor=#dddddd align=left>
+<pre>
+
+&lt;record&gt;
+   &lt;recordSchema&gt;<b>info:srw/schema/1/dc-v1.1</b>&lt;/recordSchema&gt;
+       &lt;recordPacking&gt;xml&lt;/recordPacking&gt;
+    &lt;recordData&gt;
+        &lt;srw_dc:dc&gt;
+            &lt;dc:title&gt;This is a Sample Record&lt;/dc:title&gt;
+        &lt;/srw_dc:dc&gt;
+    &lt;/recordData&gt;
+    &lt;recordPosition&gt;1&lt;/recordPosition&gt;
+    &lt;extraRecordData&gt;
+       &lt;rel:rank&gt;0.965&lt;/rel:rank&gt;
+   &lt;/extraRecordData&gt;
+&lt;/record&gt;
+</pre>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        </center>
+        </p>
+    </li>
+
+</ol>
+
+<h3>G. Comparing <b><i>INFO</i></b> URIs</h3>
+
+<ol>
+
+    <li>
+        <a id="uri_comparison" name="uri_comparison"><strong>
+            Why is comparison of URIs important?</strong></a>
+        &nbsp;<a href="#toc_uri_comparison"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            A prime motivator for comparison of URIs is to improve performance
+            in retrieval operations by using caching mechanisms. A secondary motivator
+            is to equivalence resource identifiers in Web descriptions of information
+            structures to allow those structures to be normalized or merged with other
+            like structures, e.g. the merging of two RDF graphs or the merging of two Topic Maps.
+        </p>
+        <p>
+            As far as <b><i>INFO</i></b> URIs are concerned there are no associated retrieval
+            mechanisms, and the prime motivator
+            for comparison of <b><i>INFO</i></b> URIs
+            is to support the equivalencing of identifiers
+            for information assets.
+        </p>
+
+    </li>
+
+
+    <li>
+        <a id="what_steps" name="what_steps"><strong>
+            What steps should be taken to compare two <b><i>INFO</i></b> URIs?</strong></a>
+        &nbsp;<a href="#toc_what_steps"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            <b><i>INFO</i></b> URIs only exist in absolute form - no relative URI
+            forms are allowed. The normalization steps that should be applied are
+            with respect to the three components of the URI: the "scheme" component, the
+            "namespace" component and the "identifier" component.
+        <p />
+        The following generic normalization steps should be applied:
+        <ol type="a">
+            <li>Normalize the case of the "scheme" component to be
+                lowercase.</li>
+            <li>Normalize the case of the "namespace" component to be
+                lowercase.</li>
+            <li>Unescape all unreserved %-escaped characters in the
+                "namespace" and "identifier" components.</li>
+            <li>Normalize the case of any %-escaped characters in the
+                "namespace" and "identifier" components to be
+                uppercase.</li>
+        </ol>
+        <p />
+        The subsequent namespace-specific normalization steps may be applied:
+        <ol type="a">
+            <li value="5">Normalize the case of the "identifier" component as per
+                any rules that may be recorded in the Registry.</li>
+            <li value="6">Normalize any punctuation characters in the "identifier" component
+                as per
+                any rules that may be recorded in the Registry.</li>
+        </ol>
+
+    </li>
+
+    <li>
+        <a id="info_comparison" name="info_comparison"><strong>
+            Is there an example of comparing <b><i>INFO</i></b> URIs?</strong>
+            &nbsp;<a href="#toc_info_comparison"><strong>&lt;&lt;</strong></a>
+
+            <p>
+                Before comparing <b><i>INFO</i></b> URIs they should be
+                normalized by applying the standard
+                <b><i>INFO</i></b> normalization rules
+                (lowercasing the "scheme" and "namespace" components,
+                unescaping non-reserved characters and uppercasing any
+                %-escaped characters that remain). In the example below four unnormalized forms (Step A), are reduced
+                to normalized forms (Step B). (Subsequent normalization steps are not
+                shown as they would be namespace specific.)
+            <p />
+            The Registry may be consulted for namespace-specific rules on case
+            normalization and punctuation normalization. If these
+            namespace-specific rules are available
+            <b><i>INFO</i></b> URIs may be reduced to a unique canonical form.
+            <p>
+                <center>
+            <table width=80% border=1 cellpadding=5>
+                <tbody>
+                <tr>
+                    <td bgcolor=#dddddd align=left>
+<pre>
+
+   Step A - Unnormalized Forms
+
+   U1. <b>INFO:PII/S0888-7543(02)96852-7</b>
+   U2. <b>info:PII/S0888754302968527</b>
+   U3. <b>info:pii/S0888%2D7543%2802%2996852%2D7</b>
+   U4. <b>info:pii/s0888-7543(02)96852-7</b>
+
+   Step B - Normalized Forms
+
+   N1. <b>info:pii/S0888-7543(02)96852-7</b>
+   N2. <b>info:pii/S0888754302968527</b>
+   N3. <b>info:pii/S0888-7543(02)96852-7</b>
+   N4. <b>info:pii/s0888-7543(02)96852-7</b>
+
+</pre>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            </center>
+            </p>
+
+    </li>
+
+</ol>
+
+
+<h3>H. Historical Perspective</h3>
+
+<ol>
+
+    <li>
+        <a id="background" name="background"><strong>
+            What is the historical background to <b><i>INFO</i></b>?</strong></a>
+        &nbsp;<a href="#toc_background"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            The effort to create the <b><i>INFO</i></b> URI scheme emerged from the ANSI/NISO process to standardize the OpenURL Framework for Context-Sensitive Services (see the
+            <a href="http://library.caltech.edu/openurl/PubComDocs/StdDocs/Part1-Ballot-20031111.pdf">Part 1</a>
+            and
+            <a href="http://library.caltech.edu/openurl/PubComDocs/StdDocs/Part2-Ballot-20031111.pdf">Part 2</a>
+            ballot documents), which requires the ability to describe resources by means of globally unique identifiers.  The Draft Standard for Trial Use released for Public Comment introduced a "proprietary" naming architecture which allowed information assets to be referenced by means of widely used non-URI identifiers (e.g. National Library of Medicine PubMed identifiers, International DOI Foundation Digital Object Identifiers, NASA Astrophysics Data System Bibcodes, and others) which would be registered under the OpenURL Framework.
+        </p>
+        <p>
+            The Public Comment period started March 12<sup>th</sup>, 2003, when the first document was released. Early public feedback led to the decision to fundamentally revise the naming architecture, and to base all resource identification requirements within the OpenURL Framework on URIs alone.  Because it was deemed unrealistic to expect that all namespaces required in the OpenURL Framework would be registered within the URI allocation by the respective Namespace Authorities, the <b><i>INFO</i></b> URI effort was launched.
+        </p>
+    </li>
+
+    <li>
+        <a id="consultation" name="consultation"><strong>
+            What consultations preceded the development of <b><i>INFO</i></b>?</strong></a>
+        &nbsp;<a href="#toc_consultation"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            Development of the <b><i>INFO</i></b> URI scheme is being conducted under the auspices of NISO, together with consultation from the IETF and the W3C.
+            A consultation document
+            "<a
+                href="http://info-uri.info/registry/docs/misc/Bootstrapping%20the%20Web.htm">Bootstrapping the Web</a>"
+            was prepared to analyse the options available.
+        </p> <p>
+        On June 19<sup>th</sup> 2003, representatives from NISO, NISO Committee AX on OpenURL Framework standardization, the IETF, and the W3C met to discuss the requirements with respect to the identification of resources in the OpenURL Framework. More specifically, this group discussed how to handle the ORI and XRI Naming Environments introduced in the OpenURL Framework Draft Standard for Trial Use as an integral part of the Internet's URI environment.
+        There was a general consensus to proceed with registration of a toplevel URI scheme and follow on meetings with representatives from the various communities were scheduled.
+    </p>
+
+    </li>
+
+    <li>
+        <a id="next_steps" name="next_steps"><strong>
+            What were the next steps in the development of <b><i>INFO</i></b>?</strong></a>
+        &nbsp;<a href="#toc_next_steps"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            It was recognized that these resource identifiers would have a much wider applicability to many Web-based applications and it was decided to decouple this URI scheme from the OpenURL Framework and to name it
+            <b><i>INFO</i></b>. An
+            Internet-Draft
+            was duly prepared and posted to the Internet-Drafts repository on
+            September 30<sup>th</sup>, 2003.
+            This was also widely communicated to various mailing lists
+            and there was much discussion of the new <b><i>INFO</i></b> URI scheme on the
+            public
+            <a href="http://lists.w3.org/Archives/Public/uri/2003Oct/">uri@w3.org</a>
+            mailing list.
+        </p>
+
+    </li>
+
+    <li>
+        <a id="current" name="current"><strong>
+            What is the current position of <b><i>INFO</i></b>?</strong></a>
+        &nbsp;<a href="#toc_current"><strong>&lt;&lt;</strong></a>
+
+        <p>
+            The final specification of <b><i>INFO</i></b>
+            <a href="http://www.ietf.org/rfc/rfc4452.txt">RFC 4452</a> was published
+            April 2006 which,
+            together with this FAQ, will guide Web applications,
+            such as OpenURL Framework implementations and others,
+            in making use of the <b><i>INFO</i></b> URI scheme to deploy legacy
+            identifiers within the World Wide Web global information architecture.
+        </p>
+        <p>
+            Both the OpenURL Framework and <b><i>INFO</i></b> are now approved
+            information standards and can be used securely in this capacity.
+        </p>
+        <p>
+            The <b><i>INFO</i></b> <a href="http://info-uri.info/registry/">Registry</a>
+            has been established and namespace registrations are currently being processed. A Registry policy document is available as a work in progress from the
+            <b><i>INFO</i></b> <a href="http://info-uri.info/">website</a>. An <a
+                href="http://errol.oclc.org/info-uri.info.rss">RSS feed</a> is also
+            available to alert subscribers to newly registered <b><i>INFO</i></b>
+            namespaces.
+        </p>
+        <p>
+            NISO Committee AX completed its work on the OpenURL Framework
+            standardization at its last face-to-face meeting on October
+            27<sup>th</sup>/28<sup>th</sup>, 2003 and handed over to NISO the final documents.
+            The ANSI/NISO information standard
+            <a href="http://www.niso.org/standards/z39-88-2004/">Z39.88-2004</a>
+            was duly balloted and
+            approved for
+            publication April
+            15<sup>th</sup>, 2005.
+        </p>
+
+    </li>
+
+</ol>
+
+<hr />
+
+</body>
+</html>
