@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet type="text/xsl" href="infouri.xsl"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:35:35Z</responseDate><request identifier="info:bibcode/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:bibcode/</identifier><datestamp>2003-12-17</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+	<info-namespace>bibcode</info-namespace>
+        <namespace-title>Namespace of Astrophysics Data System bibcodes</namespace-title>
+	<registration-date>2003-10-09</registration-date>
+	<namespace-authority>
+		<organisation-name>NASA Astrophysics Data System</organisation-name>
+		<organisation-address>1815 Mass. Ave. MS-31 Cambridge, MA 02140. USA</organisation-address>
+		<organisation-uri>http://adswww.harvard.edu/</organisation-uri>
+		<contact-person>Guenther Eichhorn</contact-person>
+		<contact-email>gei@cfa.harvard.edu</contact-email>
+		<contact-tel>+1 617 495 7260</contact-tel>
+	</namespace-authority>
+	<identifier-syntax>
+		<description>The bibcode syntax is: yyyyjjjjjvvvvlppppa where:
+		* yyyy: Year of publication
+		* jjjjj: A standard abbreviation for the journal. A list of
+                  abbreviations is available at
+                  http://adsabs.harvard.edu/abs_doc/journal_abbr.html
+		* vvvv: The volume number (for a journal) or an abbreviation
+                  that specifies what type of publication it is (e.g. conf for
+                  conference proceedings, meet for Meeting proceedings, book
+                  for a book, cong for congress proceedings). Volume numbers
+                  are left padded with periods.
+		* m: Qualifier for publication: L for Letter, P for Pink page,
+                  Q-Z: Unduplicating character for identical codes
+		* pppp: Page number.  Page numbers are left padded with
+                  periods.
+		* a: The first letter of the last name of the first author.</description>
+		<uri>http://adsdoc.harvard.edu/abs_doc/help_pages/bibcodes.html</uri>
+	</identifier-syntax>
+	<identifier-normalization>
+		<description>bibcode identifiers are case-sensitive.  For the jjjjj part of the identifier,
+the case provides some information: all letters are lower case for conferences,
+while for journals the first letter is always upper case and the other letters
+are mixed case.  For the l part of the identifier (14th position), the case
+also provides some information, even though it does not distinguish between
+different bibcodes.  Lower case letters are used for issue numbering, while
+uppercase letters are used for unduplicating bibcodes and for Letters pages.</description>
+	</identifier-normalization>
+	<namespace-information>
+		<uri>http://adsabs.harvard.edu/abs_doc/journal_abbr.html</uri>
+	</namespace-information>
+</info-registry-entry></metadata></record></GetRecord></OAI-PMH>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet type="text/xsl" href="infouri.xsl"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:38:39Z</responseDate><request identifier="info:lccn/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:lccn/</identifier><datestamp>2003-12-17</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+	<info-namespace>lccn</info-namespace>
+        <namespace-title>Namespace of Library of Congress Control Numbers</namespace-title>
+	<registration-date>2003-11-10</registration-date>
+	<namespace-authority>
+		<organisation-name>Library of Congress</organisation-name>
+		<organisation-address>101 Independence Ave. Washington DC 20540. USA</organisation-address>
+		<organisation-uri>http://www.loc.gov</organisation-uri>
+		<contact-person>Ray Denenberg</contact-person>
+		<contact-email>rden@loc.gov</contact-email>
+		<contact-tel>+1 202 707 5795</contact-tel>
+	</namespace-authority>
+	<identifier-syntax>
+		<description>A character string of  length eight to twelve characters.  (For purposes of
+this description  characters are ordered from left to right --  &quot;first&quot; means
+&quot;leftmost&quot;.)
+The rightmost eight characters are always digits. 
+If the length is 9, then the first character must be alphabetic.
+If the length is 10, then the first two characters must be either both digits
+or both aplhabetic.
+If the length is 11,  then the first character must be alphabetic, the next
+two characters must be either both digits or both alphabetic.
+If the length is 12,  then the first two characters must be alphabetic and the
+remaining characters digits.</description>
+		<uri>http://www.loc.gov/marc/lccn-namespace.html#syntax</uri>
+	</identifier-syntax>
+	<identifier-normalization>
+		<description>An LCCN is to be normalized to its canonical form described in the syntax
+description above, as follows:
+1. Remove all blanks.
+2. If there is a forward slash (/) in the string, remove it, and remove all
+   characters to the right of the forward slash.
+3. If there is a hyphen in the string:
+     a. Remove it.
+     b. Inspect the substring following (to the right of) the (removed) hyphen.
+        Then (and assuming that steps 1 and 2 have been carried out):
+           i.  All these characters should be digits, and there should be six
+               or less.
+           ii. If the length of the substring is less than 6, left-fill the
+               substring with zeros until  the length is six.
+
+Examples:
+     &quot;n78-890351&quot; normalizes to &quot;n78890351&quot;.  
+     &quot;n78-89035&quot; normalizes to &quot;n78089035&quot;.  
+     &quot;n  78890351 &quot; normalizes to  &quot;n78890351&quot;.  
+     &quot;   85000002 &quot;  normalizes to  &quot;85000002&quot; 
+     &quot;85-2 &quot;  normalizes to  &quot;85000002&quot; 
+     &quot;2001-000002&quot; normalizes to  &quot;2001000002&quot; 
+     &quot;75-425165//r75&quot; normalizes to &quot;75425165&quot;      
+     &quot;   79139101 /AC/r932&quot; normalizes to &quot;79139101&quot;</description>
+		<uri>http://www.loc.gov/marc/lccn-namespace.html#normalization</uri>
+	</identifier-normalization>
+	<namespace-information>
+		<description>The LCCN namespace consists of identifiers, one corresponding to every
+assigned LCCN (Library of Congress Control Number). Any LCCN may have various
+forms which all normalize to a single canonical form; only normalized values
+are included in the LCCN namespace.	
+	An LCCN is an identifier assigned by the Library of Congress for a
+metadata record (e.g., bibliographic record, authority record). LCCNs have
+three components: prefix, year, and serial number. The prefix is optional; if
+present, it has one to three lowercase alphabetic characters. (Prefixes are
+maintained in a controlled list.) The year is two or four digits. (For 2000 and
+earlier the year is two digits, for 2001 and later, four digits.) The serial
+number (after normalization) is six digits. (An un-normalized LCCN may have a
+serial number of 1-6 digits, which is left-filled with zeros when normalized.)</description>
+		<uri>http://www.loc.gov/marc/lccn-namespace.html#info</uri>
+	</namespace-information>
+</info-registry-entry></metadata></record></GetRecord></OAI-PMH>

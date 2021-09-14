@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet type="text/xsl" href="infouri.xsl"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:36:52Z</responseDate><request identifier="info:doi/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:doi/</identifier><datestamp>2005-12-19</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+	<info-namespace>doi</info-namespace>
+        <namespace-title>Namespace of Digital Object Identifiers</namespace-title>
+	<registration-date>2003-11-17</registration-date>
+	<namespace-authority>
+		<organisation-name>International DOI Foundation</organisation-name>
+		<organisation-address>Linacre House, Jordan Hill, Oxford, OX2 8DP, United Kingdom</organisation-address>
+		<organisation-uri>http://www.doi.org/</organisation-uri>
+		<contact-person>Norman Paskin</contact-person>
+		<contact-email>n.paskin@doi.org</contact-email>
+		<contact-tel>+44 1865 314033</contact-tel>
+	</namespace-authority>
+	<identifier-syntax>
+		<description>The syntax of the DOI string is: DIR&quot;.&quot;REG&quot;/&quot;DSS
+where 
+DIR is the Directory Code assigned by the International DOI Foundation,
+REG is the Registrant Code assigned to the Registrant by the International DOI
+Foundation, and 
+DSS is the DOI Suffix String which is assigned by the Registrant.
+There is no limit on the length of a DOI string, or any of its components.
+Legal characters are the legal graphic characters of Unicode.</description>
+		<uri>http://www.niso.org/standards/resources/Z39-84-2000.pdf</uri>
+	</identifier-syntax>
+	<identifier-normalization>
+		<description>DOIs are case insensitive. All DOIs are converted to upper case upon
+registration, which is a common practice for making any kind of service case
+insensitive. The same is true with resolution. The DOI syntax standard
+(ANSI/NISO Z39.84-2000) allows DOI suffixes to be case sensitive.</description>
+	</identifier-normalization>
+	<namespace-information>
+		<uri>http://dx.doi.org/10.1000/182</uri>
+	</namespace-information>
+	<service-mechanism>
+		<uri>http://dx.doi.org/</uri>
+	</service-mechanism>
+</info-registry-entry></metadata></record></GetRecord></OAI-PMH>

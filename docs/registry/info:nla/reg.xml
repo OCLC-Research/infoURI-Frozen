@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet type="text/xsl" href="infouri.xsl"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:39:24Z</responseDate><request identifier="info:nla/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:nla/</identifier><datestamp>2004-09-30</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+	<info-namespace>nla</info-namespace>
+        <namespace-title>Namespace of identifiers for the
+National Library of Australia&apos;s digital &amp; digitised collections</namespace-title>
+	<registration-date>2004-09-27</registration-date>
+	<namespace-authority>
+		<organisation-name>National Library
+of Australia</organisation-name>
+		<organisation-address>Parkes Place,
+Canberra, ACT, 2600, Australia</organisation-address>
+		<organisation-uri>www.nla.gov.au</organisation-uri>
+		<contact-person>Tony Boston</contact-person>
+		<contact-email>dsp@nla.gov.au</contact-email>
+		<contact-tel>+61 2 6262 1111</contact-tel>
+	</namespace-authority>
+	<identifier-syntax>
+		<description>Each identifier starts with &lt;info:nla/collection-id&gt;, where the &lt;collection-id&gt; represents one of the following sub-namespaces. The syntax of the remainder of the identifier following the sub-namespace varies according to the type of object. 
+
+Manuscripts: /ms-&lt;ms collection no.&gt;-&lt;series no.&gt;-&lt;item no.&gt;-&lt;sequence no.&gt;-&lt;tile no.&gt;-&lt;role code&gt; 
+Example: 
+info:nla/ms-ms9-1-s1-e
+which is currently resolvable as:
+http://nla.gov.au/nla.ms-ms9-1-s1-e (examination copy of the first page of the first item in series 1 of the papers of Sir Joseph Banks.) 
+
+
+
+Oral History: /oh-&lt;trc collection no.&gt;-&lt;series no.&gt;-&lt;item no.&gt;-&lt;part no.&gt;-&lt;sequence no.&gt;-&lt;piece no.&gt;-&lt;fragment no.&gt;-&lt;role code&gt; 
+
+Example: 
+info:nla/oh-0234-0003-0001-m
+which is currently resolvable as:
+http://nla.gov.au/nla.oh-0234-0003-0001-m (master recording of the first tape in series 3 of TRC0234) 
+
+Maps: /map-&lt;item no.&gt;-&lt;part no.&gt;-&lt;sequence no.&gt;-&lt;tile no.&gt;-&lt;subTile no.&gt;-&lt;role code&gt; 
+Example: 
+info:nla/map-rm2099-t
+which is currently resolvable as:
+http://nla.gov.au/nla.map-rm2099-t (a thumbnail copy of rare map number 2099) 
+
+Pictures: /pic-&lt;item no.&gt;-&lt;part no.&gt;-&lt;sequence no.&gt;-&lt;role code&gt; 
+
+Example: 
+info:nla/nla.pic-an6729917-t
+which is currently resolvable as:
+http://nla.gov.au/nla.pic-an6729917-t (a thumbnail copy of a single picture from the Ellis Rowan collection) 
+
+Music: /mus-&lt;item no.&gt;-&lt;sequence no.&gt;-&lt;role code&gt; 
+
+Example: 
+info:nla/nla.mus-an7579855-s2 
+which is currently resolvable as:
+http://nla.gov.au/nla.mus-an7579855-s2 (an unnumbered title page that is the second image in the group representing music item 7579855) 
+
+Monographs (gen=General Collection; aus=Australian Collection): /gen-&lt;work no.&gt;-&lt;chapter no.&gt;-&lt;section no.&gt;-&lt;sequence no.&gt;-&lt;role code&gt; .aus-&lt;work no.&gt;-&lt;chapter no.&gt;-&lt;section no.&gt;-&lt;sequence no.&gt;-&lt;role code&gt; 
+
+Example: 
+info:nla/nla.gen-isbn0590353403-2-s1-v
+which is currently resolvable as:
+http://nla.gov.au/nla.gen-isbn0590353403-2-s1-v (a view copy of the first page of chapter 2 the book with this ISBN) 
+
+
+Serials (gen=General Collection; aus=Australian Collection): /gen-&lt;serial identifier&gt;-&lt;issue vol.&gt;-&lt;issue no.&gt;-&lt;issue part&gt;-&lt;issue date&gt;-&lt;subUnit no.&gt;-&lt;sequence no.&gt;-&lt;role code&gt; .aus-&lt;serial identifier&gt;-&lt;issue vol.&gt;-&lt;issue no.&gt;-&lt;issue part&gt;-&lt;issue date&gt;-&lt;subUnit no.&gt;-&lt;sequence no.&gt;-&lt;role code&gt; 
+
+Example: 
+info:nla/nla.aus-issn10399992-s1-v
+which is currently resolvable as:
+http://nla.gov.au/nla.aus-issn10399992-s1-v (a view copy of the first page of the serial with this ISSN) 
+</description>
+
+		<uri></uri>
+	</identifier-syntax>
+	<identifier-normalization>
+		<description>The brackets &lt; &gt; are not part of the identifier itself.</description>
+		<uri>http://www.nla.gov.au/initiatives/nlapi.html</uri>
+	</identifier-normalization>
+	<namespace-information>
+		<description>To identify a born-digital or a digitised object in the managed digital collections of the National Library of Australia, an intelligent identifier has been constructed which utilises a sub-namespace to encode the collection type and, based on the type, rules for accessing component parts of the object.</description>
+		<uri>http://www.nla.gov.au/nla/staffpaper/2002/boston2.html</uri>
+	</namespace-information>
+</info-registry-entry></metadata></record></GetRecord></OAI-PMH>

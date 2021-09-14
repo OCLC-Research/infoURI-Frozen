@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet type="text/xsl" href="infouri.xsl"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:37:38Z</responseDate><request identifier="info:hdl/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:hdl/</identifier><datestamp>2006-01-09</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+<info-namespace>hdl</info-namespace>
+<namespace-title>Namespace for Handles</namespace-title>
+<registration-date>2005-12-07</registration-date>
+<namespace-authority>
+<organisation-name>Corporation for National Research Initiatives</organisation-name>
+<organisation-address>1895 Preston White Drive, Suite 100, Reston, Virginia  20191</organisation-address>
+<organisation-uri>http://www.cnri.reston.va.us</organisation-uri>
+<contact-person>Catherine Rey</contact-person>
+<contact-email>crey@cnri.reston.va.us</contact-email>
+<contact-tel>703-620-8990</contact-tel>
+<contact-uri></contact-uri>
+</namespace-authority>
+<identifier-syntax>
+<description>The syntax of the handle string is: PREFIX&quot;/&quot;SUFFIX where PREFIX is a globally unique string identifying the administrative unit of the handle; and SUFFIX is any unique &quot;local name&quot; chosen by the prefix holder. Handles may consist of any printable characters from the UCS-2 character set. There is no limit on the length of a handle string, nor on any of its components. A handle SUFFIX may contain any characters defined in UCS-2. A handle PREFIX may contain any characters defined in UCS-2, except the character &apos;/&apos;.</description>
+<uri>http://www.ietf.org/rfc/rfc3650.txt</uri>
+</identifier-syntax>
+<identifier-normalization>
+<description>By default, handles are case sensitive; however, any handle service may define its namespace under which all ASCII characters within any identifier are case insensitive.</description>
+<uri>http://www.ietf.org/rfc/rfc3650.txt</uri>
+</identifier-normalization>
+<identifier-examples>
+<identifier-example>
+<native>4263537/4000</native>
+<info-uri>info:hdl/4263537/4000</info-uri>
+</identifier-example>
+<identifier-example>
+<native></native>
+<info-uri></info-uri>
+</identifier-example>
+<identifier-example>
+<native></native>
+<info-uri></info-uri>
+</identifier-example>
+</identifier-examples>
+<namespace-information>
+<description></description>
+<uri>http://www.handle.net/overviews/handle-syntax.html</uri>
+</namespace-information>
+<service-mechanism>
+<uri>http://hdl.handle.net/</uri>
+</service-mechanism>
+</info-registry-entry></metadata></record></GetRecord></OAI-PMH>

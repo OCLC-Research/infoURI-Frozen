@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet type="text/xsl" href="infouri.xsl"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:39:36Z</responseDate><request identifier="info:nyu/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:nyu/</identifier><datestamp>2010-05-12</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+<info-namespace>nyu</info-namespace>
+<namespace-title>Identifiers for New York University Digital Objects</namespace-title>
+<registration-date></registration-date>
+<namespace-authority>
+<organisation-name>New York University</organisation-name>
+<organisation-address>70 Washington Square South, New York, NY 10012</organisation-address>
+<organisation-uri>http://www.nyu.edu</organisation-uri>
+<contact-person>Rasan Rasch</contact-person>
+<contact-email>dl-support@nyu.edu</contact-email>
+
+<contact-tel></contact-tel>
+<contact-uri>http://dlib.nyu.edu</contact-uri>
+</namespace-authority>
+<identifier-syntax>
+<description>An  &apos;info&apos; URI with  namespace  &apos;nyu&apos; takes the form:
+  info:nyu/&lt;nyu-info-subspace&gt;/&lt;subspace-specific-string&gt;
+
+nyu-info-subspace
+  nyu-info-subspace = ALPHA *( ALPHA / DIGIT )
+
+  i.e. alphanumeric with leading alphabetic character.
+
+  Values of nyu-info-subspace are assigned by NYU Libraries. 
+
+subspace-specific-string
+  subspace-specific-string = 
+    subspace-specific-component *(&quot;/&quot; subspace-specific-component) 
+
+  subspace-specific-component
+    subspace-specific-component = pchar *(pchar) 
+
+  pchar (etc.)
+    pchar is as defined in RFC 3986, that is:
+    pchar  = unreserved / pct-encoded / sub-delims / &quot;:&quot; / &quot;@&quot;
+    unreserved    = ALPHA / DIGIT / &quot;-&quot; / &quot;.&quot; / &quot;_&quot; / &quot;~&quot;
+    pct-encoded = &quot;%&quot; HEXDIG HEXDIG
+    sub-delims  = &quot;!&quot; / &quot;$&quot; / &quot;&amp;&quot; / &quot;&apos;&quot; / &quot;(&quot; / &quot;)&quot;  / &quot;*&quot; / &quot;+&quot; / &quot;,&quot; / &quot;;&quot; / &quot;=&quot;
+
+    ALPHA, DIGIT, AND HEXDIG are as defined in RFC 2234: 
+    upper or  lower case alphabetic (A-Z / a-z), decimal digit (0-9), 
+    and hexadecimal digit (DIGIT / &quot;A&quot; / &quot;B&quot; / &quot;C&quot; / &quot;D&quot; / &quot;E&quot; / 
+    &quot;F&quot;)  respectively.
+
+    Percent Encoded Characters  
+    No characters in general need to be percent encoded. 
+
+    Acknowledgements: 
+    the text and form of this registration was based on Ray Denenberg&apos;s info:lc registration.
+
+Additional information on the info:nyu namespace can be found here:</description>
+<uri>http://hdl.handle.net/2333.1/v9s4mww5</uri>
+</identifier-syntax>
+
+<identifier-normalization>
+<description>All identifiers in the info:nyu namespace are case-sensitive.</description>
+<uri>http://hdl.handle.net/2333.1/v9s4mww5</uri>
+</identifier-normalization>
+<identifier-examples>
+<identifier-example>
+<native></native>
+<info-uri>info:nyu/dl/v1.0/files/xpnvx139</info-uri>
+</identifier-example>
+<identifier-example>
+<native></native>
+<info-uri>info:nyu/dl/v1.0/aips/mw6m90b/versions/1</info-uri>
+</identifier-example>
+
+<identifier-example>
+<native></native>
+<info-uri>info:nyu/dl/v1.0/sips/sxksn1k/state
+
+</info-uri>
+</identifier-example>
+<identifier-example>
+<native></native>
+<info-uri>info:nyu/dl/v1.0/files/xpnvx139/fixity
+</info-uri>
+</identifier-example>
+<identifier-example>
+<native></native>
+<info-uri>info:nyu/dl/v1.0/agents/software/droid/versions/4.0.0
+</info-uri>
+</identifier-example>
+<identifier-example>
+<native></native>
+
+<info-uri></info-uri>
+</identifier-example>
+</identifier-examples>
+<namespace-information>
+<description>Identifiers in the info:nyu namespace will be used to identify information assets in New York University systems.  Identifiers will vary by nyu-info-subspace.</description>
+<uri>http://hdl.handle.net/2333.1/v9s4mww5</uri>
+</namespace-information>
+<service-mechanism>
+<description>There are no service mechanisms defined for the info:nyu namespace.
+Please refer to the following URI for additional information:
+</description>
+<uri>http://hdl.handle.net/2333.1/v9s4mww5</uri>
+</service-mechanism>
+</info-registry-entry></metadata></record></GetRecord></OAI-PMH>

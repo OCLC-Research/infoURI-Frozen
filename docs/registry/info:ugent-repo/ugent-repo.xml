@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet type="text/xsl" href="infouri.xsl"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:41:37Z</responseDate><request identifier="info:ugent-repo/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:ugent-repo/</identifier><datestamp>2005-03-22</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+	<info-namespace>ugent-repo</info-namespace>
+        <namespace-title>Namespace of identifiers for the University Library Ghent information assets</namespace-title>
+	<registration-date>2005-03-22</registration-date>
+	<namespace-authority>
+		<organisation-name>Ghent University, Central Library</organisation-name>
+		<organisation-address>Rozier 9, 9000 Gent, Belgium</organisation-address>
+		<organisation-uri>http://lib.ugent.be</organisation-uri>
+		<contact-person>Patrick Hochstenbach</contact-person>
+		<contact-email>libservice@ugent.be</contact-email>
+		<contact-tel>+32 (0)9 264 7980</contact-tel>
+	</namespace-authority>
+	<identifier-syntax>
+		<description>Identifiers in the ugent-repo namespace are used to
+identify information assets used in the Los Alamos aDORe
+repository at the University Library Ghent. The syntax is of
+the form:
+
+     info:ugent-repo/_type_/_identifier_
+
+whereby:
+
+     _type_  gives an indication of the nature and
+             purpose of the identifier. Current values
+             for _type_ include &apos;i&apos; , &apos;opac&apos;. Their
+             meaning is explained in the Namespace
+             Information section of the info:lanl-repo
+             namespace.
+
+     _identifier_  is a unique string assigned to the
+             information asset.
+
+Examples:
+*    info:ugent-repo/i/000b8c20-51b3-11d8-94f8-e15f3b151c3cffff
+*    info:ugent-repo/opac/rug01-0219201</description>
+                <uri></uri>
+	</identifier-syntax>
+	<identifier-normalization>
+		<description>All identifiers in the ugent-repo namespace are case-sensitive.</description>
+	</identifier-normalization>
+        <identifier-examples>
+          <identifier-example>
+            <native>000b8c20-51b3-11d8-94f8-e15f3b151c3cffff</native>
+            <info-uri>info:ugent-repo/i/000b8c20-51b3-11d8-94f8-e15f3b151c3cffff</info-uri>
+          </identifier-example>
+          <identifier-example>
+            <native>rug01-0219201</native>
+            <info-uri>info:ugent-repo/opac/rug01-0219201</info-uri>
+          </identifier-example>
+        </identifier-examples>
+</info-registry-entry></metadata></record></GetRecord></OAI-PMH>

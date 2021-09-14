@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet type="text/xsl" href="infouri.xsl"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:38:17Z</responseDate><request identifier="info:lanl-repo/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:lanl-repo/</identifier><datestamp>2004-04-06</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry C:\herbertv\NISO-id\2004-03-09\info-uri-registry.xsd.xml">
+	<info-namespace>lanl-repo</info-namespace>
+	<namespace-title>Namespace of identifiers used in the Repository of the LANL Research Library</namespace-title>
+	<registration-date>2004-04-05</registration-date>
+	<namespace-authority>
+		<organisation-name>Los Alamos National Laboratory, Research Library</organisation-name>
+		<organisation-address>MS-P362, PO Box 1663, Los Alamos, NM 87545-1362, USA</organisation-address>
+		<contact-person>Herbert Van de Sompel</contact-person>
+		<contact-email>lww@lanl.gov</contact-email>
+		<contact-tel>+1 505 667 4448</contact-tel>
+		<contact-uri>http://library.lanl.gov</contact-uri>
+	</namespace-authority>
+	<identifier-syntax>
+<description>Identifiers in the lanl-repo namespace are used to identify information assets
+used in the repository of the Research Library of the Los Alamos National
+Laboratory.  The syntax is of the form:
+info:lanl-repo/_type_/_identifier_
+whereby:
+∙	_type_ gives an indication of the nature and purpose of the identifier.
+Current values for _type_ include &apos;i&apos; , &apos;svc&apos; , &apos;voc&apos; .  Their meaning is
+explained in the Namespace Information section.
+∙	_identifier_ is a unique string assigned to the information asset.
+Examples:
+∙	info:lanl-repo/i/000b8c20-51b3-11d8-94f8-e15f3b151c3c 
+∙	info:lanl-repo/opac/125874
+∙	info:lanl-repo/svc/tomods.marc
+∙	info:lanl-repo/voc/hasProfile
+</description></identifier-syntax>
+<identifier-normalization>
+<description>All identifiers in the lanl-repo namespace are case-sensitive.</description>
+</identifier-normalization>
+<namespace-information>
+<description>Identifiers in the lanl-repo namespace are used to identify information assets
+used in the repository of the Research Library of the Los Alamos National
+Laboratory.  Different types of identifiers are used in the repository,
+including:
+∙	Repository Identifiers: Identifiers assigned by the repository
+ingestion process to MPEG-21 DIDL XML wrapper documents that are the unit of
+storage in the repository.  These identifiers are also used for the
+identification of DIDL Items and DIDL Components (see MPEG-21 DIDL data model)
+contained in such XML wrapper documents.  These identifiers are of the form:
+info:lanl-repo/i/_identifier_ whereby _identifier_ is a unique string assigned
+to an XML wrapper document.  For the identification of DIDL Items and DIDL
+Components, fragments are used.
+Example: info:lanl-repo/i/000b8c20-51b3-11d8-94f8-e15f3b151c3c .
+∙	Content Identifiers: Identifiers that are natively attached to a (set
+of) datastream(s) before ingestion into the repository.  They are typically
+inherited from the ingested materials, as, in many cases those materials have
+identifiers that were attached to them when they were created/published.  These
+identifiers are of the form: info:lanl-repo/_namespace_/_identifier_ whereby
+_namespace references the namespace from which identifiers were inherited, and
+_identifier_ is an identifier in that namespace.
+Example: info:lanl-repo/opac/125874
+∙	ServiceType identifiers: Identifiers accorded to services that can be
+applied to repository content.  These identifiers are of the form
+info:lanl-repo/svc/_identifier_ whereby _identifier_ is a unique string
+acorded to a specific service.  Example: info:lanl-repo/svc/tomods.marc.
+∙	Identifiers for vocabulary terms: Identifiers used to represent
+properties of assets stored in the repository, or relationships between such
+assets.  These identifiers are used in RDF statements.  These identifiers are
+of the form info:lanl-repo/voc/_identifier_ whereby _identifier_ is a unique
+string acorded to a property or type of relationship.
+Example: info:lanl-repo/voc/hasProfile .</description>
+</namespace-information>
+</info-registry-entry></metadata></record></GetRecord></OAI-PMH>

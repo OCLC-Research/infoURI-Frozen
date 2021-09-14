@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet type="text/xsl" href="infouri.xsl"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:40:55Z</responseDate><request identifier="info:rlgid/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:rlgid/</identifier><datestamp>2005-02-14</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+	<info-namespace>rlgid</info-namespace>
+        <namespace-title>Namespace of RLG Database Record identifiers</namespace-title>
+	<registration-date>2005-02-14</registration-date>
+	<namespace-authority>
+		<organisation-name>RLG</organisation-name>
+		<organisation-address>2029 Stierlin Ct., Suite 100, Mountain View, CA 94043-4684, USA</organisation-address>
+		<organisation-uri>http://www.rlg.org</organisation-uri>
+		<contact-person>Walt Crawford</contact-person>
+		<contact-email>wcc@notes.rlg.org</contact-email>
+		<contact-tel>+1 650 691 2227</contact-tel>
+	</namespace-authority>
+	<identifier-syntax>
+		<description>An rlgid is a unique identifier assigned to any bibliographic record
+either within the RLG Union Catalog or any RLG-mounted database. These
+identifiers are assigned automatically on records entered online and
+maintained on batch-loaded records so as to assure uniqueness in records
+loaded in batch form. rlgid identifiers are composed of digits, letters,
+and (optionally) a single dash. There is no explicit limit on the length
+of an rlgid, and an rlgid does not carry significance other than to
+identify a specific bibliographic record.
+
+The uri provided below describes rlgid structure within the RLG Union
+Catalog; equivalent structures (with different letter identifiers) are
+used for other RLG-mounted databases.</description>
+                <uri>http://www.rlg.org/rlinmarc.html#001</uri>
+	</identifier-syntax>
+	<identifier-normalization>
+		<description>RLG identifiers (rlgid instances) in the RLG Union Catalog frequently
+appear in the 035 tag (System Control Number) of MARC21 records. In
+these cases, the rlgid is preceded by a code contained within parentheses
+and representing the originating institution, e.g. (CStRLIN). The leading
+code, including parentheses and any following spaces, is stripped off to
+create a proper rlgid.
+
+Letters within rlgid instances are not case-sensitive.
+
+The single dash that may appear within an rlg may be omitted (but not
+replaced by a space).</description>
+	</identifier-normalization>
+        <identifier-examples>
+          <identifier-example>
+            <native>CTYG87-B14807</native>
+            <info-uri>info:rlgid/CTYG87-B14807</info-uri>
+          </identifier-example>
+        </identifier-examples>
+
+</info-registry-entry></metadata></record></GetRecord></OAI-PMH>

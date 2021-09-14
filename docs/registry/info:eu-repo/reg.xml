@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet type="text/xsl" href="infouri.xsl"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:37:11Z</responseDate><request identifier="info:eu-repo/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:eu-repo/</identifier><datestamp>2014-02-17</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+<info-namespace>eu-repo</info-namespace>
+<namespace-title>Namespace of identifiers used by the European Repository Systems for describing semantic relationships in Compound and Complex documents.</namespace-title>
+<registration-date>2008-05-13</registration-date>
+<namespace-authority>
+<organisation-name>Confederation of Open Access Repositories (COAR)</organisation-name>
+<organisation-address>Gottingen State and University Library, Platz der Gottinger Sieben 1, 37073 Gottingen, Germany</organisation-address>
+<organisation-uri>https://www.coar-repositories.org/</organisation-uri>
+<contact-person>Controlled Vocabulary Authority Group</contact-person>
+<contact-email>coar-vocabularies@sub.uni-goettingen.de</contact-email>
+
+<contact-tel></contact-tel>
+<contact-uri>https://www.coar-repositories.org/activities/repository-interoperability/ig-controlled-vocabularies-for-repository-assets/</contact-uri>
+</namespace-authority>
+<identifier-syntax>
+<description>Identifiers in the eu-repo namespace are used to identify 
+information assets used in the European Research Libraries. 
+The syntax is of the form:
+  info:eu-repo/_type_/_identifier_
+
+whereby:
+* _type_ gives an indication of the nature and purpose of 
+the identifier.
+Current values for _type_ include: &apos;semantics&apos; and &apos;dai&apos;.  The meaning 
+is explained in the Namespace Information section.
+* _identifier_ is a unique string assigned to the 
+information asset.
+* _identifier_ can be replaced by _subType_/_identifier_
+
+Examples:
+* info:eu-repo/semantics/descriptiveMetadata
+* info:eu-repo/semantics/objectFile
+* info:eu-repo/semantics/humanStartPage
+* info:eu-repo/dai/nl/12345
+* info:eu-repo/semantics/researchProposal
+</description>
+<uri></uri>
+</identifier-syntax>
+<identifier-normalization>
+<description>All identifiers in the eu-repo namespace are case-sensitive.</description>
+<uri></uri>
+</identifier-normalization>
+<identifier-examples>
+
+<identifier-example>
+<native></native>
+<info-uri>info:eu-repo/semantics/objectFile</info-uri>
+</identifier-example>
+<identifier-example>
+<native></native>
+<info-uri></info-uri>
+</identifier-example>
+<identifier-example>
+<native></native>
+<info-uri></info-uri>
+</identifier-example>
+<identifier-example>
+<native></native>
+<info-uri></info-uri>
+</identifier-example>
+
+<identifier-example>
+<native></native>
+<info-uri></info-uri>
+</identifier-example>
+<identifier-example>
+<native></native>
+<info-uri></info-uri>
+</identifier-example>
+</identifier-examples>
+<namespace-information>
+<description>Identifiers in the eu-repo namespace are used to identify 
+information assets used in the European Research Libraries.  
+Different types of identifiers are used in the repository,
+including: Semantic  Identifiers, Publication Types and 
+Digital Author Identifiers.
+
+# Identifiers for Semantic terms: Identifiers used to 
+represent properties of assets stored in the repository, or 
+relationships between such assets.  These identifiers are 
+used in RDF or DIDL statements.  These identifiers are of 
+the form 
+info:eu-repo/semantics/_identifier_ 
+whereby _identifier_ is a unique string acorded to a 
+property or type of relationship.
+Official Enumerations: 
+* info:eu-repo/semantics/descriptiveMetadata
+--&gt; Defines the information about the item
+* info:eu-repo/semantics/objectFile
+--&gt; Defines the object item
+* info:eu-repo/semantics/humanStartPage
+--&gt; defines the location used for human beings to start
+
+# Identifiers for publication types: Identifiers to 
+represent the type of publication. These identifiers are of 
+the form info:eu-repo/semantics/_identifier_
+Official Enumerations:
+* info:eu-repo/semantics/annotation
+* info:eu-repo/semantics/article
+* info:eu-repo/semantics/bachelorThesis
+* info:eu-repo/semantics/book
+* info:eu-repo/semantics/bookPart
+* info:eu-repo/semantics/bookReview
+* info:eu-repo/semantics/contributionToPeriodical
+* info:eu-repo/semantics/doctoralThesis
+* info:eu-repo/semantics/researchProposal
+* info:eu-repo/semantics/lecture
+* info:eu-repo/semantics/masterThesis
+* info:eu-repo/semantics/researchPaper
+* info:eu-repo/semantics/patent
+* info:eu-repo/semantics/preprint
+* info:eu-repo/semantics/report
+* info:eu-repo/semantics/studentThesis
+* info:eu-repo/semantics/technicalDocumentation
+
+# Identifiers for Authors: Identifiers that are used 
+to represent the author in a unique way.
+* info:eu-repo/dai/_ISO3166_/_uniqueNationalString_
+Where by: _ISO3166_ is the two letter code for countries.
+http://www.iso.org/iso/country_codes/iso_3166_code_lists/
+Example: 
+* info:eu-repo/dai/nl/12345</description>
+
+<uri>http://purl.org/REP/standards/info-eu-repo</uri>
+</namespace-information>
+<service-mechanism>
+<description></description>
+<uri></uri>
+</service-mechanism>
+</info-registry-entry></metadata></record></GetRecord></OAI-PMH>

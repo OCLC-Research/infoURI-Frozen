@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet type="text/xsl" href="infouri.xsl"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:39:12Z</responseDate><request identifier="info:netref/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:netref/</identifier><datestamp>2006-01-10</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+	<info-namespace>netref</info-namespace>
+        <namespace-title>Namespace of NISO Standard for Network Reference Services</namespace-title>
+	<registration-date>2004-03-04</registration-date>
+	<namespace-authority>
+		<organisation-name>NetRef Maintenance Agency  (temporarily, Library of Congress)</organisation-name>
+		<organisation-address>101 Independence Ave. SE 20540 Washington DC</organisation-address>
+		<organisation-uri>http://www.loc.gov/standards/netref/
+</organisation-uri>
+		<contact-person>Ray Denenberg</contact-person>
+		<contact-email>rden@loc.gov</contact-email>
+		<contact-tel>202-707-5795</contact-tel>
+	</namespace-authority>
+	<identifier-syntax>
+		<description>
+There are a number of netref object types that require unambiguous identifiers in order for the protocol to function properly.  These include metadata elements, constraints, diagnostics, and schemas.The syntax would thus be:
+info:netref/&lt;netref object type&gt;/&lt;sub-authority&gt;/&lt;id&gt;
+
+
+example:
+info:netref/metadata/1/question-id</description>
+		<uri>http://www.loc.gov/standards/netref/infoURI.html
+</uri>
+	</identifier-syntax>
+	<namespace-information>
+                <description>For information about this NISO activity see:
+http://www.niso.org/committees/committee_az.html
+
+(Temporary note: this is analogous to the SRW info namespace.)</description>
+		<uri>http://www.loc.gov/sru/infoURI.html</uri>
+	</namespace-information>
+</info-registry-entry></metadata></record></GetRecord></OAI-PMH>

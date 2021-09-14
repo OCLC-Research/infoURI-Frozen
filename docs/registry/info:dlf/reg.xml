@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet type="text/xsl" href="infouri.xsl"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:36:41Z</responseDate><request identifier="info:dlf/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:dlf/</identifier><datestamp>2008-05-13</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+<info-namespace>dlf</info-namespace>
+<namespace-title>Namespace of Digital Library Federation Identifiers</namespace-title>
+<registration-date>2008-05-13</registration-date>
+<namespace-authority>
+<organisation-name>Digital Library Federation</organisation-name>
+<organisation-address>1755 Massachusetts Avenue NW Suite 500, Washington DC 20036-2124</organisation-address>
+<organisation-uri>http://www.diglib.org/</organisation-uri>
+<contact-person>Barrie Howard</contact-person>
+
+<contact-email>bhoward@clir.org</contact-email>
+<contact-tel>+1 202 939 4769</contact-tel>
+<contact-uri>http://www.diglib.org/</contact-uri>
+</namespace-authority>
+<identifier-syntax>
+<description>Identifiers in the dlf namespace are used to identify 
+information assets used in Digital Library Federation 
+research and development projects.
+
+An  &apos;info&apos; URI with  namespace &apos;dlf&apos; takes the form:
+
+info:dlf/&lt;dlf-project&gt;/&lt;project-specific-id&gt;
+ 
+dlf-project = ALPHA *( ALPHA | DIGIT )
+
+i.e. alphanumeric with leading alphabetic character.
+
+Values of dlf-project are assigned by the Digital Library Federation and
+registered at http://diglib.org/namespace/Projects.txt.  At the time of this
+registration the only valid dlf-project value is &quot;Aquifer&quot;.
+
+project-specific-id = project-specific-component *(&quot;/&quot; project-specific-component) 
+
+project-specific-component = *pchar 
+
+pchar is as defined in RFC 3986, that is:
+
+pchar  = unreserved | pct-encoded | sub-delims | &quot;:&quot; | &quot;@&quot;
+unreserved    = ALPHA | DIGIT | &quot;-&quot; | &quot;.&quot; | &quot;_&quot; | &quot;~&quot;
+pct-encoded = &quot;%&quot; HEXDIG HEXDIG
+sub-delims  = &quot;!&quot; | &quot;$&quot; | &quot;&amp;&quot; | &quot;&apos;&quot; | &quot;(&quot; | &quot;)&quot;  | &quot;*&quot; | &quot;+&quot; | &quot;,&quot; | &quot;;&quot; | &quot;=&quot;
+
+ALPHA, DIGIT, AND HEXDIG are as defined in RFC 2234: upper 
+or  lower case alphabetic (A-Z | a-z), decimal digit (0-9), 
+and hexadecimal digit (DIGIT | &quot;A&quot; | &quot;B&quot; | &quot;C&quot; | &quot;D&quot; | &quot;E&quot; | &quot;F&quot;)  respectively.
+
+Percent Encoded Characters  
+
+No characters in general need to be percent encoded. </description>
+
+<uri>http://www.diglib.org/namespace/IdentifierSyntax.txt</uri>
+</identifier-syntax>
+<identifier-normalization>
+<description>All identifiers in the dlf namespace are case-sensitive.</description>
+<uri>http://www.diglib.org/namespace/IdentifierNormalization.txt</uri>
+</identifier-normalization>
+<identifier-examples>
+<identifier-example>
+<native></native>
+<info-uri>info:dlf/Aquifer/AssetActions/AssetDefinition/</info-uri>
+</identifier-example>
+<identifier-example>
+<native></native>
+
+<info-uri>info:dlf/Aquifer/AssetActions/MODS3.2-extension/</info-uri>
+</identifier-example>
+<identifier-example>
+<native></native>
+<info-uri>info:dlf/Aquifer/AssetActions/getWebView</info-uri>
+</identifier-example>
+<identifier-example>
+<native></native>
+<info-uri></info-uri>
+</identifier-example>
+<identifier-example>
+<native></native>
+<info-uri></info-uri>
+</identifier-example>
+<identifier-example>
+
+<native></native>
+<info-uri></info-uri>
+</identifier-example>
+</identifier-examples>
+<namespace-information>
+<description>Identifiers in the dlf namespace are used to identify information assets
+used in Digital Library Federation research and development projects.
+Identifiers will vary according to project.  Their uses currently include:
+
+* Target namespaces for XML Schema, for example: info:dlf/Aquifer/AssetActions/AssetDefinition/
+
+* Identifiers for use in ontologies, for example RDF property labels, such as:
+ info:dlf/Aquifer/AssetActions/getWebView</description>
+<uri>http://www.diglib.org/namespace/NamespaceInformation.txt</uri>
+</namespace-information>
+<service-mechanism>
+<description>No service mechanisms are at present defined. </description>
+<uri></uri>
+</service-mechanism>
+</info-registry-entry></metadata></record></GetRecord></OAI-PMH>

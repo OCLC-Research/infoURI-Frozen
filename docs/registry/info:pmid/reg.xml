@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet type="text/xsl" href="infouri.xsl"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:40:09Z</responseDate><request identifier="info:pmid/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:pmid/</identifier><datestamp>2003-12-17</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+	<info-namespace>pmid</info-namespace>
+        <namespace-title>Namespace of identifiers of PubMed records</namespace-title>
+	<registration-date>2003-10-17</registration-date>
+	<namespace-authority>
+		<organisation-name>PubMed</organisation-name>
+		<organisation-address>National Center for Biotechnology Information, National Library of Medicine, NIH, Building 38A, 8600 Rockville Pike, Bethesda, MD 20894, USA</organisation-address>
+		<organisation-uri>http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=PubMed</organisation-uri>
+		<contact-person>LinkOut team, NCBI/US NLM</contact-person>
+		<contact-email>linkout@ncbi.nlm.nih.gov</contact-email>
+	</namespace-authority>
+	<identifier-syntax>
+		<description>pmid is a sequentially assigned unique number which identifies a PubMed record.</description>
+	</identifier-syntax>
+	<identifier-normalization></identifier-normalization>
+</info-registry-entry></metadata></record></GetRecord></OAI-PMH>
