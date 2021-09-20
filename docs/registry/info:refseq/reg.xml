@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" ?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:40:35Z</responseDate><request identifier="info:refseq/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:refseq/</identifier><datestamp>2004-01-05</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+<info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
         <info-namespace>refseq</info-namespace>
         <namespace-title>Namespace of identifiers for RefSeq reference sequence record</namespace-title>
 	<registration-date>2003-12-19</registration-date>
 	<namespace-authority>
                 <organisation-name>National Center for Biotechnology Information (NCBI)</organisation-name>
                 <organisation-address> National Library of Medicine, National Institutes of Health, Building 38A, 8600 Rockville Pike, Bethesda, MD 20894, USA</organisation-address>
-			<organisation-uri>http://www.ncbi.nlm.nih.gov/RefSeq/</organisation-uri>           
+			<organisation-uri>http://www.ncbi.nlm.nih.gov/RefSeq/</organisation-uri>
                 <contact-person>User Services NCBI/NLM/NIH/DHHS</contact-person>
                 <contact-email>info@ncbi.nlm.nih.gov</contact-email>
                 <contact-tel>+ 1 301 496 2475</contact-tel>
@@ -13,16 +13,16 @@
         <identifier-syntax>
                 <description>RefSeq Accession Numbers are identifiers assigned to all publicly available
 nucleotide sequences provided by the NCBI RefSeq project. Nucleotide sequence
-accession numbers can be 2 letter + underscore (&quot;_&quot;) + 6-8 digits. The first
+accession numbers can be 2 letter + underscore ("_") + 6-8 digits. The first
 two letters impart information about the type of sequence data contained
 within the record. RefSeq records that are based on Whole Genome Shotgun
 sequence project data may have accession numbers that are 2 letter +
 underscore + 4 letters + 8-10 digits. The first two digits represent the
 version number of the assembly and the subsequent 6-8 represent the sequence
-contig number.</description>          
+contig number.</description>
         </identifier-syntax>
-        <identifier-normalization></identifier-normalization>
+        <identifier-normalization/>
         <namespace-information>
         <uri>http://www.ncbi.nlm.nih.gov/RefSeq/</uri>
         </namespace-information>
-</info-registry-entry></metadata></record></GetRecord></OAI-PMH>
+</info-registry-entry>

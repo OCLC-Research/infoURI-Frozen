@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:38:39Z</responseDate><request identifier="info:lccn/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:lccn/</identifier><datestamp>2003-12-17</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+<info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
 	<info-namespace>lccn</info-namespace>
         <namespace-title>Namespace of Library of Congress Control Numbers</namespace-title>
 	<registration-date>2003-11-10</registration-date>
@@ -12,9 +12,9 @@
 	</namespace-authority>
 	<identifier-syntax>
 		<description>A character string of  length eight to twelve characters.  (For purposes of
-this description  characters are ordered from left to right --  &quot;first&quot; means
-&quot;leftmost&quot;.)
-The rightmost eight characters are always digits. 
+this description  characters are ordered from left to right --  "first" means
+"leftmost".)
+The rightmost eight characters are always digits.
 If the length is 9, then the first character must be alphabetic.
 If the length is 10, then the first two characters must be either both digits
 or both aplhabetic.
@@ -40,21 +40,21 @@ description above, as follows:
                substring with zeros until  the length is six.
 
 Examples:
-     &quot;n78-890351&quot; normalizes to &quot;n78890351&quot;.  
-     &quot;n78-89035&quot; normalizes to &quot;n78089035&quot;.  
-     &quot;n  78890351 &quot; normalizes to  &quot;n78890351&quot;.  
-     &quot;   85000002 &quot;  normalizes to  &quot;85000002&quot; 
-     &quot;85-2 &quot;  normalizes to  &quot;85000002&quot; 
-     &quot;2001-000002&quot; normalizes to  &quot;2001000002&quot; 
-     &quot;75-425165//r75&quot; normalizes to &quot;75425165&quot;      
-     &quot;   79139101 /AC/r932&quot; normalizes to &quot;79139101&quot;</description>
+     "n78-890351" normalizes to "n78890351".
+     "n78-89035" normalizes to "n78089035".
+     "n  78890351 " normalizes to  "n78890351".
+     "   85000002 "  normalizes to  "85000002"
+     "85-2 "  normalizes to  "85000002"
+     "2001-000002" normalizes to  "2001000002"
+     "75-425165//r75" normalizes to "75425165"
+     "   79139101 /AC/r932" normalizes to "79139101"</description>
 		<uri>http://www.loc.gov/marc/lccn-namespace.html#normalization</uri>
 	</identifier-normalization>
 	<namespace-information>
 		<description>The LCCN namespace consists of identifiers, one corresponding to every
 assigned LCCN (Library of Congress Control Number). Any LCCN may have various
 forms which all normalize to a single canonical form; only normalized values
-are included in the LCCN namespace.	
+are included in the LCCN namespace.
 	An LCCN is an identifier assigned by the Library of Congress for a
 metadata record (e.g., bibliographic record, authority record). LCCNs have
 three components: prefix, year, and serial number. The prefix is optional; if
@@ -65,4 +65,4 @@ number (after normalization) is six digits. (An un-normalized LCCN may have a
 serial number of 1-6 digits, which is left-filled with zeros when normalized.)</description>
 		<uri>http://www.loc.gov/marc/lccn-namespace.html#info</uri>
 	</namespace-information>
-</info-registry-entry></metadata></record></GetRecord></OAI-PMH>
+</info-registry-entry>

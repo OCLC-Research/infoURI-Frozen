@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" ?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:35:51Z</responseDate><request identifier="info:bnf/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:bnf/</identifier><datestamp>2008-10-29</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+<info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
 <info-namespace>bnf</info-namespace>
 <namespace-title>Namespace of identifiers used by the Bibliothèque nationale de France</namespace-title>
-<registration-date></registration-date>
+<registration-date/>
 <namespace-authority>
 <organisation-name>Bibliothèque nationale de France</organisation-name>
 <organisation-address>Quai François Mauriac 75013 PARIS</organisation-address>
@@ -10,10 +10,10 @@
 <contact-email>emmanuelle.bermes@bnf.fr</contact-email>
 
 <contact-tel>+33 (0)1 53 79 42 40</contact-tel>
-<contact-uri></contact-uri>
+<contact-uri/>
 </namespace-authority>
 <identifier-syntax>
-<description>An &apos;info&apos; URI with namespace &apos;bnf&apos; takes the form:
+<description>An 'info' URI with namespace 'bnf' takes the form:
 
 info:bnf/&lt;bnf-context&gt;/&lt;sub-context&gt;
 
@@ -23,35 +23,35 @@ bnf-context = ALPHA *(ALPHA / DIGIT )
 
 i.e. alphanumeric with leading alphabetic character.
 
-Values of &lt;bnf-context&gt; correspond to naming authorities 
+Values of &lt;bnf-context&gt; correspond to naming authorities
 assigned by the national library of France and registered at
 http://bibnum.bnf.fr/identifiants/bnFInfoURI.html.
 
 sub-context
 
-sub-context = sub-context-component *(&quot;/&quot; sub-context-component) [&quot;#&quot; component]
+sub-context = sub-context-component *("/" sub-context-component) ["#" component]
 
 sub-context-component
 
 sub-context-component = pchar *(pchar)
 
-The value of &lt;sub-context-component&gt; is an alphabetic string assigned 
-by the national library of France and corresponding to the 
-name of a specific data dictionary. 
+The value of &lt;sub-context-component&gt; is an alphabetic string assigned
+by the national library of France and corresponding to the
+name of a specific data dictionary.
 
 component
 
-component = pchar *(pchar) 
+component = pchar *(pchar)
 
-The value of &lt;component&gt; is an alphabetic string assigned 
-by the national library of France and corresponding to the 
+The value of &lt;component&gt; is an alphabetic string assigned
+by the national library of France and corresponding to the
 name of an element inside a specific data dictionary.
 
-All data dictionaries are declared in the national library 
-of France preservation system documentation. When 
-applicable, they are published at http://bibnum.bnf.fr. 
-Data dictionaries are expressed using a human readable 
-format and can also be formalized according to a machine 
+All data dictionaries are declared in the national library
+of France preservation system documentation. When
+applicable, they are published at http://bibnum.bnf.fr.
+Data dictionaries are expressed using a human readable
+format and can also be formalized according to a machine
 readable format such as XML schema, RDFS, OWL.
 
 
@@ -59,19 +59,19 @@ pchar (and others)
 
 pchar is as defined in RFC 3986, that is:
 
-pchar = unreserved / pct-encoded / sub-delims / &quot;:&quot; / &quot;@&quot;
-unreserved = ALPHA / DIGIT / &quot;-&quot; / &quot;.&quot; / &quot;_&quot; / &quot;~&quot;
-pct-encoded = &quot;%&quot; HEXDIG HEXDIG
-sub-delims  = &quot;!&quot; / &quot;$&quot; / &quot;&amp;&quot; / &quot;&apos;&quot; / &quot;(&quot; / &quot;)&quot; / &quot;*&quot; / &quot;+&quot; / &quot;,&quot; / &quot;;&quot; / &quot;=&quot;
+pchar = unreserved / pct-encoded / sub-delims / ":" / "@"
+unreserved = ALPHA / DIGIT / "-" / "." / "_" / "~"
+pct-encoded = "%" HEXDIG HEXDIG
+sub-delims  = "!" / "$" / "&amp;" / "'" / "(" / ")" / "*" / "+" / "," / ";" / "="
 
-ALPHA, DIGIT, AND HEXDIG are as defined in RFC 2234: upper 
-or lower case alphabetic (A-Z / a-z), decimal digit (0-9), 
-and hexadecimal digit (DIGIT / &quot;A&quot; / &quot;B&quot; / &quot;C&quot; / &quot;D&quot; / &quot;E&quot; / 
-&quot;F&quot;) respectively.
+ALPHA, DIGIT, AND HEXDIG are as defined in RFC 2234: upper
+or lower case alphabetic (A-Z / a-z), decimal digit (0-9),
+and hexadecimal digit (DIGIT / "A" / "B" / "C" / "D" / "E" /
+"F") respectively.
 
-Percent Encoded Characters 
+Percent Encoded Characters
 
-Percent Encoded Characters are used in the rare cases where 
+Percent Encoded Characters are used in the rare cases where
 non US-ASCII characters appears in the URI.
 
 </description>
@@ -79,58 +79,58 @@ non US-ASCII characters appears in the URI.
 </identifier-syntax>
 <identifier-normalization>
 <description>All identifiers in the info:bnf namespace are case-sensitive.</description>
-<uri></uri>
+<uri/>
 </identifier-normalization>
 <identifier-examples>
 <identifier-example>
-<native></native>
+<native/>
 <info-uri>info:bnf/spar/structure#set</info-uri>
 </identifier-example>
 <identifier-example>
-<native></native>
+<native/>
 
 <info-uri>info:bnf/spar/representation#thumbnail</info-uri>
 </identifier-example>
 <identifier-example>
-<native></native>
+<native/>
 <info-uri>info:bnf/rights/eventType#birth</info-uri>
 </identifier-example>
 <identifier-example>
-<native></native>
-<info-uri></info-uri>
+<native/>
+<info-uri/>
 </identifier-example>
 <identifier-example>
-<native></native>
-<info-uri></info-uri>
+<native/>
+<info-uri/>
 </identifier-example>
 <identifier-example>
 
-<native></native>
-<info-uri></info-uri>
+<native/>
+<info-uri/>
 </identifier-example>
 </identifier-examples>
 <namespace-information>
-<description>The info:bnf is primarily used to assign URIs to classes 
-and properties in data dictionaries that are intended to be 
+<description>The info:bnf is primarily used to assign URIs to classes
+and properties in data dictionaries that are intended to be
 expressed in RDF.
 
-These URIs correspond to abstract concepts and they don&apos;t 
-need to be actionable or to dereference a resource. The BnF 
-is using another persistent identifier scheme (ARK) for 
-resources that need to be dereferenced such as digital 
+These URIs correspond to abstract concepts and they don't
+need to be actionable or to dereference a resource. The BnF
+is using another persistent identifier scheme (ARK) for
+resources that need to be dereferenced such as digital
 objects, web documents, etc.
 
-The info URIs are meant to be easily readable for ease of 
-use in the system (for instance, to construct a RDF 
-ontology or to query it with SPARQL) so they are composed 
+The info URIs are meant to be easily readable for ease of
+use in the system (for instance, to construct a RDF
+ontology or to query it with SPARQL) so they are composed
 with semantic elements rather than opaque strings.
 
-More information on the use of identifiers can be found at 
+More information on the use of identifiers can be found at
 http://bibnum.bnf.fr/identifiants/index.html</description>
-<uri></uri>
+<uri/>
 </namespace-information>
 <service-mechanism>
-<description></description>
+<description/>
 <uri>No service mechanisms are at present defined. </uri>
 </service-mechanism>
-</info-registry-entry></metadata></record></GetRecord></OAI-PMH>
+</info-registry-entry>

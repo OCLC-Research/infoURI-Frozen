@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:40:22Z</responseDate><request identifier="info:pronom/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:pronom/</identifier><datestamp>2005-12-07</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+<info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
 <info-namespace>pronom</info-namespace>
 <namespace-title>Namespace of PRONOM Unique Identifiers</namespace-title>
 <registration-date>2005-11-30</registration-date>
@@ -9,17 +9,17 @@
 <contact-person>Adrian Brown</contact-person>
 <contact-email>pronom@nationalarchives.gov.uk</contact-email>
 <contact-tel>+44 (0) 20 8392 5257</contact-tel>
-<contact-uri></contact-uri>
+<contact-uri/>
 </namespace-authority>
 <identifier-syntax>
-<description>A PRONOM Unique Identifier (PUID) is composed of two 
-elements, the PUID type, and the actual identifier. The PUID 
-type identifies the class of representation information to 
-which the identifier refers, where each identifier is unique 
-within that class. Thus, both elements are required to 
+<description>A PRONOM Unique Identifier (PUID) is composed of two
+elements, the PUID type, and the actual identifier. The PUID
+type identifies the class of representation information to
+which the identifier refers, where each identifier is unique
+within that class. Thus, both elements are required to
 construct a unique identifier.
 
-The syntax may be expressed in formal BNF notation as 
+The syntax may be expressed in formal BNF notation as
 follows:
 
 &lt;puid&gt; ::= &lt;puid_type&gt; &apos;/&apos; &lt;identifier&gt;
@@ -28,19 +28,19 @@ follows:
 
 &lt;identifier&gt; ::= &lt;fragment&gt; | &lt;identifier&gt; &lt;fragment&gt;
 
-&lt;fragment&gt; ::= &lt;digit&gt; | &lt;letter&gt; 
+&lt;fragment&gt; ::= &lt;digit&gt; | &lt;letter&gt;
 
 
 &lt;letter&gt; ::= &apos;a&apos; – &apos;z&apos;
 
 &lt;digit&gt; ::= &apos;0&apos; - &apos;9&apos;
 
-The PUID type is expressed as a lowercase alphanumeric 
-string. The only PUID type currently defined is &quot;fmt&quot;, which 
-denotes that the identifier relates to a file format. Other 
-types may be defined in the future. The identifier itself is 
-expressed as a lowercase alphanumeric string of arbitrary 
-length. The PUID type and identifier are separated by a 
+The PUID type is expressed as a lowercase alphanumeric
+string. The only PUID type currently defined is &quot;fmt&quot;, which
+denotes that the identifier relates to a file format. Other
+types may be defined in the future. The identifier itself is
+expressed as a lowercase alphanumeric string of arbitrary
+length. The PUID type and identifier are separated by a
 forward slash.</description>
 <uri>http://www.nationalarchives.gov.uk/aboutapps/pronom/pdf/pronom_unique_identifier_scheme.pdf</uri>
 </identifier-syntax>
@@ -54,12 +54,12 @@ forward slash.</description>
 <info-uri>info:pronom/fmt/42</info-uri>
 </identifier-example>
 <identifier-example>
-<native></native>
-<info-uri></info-uri>
+<native/>
+<info-uri/>
 </identifier-example>
 <identifier-example>
-<native></native>
-<info-uri></info-uri>
+<native/>
+<info-uri/>
 </identifier-example>
 </identifier-examples>
 <namespace-information>
@@ -74,4 +74,4 @@ registry (e.g. the record for a specific file format).</description>
 <service-mechanism>
 <uri>N/A</uri>
 </service-mechanism>
-</info-registry-entry></metadata></record></GetRecord></OAI-PMH>
+</info-registry-entry>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:39:48Z</responseDate><request identifier="info:oclcnum/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:oclcnum/</identifier><datestamp>2005-12-16</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+<info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
 	<info-namespace>oclcnum</info-namespace>
         <namespace-title>Namespace of OCLC Worldcat Control Numbers</namespace-title>
 	<registration-date>2003-11-14</registration-date>
@@ -26,7 +26,7 @@ code of the organization originating the system control number,
 e.g.,(OCoLC)814782.  The leading MARC code, (OCoLC)in this example, should be
 stripped off to create a properly formed oclcnum identifier.  The OCLC number
 is displayed by some software programs as ocmnnnnn, i.e., ocm53393962. The
-leading &quot;ocm&quot; should be stripped off to create a properly formed oclcnum
+leading "ocm" should be stripped off to create a properly formed oclcnum
 identifier.</description>
 	</identifier-normalization>
 	<namespace-information>
@@ -36,4 +36,4 @@ identifier.</description>
 	<service-mechanism>
 		<uri>http://worldcatlibraries.org/wcpa/oclc/</uri>
 	</service-mechanism>
-</info-registry-entry></metadata></record></GetRecord></OAI-PMH>
+</info-registry-entry>

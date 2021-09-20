@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:39:00Z</responseDate><request identifier="info:ncid/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:ncid/</identifier><datestamp>2007-10-09</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+<info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
 <info-namespace>ncid</info-namespace>
 <namespace-title>Namespace of NACSIS-CAT Identification Numbers</namespace-title>
 <registration-date>2007-10-09</registration-date>
@@ -10,26 +10,26 @@
 <contact-email>geniiadm@nii.ac.jp</contact-email>
 
 <contact-tel>+81-3-4212-2330</contact-tel>
-<contact-uri></contact-uri>
+<contact-uri/>
 </namespace-authority>
 <identifier-syntax>
-<description>The ncid identifier is a string of length 10, with the 
+<description>The ncid identifier is a string of length 10, with the
 following composition:
 
-(*) The first two characters must be alphabetic.  The 
+(*) The first two characters must be alphabetic.  The
 following 4 patterns are supported:
 
-BA  or  BN  assigned for books 
+BA  or  BN  assigned for books
 AA  or  AN  assigned for serials
 
 (*) The next 7 characters must be digits (0-9).
 
 (*) The last  character is a check sum (0-9,X).</description>
-<uri></uri>
+<uri/>
 </identifier-syntax>
 <identifier-normalization>
 <description>Identifiers in this namespace are case sensitive.</description>
-<uri></uri>
+<uri/>
 </identifier-normalization>
 <identifier-examples>
 <identifier-example>
@@ -42,26 +42,26 @@ AA  or  AN  assigned for serials
 <info-uri>info:ncid/AA1070693X</info-uri>
 </identifier-example>
 <identifier-example>
-<native></native>
-<info-uri></info-uri>
+<native/>
+<info-uri/>
 </identifier-example>
 </identifier-examples>
 <namespace-information>
-<description>the ncid identifier is a sequentially assigned number that 
-uniquely identifies an NACSIS-CAT bibliographic record.  In 
-November 2006 there were about 8 million bibliographic and 
-90 million holding records in NACSIS-CAT. 
+<description>the ncid identifier is a sequentially assigned number that
+uniquely identifies an NACSIS-CAT bibliographic record.  In
+November 2006 there were about 8 million bibliographic and
+90 million holding records in NACSIS-CAT.
 
-If a record is merged into another or if a record is deleted, 
-its number is discontinued and never re-used. 
+If a record is merged into another or if a record is deleted,
+its number is discontinued and never re-used.
 
-Information on NACSIS-CAT is available at 
-http://www.nii.ac.jp/CAT-ILL/contents-e/e_ncat_top.html. 
+Information on NACSIS-CAT is available at
+http://www.nii.ac.jp/CAT-ILL/contents-e/e_ncat_top.html.
 </description>
 
-<uri></uri>
+<uri/>
 </namespace-information>
 <service-mechanism>
 <uri>http://webcatplus-equal.nii.ac.jp/libportal/en/equalTop.html</uri>
 </service-mechanism>
-</info-registry-entry></metadata></record></GetRecord></OAI-PMH>
+</info-registry-entry>

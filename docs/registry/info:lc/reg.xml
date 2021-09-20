@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:38:28Z</responseDate><request identifier="info:lc/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:lc/</identifier><datestamp>2007-10-15</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+<info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
 <info-namespace>lc</info-namespace>
 <namespace-title>Library of Congress Identifiers</namespace-title>
 <registration-date>2007-10-15</registration-date>
@@ -10,49 +10,49 @@
 <contact-email>rden@loc.gov</contact-email>
 
 <contact-tel>202-707-5795</contact-tel>
-<contact-uri></contact-uri>
+<contact-uri/>
 </namespace-authority>
 <identifier-syntax>
-<description>An  &apos;info&apos; URI with  namespace  &apos;lc&apos; takes the form:
+<description>An  'info' URI with  namespace  'lc' takes the form:
 
 info:lc/&lt;lc-info-subspace&gt;/&lt;subspace-specific-string&gt;
- 
+
 lc-info-subspace
 
 lc-info-subspace = ALPHA *( ALPHA / DIGIT )
 
 i.e. alphanumeric with leading alphabetic character.
 
-Values of lc-info-subspace are assigned by the Library of 
-Congress and registered at 
-http://www.loc.gov/standards/uri/LcInfoURI.html. 
-The Library of Congress will designate an authority for each 
+Values of lc-info-subspace are assigned by the Library of
+Congress and registered at
+http://www.loc.gov/standards/uri/LcInfoURI.html.
+The Library of Congress will designate an authority for each
 value.
 
 subspace-specific-string
 
-subspace-specific-string = 
-subspace-specific-component *(&quot;/&quot; subspace-specific-component) 
+subspace-specific-string =
+subspace-specific-component *("/" subspace-specific-component)
 
 subspace-specific-component
 
-subspace-specific-component = pchar *(pchar) 
+subspace-specific-component = pchar *(pchar)
 
 pchar (etc.)
 
 pchar is as defined in RFC 3986, that is:
 
-pchar  = unreserved / pct-encoded / sub-delims / &quot;:&quot; / &quot;@&quot;
-unreserved    = ALPHA / DIGIT / &quot;-&quot; / &quot;.&quot; / &quot;_&quot; / &quot;~&quot;
-pct-encoded = &quot;%&quot; HEXDIG HEXDIG
-sub-delims  = &quot;!&quot; / &quot;$&quot; / &quot;&amp;&quot; / &quot;&apos;&quot; / &quot;(&quot; / &quot;)&quot;  / &quot;*&quot; / &quot;+&quot; / &quot;,&quot; / &quot;;&quot; / &quot;=&quot;
+pchar  = unreserved / pct-encoded / sub-delims / ":" / "@"
+unreserved    = ALPHA / DIGIT / "-" / "." / "_" / "~"
+pct-encoded = "%" HEXDIG HEXDIG
+sub-delims  = "!" / "$" / "&amp;" / "'" / "(" / ")"  / "*" / "+" / "," / ";" / "="
 
-ALPHA, DIGIT, AND HEXDIG are as defined in RFC 2234: upper 
-or  lower case alphabetic (A-Z / a-z), decimal digit (0-9), 
-and hexadecimal digit (DIGIT / &quot;A&quot; / &quot;B&quot; / &quot;C&quot; / &quot;D&quot; / &quot;E&quot; / 
-&quot;F&quot;)  respectively.
+ALPHA, DIGIT, AND HEXDIG are as defined in RFC 2234: upper
+or  lower case alphabetic (A-Z / a-z), decimal digit (0-9),
+and hexadecimal digit (DIGIT / "A" / "B" / "C" / "D" / "E" /
+"F")  respectively.
 
-Percent Encoded Characters  
+Percent Encoded Characters
 
 No characters in general needs to be percent encoded. </description>
 <uri>http://www.loc.gov/standards/uri/LcInfoURI.html</uri>
@@ -60,52 +60,52 @@ No characters in general needs to be percent encoded. </description>
 
 <identifier-normalization>
 <description>All identifiers in the info:lc namespace are case-sensitive.</description>
-<uri></uri>
+<uri/>
 </identifier-normalization>
 <identifier-examples>
 <identifier-example>
-<native></native>
+<native/>
 <info-uri>info:lc/xmlns/marcxchange-v1</info-uri>
 </identifier-example>
 <identifier-example>
-<native></native>
+<native/>
 <info-uri>info:lc/xmlns/rmd-v1</info-uri>
 </identifier-example>
 <identifier-example>
 
-<native></native>
+<native/>
 <info-uri>info:lc/xmlns/update-v1</info-uri>
 </identifier-example>
 <identifier-example>
-<native></native>
+<native/>
 <info-uri>info:lc/xmlns/mods-4.0</info-uri>
 </identifier-example>
 <identifier-example>
-<native></native>
-<info-uri></info-uri>
+<native/>
+<info-uri/>
 </identifier-example>
 <identifier-example>
-<native></native>
-<info-uri></info-uri>
+<native/>
+<info-uri/>
 </identifier-example>
 
 </identifier-examples>
 <namespace-information>
-<description>This info namespace will be used for various lc identifiers, 
-where the identifier class is specified by the 
-lc-info-subspace.  Only one such subspace is defined 
-initially, ‘xmlns’.   xmlns identifiers are XML namespace 
+<description>This info namespace will be used for various lc identifiers,
+where the identifier class is specified by the
+lc-info-subspace.  Only one such subspace is defined
+initially, ‘xmlns’.   xmlns identifiers are XML namespace
 URIs.
-For a discussion of why ‘info:’ (rather than for example 
-‘http:’) might be used for XML namespace URIs, see 
+For a discussion of why ‘info:’ (rather than for example
+‘http:’) might be used for XML namespace URIs, see
 http://www.loc.gov/standards/uri/xml-namespaces.html
 </description>
-<uri></uri>
+<uri/>
 </namespace-information>
 <service-mechanism>
-<description>No service mechanisms are at present defined. If any are 
-defined in the future they will be described at 
+<description>No service mechanisms are at present defined. If any are
+defined in the future they will be described at
 http://www.loc.gov/standards/uri/LcInfoURI.html</description>
-<uri></uri>
+<uri/>
 </service-mechanism>
-</info-registry-entry></metadata></record></GetRecord></OAI-PMH>
+</info-registry-entry>

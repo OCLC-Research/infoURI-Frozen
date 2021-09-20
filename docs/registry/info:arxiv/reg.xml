@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:35:03Z</responseDate><request identifier="info:arxiv/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:arxiv/</identifier><datestamp>2006-02-07</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+<info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
 <info-namespace>arxiv</info-namespace>
 <namespace-title>Namespace for arXiv.org identifiers </namespace-title>
 <registration-date>2006-02-07</registration-date>
@@ -10,10 +10,10 @@
 <contact-email>simeon@cs.cornell.edu</contact-email>
 
 <contact-tel>607 254 8605</contact-tel>
-<contact-uri></contact-uri>
+<contact-uri/>
 </namespace-authority>
 <identifier-syntax>
-<description>Identifiers in the arxiv namespace are used to identify &apos;papers&apos; in the 
+<description>Identifiers in the arxiv namespace are used to identify 'papers' in the
 arXiv.org e-print repository. The syntax of the identifier is of the form:
 
   info:arxiv/&lt;internal_id&gt;
@@ -21,35 +21,35 @@ arXiv.org e-print repository. The syntax of the identifier is of the form:
 where:
 
   &lt;internal_id&gt; is the arXiv.org paper identifier
-  &lt;internal_id&gt; = &lt;archive&gt; &apos;/&apos; &lt;papernum&gt;
+  &lt;internal_id&gt; = &lt;archive&gt; '/' &lt;papernum&gt;
 
   &lt;archive&gt; is the archive name with the repository
-  &lt;archive&gt; = &lt;lcletter&gt; *( &lt;lcletter&gt; | &apos;-&apos; )
- 
+  &lt;archive&gt; = &lt;lcletter&gt; *( &lt;lcletter&gt; | '-' )
+
   &lt;papernum&gt; is the number of a given paper within the archive
   &lt;papernum&gt; = 7*&lt;digit&gt;
 
-  &lt;lcletter&gt; = &apos;a&apos; - &apos;z&apos;
-  &lt;digit&gt; = &apos;0&apos; - &apos;9&apos;
+  &lt;lcletter&gt; = 'a' - 'z'
+  &lt;digit&gt; = '0' - '9'
 
-At present, &lt;papernum&gt; is always 7 digits but this is likely to be 
-increased in the near future. 
+At present, &lt;papernum&gt; is always 7 digits but this is likely to be
+increased in the near future.
 
-A &apos;paper&apos; in arXiv may include one or more versions of an article or may have 
-been deleted. Each version may be composed a number of files in different 
+A 'paper' in arXiv may include one or more versions of an article or may have
+been deleted. Each version may be composed a number of files in different
 formats and a number of disseminations may also be available. As with historical
-use of arXiv&apos;s internal identifiers, info: identifiers using the format above 
+use of arXiv's internal identifiers, info: identifiers using the format above
 identify the compound digital object including all versions.
 
-It is intended to extend this identifier syntax to identify versions and 
+It is intended to extend this identifier syntax to identify versions and
 components of papers.</description>
-<uri></uri>
+<uri/>
 </identifier-syntax>
 <identifier-normalization>
 <description>Identifiers in this namespace are case sensitive. At present this means that all
 letters will be lower case.</description>
 
-<uri></uri>
+<uri/>
 </identifier-normalization>
 <identifier-examples>
 <identifier-example>
@@ -57,20 +57,20 @@ letters will be lower case.</description>
 <info-uri>info:arxiv/hep-th/9901001</info-uri>
 </identifier-example>
 <identifier-example>
-<native></native>
-<info-uri></info-uri>
+<native/>
+<info-uri/>
 </identifier-example>
 <identifier-example>
-<native></native>
-<info-uri></info-uri>
+<native/>
+<info-uri/>
 </identifier-example>
 
 </identifier-examples>
 <namespace-information>
-<description></description>
-<uri></uri>
+<description/>
+<uri/>
 </namespace-information>
 <service-mechanism>
-<uri></uri>
+<uri/>
 </service-mechanism>
-</info-registry-entry></metadata></record></GetRecord></OAI-PMH>
+</info-registry-entry>

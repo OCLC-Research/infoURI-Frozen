@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:41:23Z</responseDate><request identifier="info:srw/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:srw/</identifier><datestamp>2006-01-10</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+<info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
   <info-namespace>srw</info-namespace>
   <namespace-title>Namespace of Search/Retrieve Web Services</namespace-title>
   <registration-date>2004-01-09</registration-date>
@@ -18,7 +18,7 @@ and record schemas.  The syntax would thus be:
 info:srw/&lt;srw object type&gt;/&lt;sub-authority&gt;/&lt;id&gt;
 
 The &lt;id&gt; is opaque as far as this concerns the info syntax, but may
-itself be structured later. 
+itself be structured later.
 
 example:
 info:srw/cql-context-set/1/cql-v1.1</description>
@@ -27,4 +27,4 @@ info:srw/cql-context-set/1/cql-v1.1</description>
   <namespace-information>
     <uri>http://www.loc.gov/sru/infoURI.html</uri>
   </namespace-information>
-</info-registry-entry></metadata></record></GetRecord></OAI-PMH>
+</info-registry-entry>

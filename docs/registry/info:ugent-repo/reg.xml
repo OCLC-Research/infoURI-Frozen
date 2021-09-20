@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:41:37Z</responseDate><request identifier="info:ugent-repo/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:ugent-repo/</identifier><datestamp>2005-03-22</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+<info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
 	<info-namespace>ugent-repo</info-namespace>
         <namespace-title>Namespace of identifiers for the University Library Ghent information assets</namespace-title>
 	<registration-date>2005-03-22</registration-date>
@@ -22,7 +22,7 @@ whereby:
 
      _type_  gives an indication of the nature and
              purpose of the identifier. Current values
-             for _type_ include &apos;i&apos; , &apos;opac&apos;. Their
+             for _type_ include 'i' , 'opac'. Their
              meaning is explained in the Namespace
              Information section of the info:lanl-repo
              namespace.
@@ -48,4 +48,4 @@ Examples:
             <info-uri>info:ugent-repo/opac/rug01-0219201</info-uri>
           </identifier-example>
         </identifier-examples>
-</info-registry-entry></metadata></record></GetRecord></OAI-PMH>
+</info-registry-entry>

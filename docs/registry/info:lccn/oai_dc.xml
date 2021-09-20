@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-20T15:56:19Z</responseDate><request metadataPrefix="oai_dc" verb="GetRecord" identifier="info:lccn/">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:lccn/</identifier><datestamp>2003-12-17</datestamp></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+<oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
         <dc:title>Namespace of Library of Congress Control Numbers</dc:title>
         <dc:creator>Ray Denenberg</dc:creator>
         <dc:date>2003-11-10</dc:date>
@@ -7,4 +7,4 @@
 The LCCN namespace consists of identifiers, one corresponding to every assigned LCCN (Library of Congress Control Number). Any LCCN may have various forms which all normalize to a single canonical form; only normalized values are included in the LCCN namespace.	
 	An LCCN is an identifier assigned by the Library of Congress for a metadata record (e.g., bibliographic record, authority record). LCCNs have three components: prefix, year, and serial number. The prefix is optional; if present, it has one to three lowercase alphabetic characters. (Prefixes are maintained in a controlled list.) The year is two or four digits. (For 2000 and earlier the year is two digits, for 2001 and later, four digits.) The serial number (after normalization) is six digits. (An un-normalized LCCN may have a serial number of 1-6 digits, which is left-filled with zeros when normalized.) 
 </dc:description>
-      </oai_dc:dc></metadata></record></GetRecord></OAI-PMH>
+      </oai_dc:dc>

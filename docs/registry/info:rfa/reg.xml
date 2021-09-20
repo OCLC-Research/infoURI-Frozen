@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:40:45Z</responseDate><request identifier="info:rfa/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:rfa/</identifier><datestamp>2007-10-09</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+<info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
 <info-namespace>rfa</info-namespace>
 <namespace-title>Namespace for Registry Framework Architecture Identifiers (RFA)</namespace-title>
 <registration-date>2007-10-09</registration-date>
@@ -10,36 +10,36 @@
 <contact-email>jyoung@oclc.org</contact-email>
 
 <contact-tel>+1 614 764 6000</contact-tel>
-<contact-uri></contact-uri>
+<contact-uri/>
 </namespace-authority>
 <identifier-syntax>
-<description>The native form for RFA identifiers is info:rfa/*. There are 
-no legacy forms. 
+<description>The native form for RFA identifiers is info:rfa/*. There are
+no legacy forms.
 
-Identifiers in the rfa namespace are used to identify 
-&apos;items&apos; in &apos;collections&apos;. The syntax of the identifier is of 
+Identifiers in the rfa namespace are used to identify
+'items' in 'collections'. The syntax of the identifier is of
 the form:
 
   info:rfa/&lt;registryLabel&gt;/&lt;collectionLabel&gt;/&lt;itemLabel&gt;
 
 where:
 
-  * &lt;registryLabel&gt; is a label for a registry that can be 
-used to facilitate interoperability across BaseURLs. This 
-label MUST be registered in the service-mechanism. Although 
-these labels must be registered, it is NOT required that 
-they be connected to a resolver. Note! The labels 
-&quot;webservices&quot; and &quot;localhost&quot; are reserved for internal 
+  * &lt;registryLabel&gt; is a label for a registry that can be
+used to facilitate interoperability across BaseURLs. This
+label MUST be registered in the service-mechanism. Although
+these labels must be registered, it is NOT required that
+they be connected to a resolver. Note! The labels
+"webservices" and "localhost" are reserved for internal
 purposes.
 
-  * &lt;collectionLabel&gt; is a label for a collection within a 
-registry. Note! The label &apos;collections&apos; is reserved for 
+  * &lt;collectionLabel&gt; is a label for a collection within a
+registry. Note! The label 'collections' is reserved for
 internal purposes.
 
-  * &lt;itemLabel&gt; is a label for an item (unique within a 
+  * &lt;itemLabel&gt; is a label for an item (unique within a
 collection).
 
-Labels in an RFA identifier may contain the following 
+Labels in an RFA identifier may contain the following
 characters:
 
 ()*+,-./;=?@
@@ -47,24 +47,24 @@ characters:
 A-Z
 a-z
 
-i.e. 12 punctuation characters, 10 digits, 26+26 upper and 
-lowercase English letters. An RFA identifier does not 
+i.e. 12 punctuation characters, 10 digits, 26+26 upper and
+lowercase English letters. An RFA identifier does not
 contain whitespace characters.
 
-The only character in an RFA identifier that needs to be 
-%-encoded within an &quot;info&quot; URI is the &quot;?&quot; character which 
-should be %-encoded as &quot;%3F&quot;, i.e. all instances of &quot;?&quot; 
-should be replaced by the string &quot;%3F&quot; 
+The only character in an RFA identifier that needs to be
+%-encoded within an "info" URI is the "?" character which
+should be %-encoded as "%3F", i.e. all instances of "?"
+should be replaced by the string "%3F"
 
-Note! Only itemLabel is  allowed to contain the &apos;/&apos; 
-character. Otherwise the URI pattern couldn&apos;t be parsed 
+Note! Only itemLabel is  allowed to contain the '/'
+character. Otherwise the URI pattern couldn't be parsed
 unambiguously.</description>
 
-<uri></uri>
+<uri/>
 </identifier-syntax>
 <identifier-normalization>
 <description>RFAs are case-insensitive.</description>
-<uri></uri>
+<uri/>
 </identifier-normalization>
 <identifier-examples>
 <identifier-example>
@@ -82,22 +82,22 @@ unambiguously.</description>
 </identifier-example>
 </identifier-examples>
 <namespace-information>
-<description>An RFA (Registry Framework Architecture Identifier) is a 
-string of characters capable of uniquely representing an 
-item in a collection. The identifier is a string of unique 
-characters of indefinite length according to the needs of 
-the owner of the &lt;registryLabel&gt;. It can be used for both 
-public and private databases. It is extensible and is a 
-non-proprietray identifier which can be used in both printed 
+<description>An RFA (Registry Framework Architecture Identifier) is a
+string of characters capable of uniquely representing an
+item in a collection. The identifier is a string of unique
+characters of indefinite length according to the needs of
+the owner of the &lt;registryLabel&gt;. It can be used for both
+public and private databases. It is extensible and is a
+non-proprietray identifier which can be used in both printed
 and electronic databases.
 
-RFAs can generally be resolved via the service-mechanism by 
-replacing &quot;info:rfa/&quot; with &quot;http://purl.org/rfa/&quot;.
+RFAs can generally be resolved via the service-mechanism by
+replacing "info:rfa/" with "http://purl.org/rfa/".
 </description>
-<uri></uri>
+<uri/>
 </namespace-information>
 
 <service-mechanism>
 <uri>http://purl.org/rfa/</uri>
 </service-mechanism>
-</info-registry-entry></metadata></record></GetRecord></OAI-PMH>
+</info-registry-entry>

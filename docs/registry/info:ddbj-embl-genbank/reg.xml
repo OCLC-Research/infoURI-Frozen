@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:36:18Z</responseDate><request identifier="info:ddbj-embl-genbank/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:ddbj-embl-genbank/</identifier><datestamp>2003-12-18</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+<info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
         <info-namespace>ddbj-embl-genbank</info-namespace>
         <namespace-title>Namespace of identifiers for sequence records in
 DDBJ/EMBL/GenBank</namespace-title>
@@ -23,5 +23,5 @@ Whole Genome Shotgun sequence project accession numbers are 4 letters + 8-10
 digits.  The first two digits represent the version number of the assembly
 and the subsequent 6-8 represent the sequence contig number.</description>
         </identifier-syntax>
-<identifier-normalization></identifier-normalization>
-</info-registry-entry></metadata></record></GetRecord></OAI-PMH>
+<identifier-normalization/>
+</info-registry-entry>

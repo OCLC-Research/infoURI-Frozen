@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-20T15:56:17Z</responseDate><request metadataPrefix="oai_dc" verb="GetRecord" identifier="info:bnf/">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:bnf/</identifier><datestamp>2008-10-29</datestamp></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+<oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
         <dc:title>Namespace of identifiers used by the Bibliothèque nationale de France</dc:title>
         <dc:creator>Bibliothèque nationale de France</dc:creator>
         <dc:date>2008-05-13</dc:date>
         <dc:identifier>http://errol.oclc.org/info-uri.info/info:bnf/.reg</dc:identifier>
-      </oai_dc:dc></metadata></record></GetRecord></OAI-PMH>
+      </oai_dc:dc>

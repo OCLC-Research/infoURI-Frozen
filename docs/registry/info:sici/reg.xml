@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" ?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-14T20:41:06Z</responseDate><request identifier="info:sici/" metadataPrefix="reg" verb="GetRecord">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:sici/</identifier><datestamp>2004-01-05</datestamp></header><metadata><info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
+<info-registry-entry xmlns="http://info-uri.info/registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://info-uri.info/registry http://info-uri.info/info-uri-registry.xsd">
 	<info-namespace>sici</info-namespace>
         <namespace-title>Namespace of Serial Item and Contribution Identifiers</namespace-title>
 	<registration-date>2004-01-05</registration-date>
 	<namespace-authority>
 		<organisation-name>NISO</organisation-name>
-		<organisation-address>4733 Bethesda Ave., 
+		<organisation-address>4733 Bethesda Ave.,
       Bethesda, MD 20814, USA</organisation-address>
 		<organisation-uri>http://www.niso.org/</organisation-uri>
 		<contact-person>Pat Stevens</contact-person>
@@ -59,13 +59,13 @@ Below is given an ABNF rule set for producing a SICI code:
   SICI = item-segment contribution-segment control-segment
 
   item-segment = issn chronology  enumeration
-  contribution-segment = &quot;&lt;&quot; location [ &quot;:&quot; title-code [ &quot;:&quot; local-number ] ] &quot;&gt;&quot;
-  control-segment = csi &quot;.&quot; dpi &quot;.&quot; mfi &quot;;&quot; version &quot;-&quot; check-char
+  contribution-segment = "&lt;" location [ ":" title-code [ ":" local-number ] ] "&gt;"
+  control-segment = csi "." dpi "." mfi ";" version "-" check-char
 
   ; item-segment components
-  issn = 4DIGIT [ &quot;-&quot; ] 3DIGIT ( DIGIT / &quot;X&quot; )
-  chronology = &quot;(&quot; [ 4*8DIGIT [ &quot;/&quot; 4*8DIGIT ] ] &quot;)&quot;
-  enumeration = [ 1*( DIGIT / UPPER / &quot;/&quot; ) *( &quot;:&quot; 1*( DIGIT / UPPER / &quot;/&quot; ) ) ] [ ( &quot;+&quot; / &quot;*&quot; ) ]
+  issn = 4DIGIT [ "-" ] 3DIGIT ( DIGIT / "X" )
+  chronology = "(" [ 4*8DIGIT [ "/" 4*8DIGIT ] ] ")"
+  enumeration = [ 1*( DIGIT / UPPER / "/" ) *( ":" 1*( DIGIT / UPPER / "/" ) ) ] [ ( "+" / "*" ) ]
 
   ; contribution-segment components
   location = *CHARS
@@ -74,46 +74,46 @@ Below is given an ABNF rule set for producing a SICI code:
 
   ; control-segment components
   csi = ; code structure identifier
-        &quot;1&quot; /  ; serial item identifier
-        &quot;2&quot; /  ; serial contribution identifier
-        &quot;3&quot;    ; other
+        "1" /  ; serial item identifier
+        "2" /  ; serial contribution identifier
+        "3"    ; other
 
   dpi = ; derivative part identifier
-        &quot;0&quot; /  ; serial item or contribution
-        &quot;1&quot; /  ; table of contents
-        &quot;2&quot; /  ; index
-        &quot;3&quot;    ; abstract
+        "0" /  ; serial item or contribution
+        "1" /  ; table of contents
+        "2" /  ; index
+        "3"    ; abstract
 
   mfi = ; medium/format identifier
-        &quot;TX&quot; / ; printed text
-        &quot;TL&quot; / ; printed text, looseleaf
-        &quot;TH&quot; / ; printed text, hardbound
-        &quot;TS&quot; / ; printed text, softcover
-        &quot;TB&quot; / ; braille
-        &quot;CD&quot; / ; computer-readable optical media (CD-ROM)
-        &quot;CF&quot; / ; computer-readable magnetic disk media
-        &quot;CT&quot; / ; computer-readable magnetic tape media
-        &quot;CO&quot; / ; online (remote)
-        &quot;HE&quot; / ; microfiche
-        &quot;HD&quot; / ; microfilm
-        &quot;SC&quot; / ; sound recording
-        &quot;VX&quot; / ; video recording
-        &quot;ZN&quot; / ; multiple physical forms
-        &quot;ZU&quot; / ; physical form unknown
-        &quot;ZZ&quot;   ; other
+        "TX" / ; printed text
+        "TL" / ; printed text, looseleaf
+        "TH" / ; printed text, hardbound
+        "TS" / ; printed text, softcover
+        "TB" / ; braille
+        "CD" / ; computer-readable optical media (CD-ROM)
+        "CF" / ; computer-readable magnetic disk media
+        "CT" / ; computer-readable magnetic tape media
+        "CO" / ; online (remote)
+        "HE" / ; microfiche
+        "HD" / ; microfilm
+        "SC" / ; sound recording
+        "VX" / ; video recording
+        "ZN" / ; multiple physical forms
+        "ZU" / ; physical form unknown
+        "ZZ"   ; other
 
   version = ; version number
-        &quot;1&quot; /  ; Z39.56-1991
-        &quot;2&quot;    ; Z39.56-1996
+        "1" /  ; Z39.56-1991
+        "2"    ; Z39.56-1996
 
-  check-char = DIGIT / UPPER / &quot;#&quot;
+  check-char = DIGIT / UPPER / "#"
 
   CHARS = DIGIT / UPPER /
-    &quot;&amp;&quot; / &quot;&apos;&quot; / &quot;*&quot; / &quot;\&quot; / &quot;}&quot; / &quot;)&quot; / &quot;]&quot; / &quot;,&quot; / &quot;@&quot; / &quot;$&quot; /
-    &quot;=&quot; / &quot;!&quot; / &quot;-&quot; / &quot;#&quot; / &quot;{&quot; / &quot;(&quot; / &quot;[&quot; / &quot;%&quot; / &quot;.&quot; / &quot;+&quot; /
-    &quot;?&quot; / &apos;&quot;&apos; / &quot;;&quot; / &quot;/&quot; / &quot;^&quot; / &quot;`&quot; / &quot;~&quot; / &quot;_&quot; / &quot;|&quot;
+    "&amp;" / "'" / "*" / "\" / "}" / ")" / "]" / "," / "@" / "$" /
+    "=" / "!" / "-" / "#" / "{" / "(" / "[" / "%" / "." / "+" /
+    "?" / '"' / ";" / "/" / "^" / "`" / "~" / "_" / "|"
 
-  DELIM = &quot;:&quot; / &quot;&lt;&quot; / &quot;&gt;&quot;
+  DELIM = ":" / "&lt;" / "&gt;"
   DIGIT = %x30-39 ; 0-9
   UPPER = %x41-5A ; A-Z</description>
 		<uri>http://www.niso.org/standards/resources/Z39-56.pdf</uri>
@@ -126,4 +126,4 @@ the 7-bit ASCII character set.</description>
 	<namespace-information>
 		<uri>http://www.niso.org/standards/resources/Z39-56.pdf</uri>
 	</namespace-information>
-</info-registry-entry></metadata></record></GetRecord></OAI-PMH>
+</info-registry-entry>
