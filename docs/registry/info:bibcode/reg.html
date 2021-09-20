@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:dt="urn:schemas-microsoft-com:datatypes" xmlns:d2="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:str="http://xsltsl.org/string" xmlns:oai="http://www.openarchives.org/OAI/2.0/" xmlns:oai_id="http://www.openarchives.org/OAI/2.0/oai-identifier" xmlns:oai_branding="http://www.openarchives.org/OAI/2.0/branding/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:provenance="http://www.openarchives.org/OAI/2.0/provenance" xmlns:toolkit="http://oai.dlib.vt.edu/OAI/metadata/toolkit">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title> - info:bibcode/</title>
+<link href="http://www.oclc.org/common/css/basic_oclc.css" rel="stylesheet" type="text/css">
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<center><h2>"info" URI Scheme</h2></center>
+<table width="100%" border="0" cellpadding="0" cellspacing="20">
+<tr valign="top"><td>
+<a href="docs/misc/faq.html">About "info"</a> <span class="divider">|</span> <a href="standards.html">Standards</a> <span class="divider">|</span> <a href="OAIHandler?verb=Identify">Registry ID</a> <span class="divider">|</span> <a href="OAIHandler?verb=ListRecords&amp;metadataPrefix=oai_dc">Registry Entries</a> <span class="divider">|</span> <a href="docs/misc/INFO%20URI%20Registry%20Policy%20Issues%202003-12-03.rtf">Registry Policy</a> <span class="divider">|</span> <a href="http://www.loc.gov/standards/uri/info.html">More Information</a> <span class="divider">|</span> <a href="mailto:jyoung@oclc.org">Contact</a>
+</td></tr>
+<tr valign="top"><td>
+<h3>info:bibcode/</h3>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>info-namespace</strong></th>
+<td width="100%">bibcode</td>
+</tr>
+        <tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>namespace-title</strong></th>
+<td width="100%">Namespace of Astrophysics Data System bibcodes</td>
+</tr>
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>registration-date</strong></th>
+<td width="100%">2003-10-09</td>
+</tr>
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>namespace-authority</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr valign="top">
+<th><strong>organisation-name</strong></th>
+<td width="100%">NASA Astrophysics Data System</td>
+</tr>
+		<tr valign="top">
+<th><strong>organisation-address</strong></th>
+<td width="100%">1815 Mass. Ave. MS-31 Cambridge, MA 02140. USA</td>
+</tr>
+		<tr valign="top">
+<th><strong>organisation-uri</strong></th>
+<td width="100%"><a target="_blank" href="http://adswww.harvard.edu/">http://adswww.harvard.edu/</a></td>
+</tr>
+		<tr valign="top">
+<th><strong>contact-person</strong></th>
+<td width="100%">Guenther Eichhorn</td>
+</tr>
+		<tr valign="top">
+<th><strong>contact-email</strong></th>
+<td width="100%"><a target="_blank" href="mailto:gei@cfa.harvard.edu">gei@cfa.harvard.edu</a></td>
+</tr>
+		<tr valign="top">
+<th><strong>contact-tel</strong></th>
+<td width="100%">+1 617 495 7260</td>
+</tr>
+	</table></td>
+</tr>
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>identifier-syntax</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr valign="top">
+<th><strong>description</strong></th>
+<td width="100%"><pre>The bibcode syntax is: yyyyjjjjjvvvvlppppa where:
+		* yyyy: Year of publication
+		* jjjjj: A standard abbreviation for the journal. A list of
+                  abbreviations is available at
+                  http://adsabs.harvard.edu/abs_doc/journal_abbr.html
+		* vvvv: The volume number (for a journal) or an abbreviation
+                  that specifies what type of publication it is (e.g. conf for
+                  conference proceedings, meet for Meeting proceedings, book
+                  for a book, cong for congress proceedings). Volume numbers
+                  are left padded with periods.
+		* m: Qualifier for publication: L for Letter, P for Pink page,
+                  Q-Z: Unduplicating character for identical codes
+		* pppp: Page number.  Page numbers are left padded with
+                  periods.
+		* a: The first letter of the last name of the first author.</pre></td>
+</tr>
+		<tr valign="top">
+<th><strong>uri</strong></th>
+<td width="100%"><a target="_blank" href="http://adsdoc.harvard.edu/abs_doc/help_pages/bibcodes.html">http://adsdoc.harvard.edu/abs_doc/help_pages/bibcodes.html</a></td>
+</tr>
+	</table></td>
+</tr>
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>identifier-normalization</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr valign="top">
+<th><strong>description</strong></th>
+<td width="100%"><pre>bibcode identifiers are case-sensitive.  For the jjjjj part of the identifier,
+the case provides some information: all letters are lower case for conferences,
+while for journals the first letter is always upper case and the other letters
+are mixed case.  For the l part of the identifier (14th position), the case
+also provides some information, even though it does not distinguish between
+different bibcodes.  Lower case letters are used for issue numbering, while
+uppercase letters are used for unduplicating bibcodes and for Letters pages.</pre></td>
+</tr>
+	</table></td>
+</tr>
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>namespace-information</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr valign="top">
+<th><strong>uri</strong></th>
+<td width="100%"><a target="_blank" href="http://adsabs.harvard.edu/abs_doc/journal_abbr.html">http://adsabs.harvard.edu/abs_doc/journal_abbr.html</a></td>
+</tr>
+	</table></td>
+</tr>
+</table>
+<p><a href="OAIHandler?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=info:bibcode/">View Dublin Core metadata for this entry</a></p>
+</td></tr>
+<tr valign="top"><td>The "info" URI Registry Prototype is currently managed by the OCLC Office of Research on behalf of <a href="http://www.niso.org">NISO</a>.</td></tr>
+<tr valign="top"><td>
+<a href="http://www.oclc.org/research/software/oai/cat.shtm"><img border="0" src="oaicat_icon.gif" alt="OAICat - An OAI-PMH v2 Repository Framework" width="120" height="60"></a>    <a href="http://www.openarchives.org"><img border="0" src="OA100.gif"></a>
+</td></tr>
+</table>
+</body>
+</html>

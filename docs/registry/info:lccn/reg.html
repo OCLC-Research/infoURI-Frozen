@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:dt="urn:schemas-microsoft-com:datatypes" xmlns:d2="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:str="http://xsltsl.org/string" xmlns:oai="http://www.openarchives.org/OAI/2.0/" xmlns:oai_id="http://www.openarchives.org/OAI/2.0/oai-identifier" xmlns:oai_branding="http://www.openarchives.org/OAI/2.0/branding/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:provenance="http://www.openarchives.org/OAI/2.0/provenance" xmlns:toolkit="http://oai.dlib.vt.edu/OAI/metadata/toolkit">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title> - info:lccn/</title>
+<link href="http://www.oclc.org/common/css/basic_oclc.css" rel="stylesheet" type="text/css">
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<center><h2>"info" URI Scheme</h2></center>
+<table width="100%" border="0" cellpadding="0" cellspacing="20">
+<tr valign="top"><td>
+<a href="docs/misc/faq.html">About "info"</a> <span class="divider">|</span> <a href="standards.html">Standards</a> <span class="divider">|</span> <a href="OAIHandler?verb=Identify">Registry ID</a> <span class="divider">|</span> <a href="OAIHandler?verb=ListRecords&amp;metadataPrefix=oai_dc">Registry Entries</a> <span class="divider">|</span> <a href="docs/misc/INFO%20URI%20Registry%20Policy%20Issues%202003-12-03.rtf">Registry Policy</a> <span class="divider">|</span> <a href="http://www.loc.gov/standards/uri/info.html">More Information</a> <span class="divider">|</span> <a href="mailto:jyoung@oclc.org">Contact</a>
+</td></tr>
+<tr valign="top"><td>
+<h3>info:lccn/</h3>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>info-namespace</strong></th>
+<td width="100%">lccn</td>
+</tr>
+        <tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>namespace-title</strong></th>
+<td width="100%">Namespace of Library of Congress Control Numbers</td>
+</tr>
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>registration-date</strong></th>
+<td width="100%">2003-11-10</td>
+</tr>
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>namespace-authority</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr valign="top">
+<th><strong>organisation-name</strong></th>
+<td width="100%">Library of Congress</td>
+</tr>
+		<tr valign="top">
+<th><strong>organisation-address</strong></th>
+<td width="100%">101 Independence Ave. Washington DC 20540. USA</td>
+</tr>
+		<tr valign="top">
+<th><strong>organisation-uri</strong></th>
+<td width="100%"><a target="_blank" href="http://www.loc.gov">http://www.loc.gov</a></td>
+</tr>
+		<tr valign="top">
+<th><strong>contact-person</strong></th>
+<td width="100%">Ray Denenberg</td>
+</tr>
+		<tr valign="top">
+<th><strong>contact-email</strong></th>
+<td width="100%"><a target="_blank" href="mailto:rden@loc.gov">rden@loc.gov</a></td>
+</tr>
+		<tr valign="top">
+<th><strong>contact-tel</strong></th>
+<td width="100%">+1 202 707 5795</td>
+</tr>
+	</table></td>
+</tr>
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>identifier-syntax</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr valign="top">
+<th><strong>description</strong></th>
+<td width="100%"><pre>A character string of  length eight to twelve characters.  (For purposes of
+this description  characters are ordered from left to right --  "first" means
+"leftmost".)
+The rightmost eight characters are always digits. 
+If the length is 9, then the first character must be alphabetic.
+If the length is 10, then the first two characters must be either both digits
+or both aplhabetic.
+If the length is 11,  then the first character must be alphabetic, the next
+two characters must be either both digits or both alphabetic.
+If the length is 12,  then the first two characters must be alphabetic and the
+remaining characters digits.</pre></td>
+</tr>
+		<tr valign="top">
+<th><strong>uri</strong></th>
+<td width="100%"><a target="_blank" href="http://www.loc.gov/marc/lccn-namespace.html#syntax">http://www.loc.gov/marc/lccn-namespace.html#syntax</a></td>
+</tr>
+	</table></td>
+</tr>
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>identifier-normalization</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr valign="top">
+<th><strong>description</strong></th>
+<td width="100%"><pre>An LCCN is to be normalized to its canonical form described in the syntax
+description above, as follows:
+1. Remove all blanks.
+2. If there is a forward slash (/) in the string, remove it, and remove all
+   characters to the right of the forward slash.
+3. If there is a hyphen in the string:
+     a. Remove it.
+     b. Inspect the substring following (to the right of) the (removed) hyphen.
+        Then (and assuming that steps 1 and 2 have been carried out):
+           i.  All these characters should be digits, and there should be six
+               or less.
+           ii. If the length of the substring is less than 6, left-fill the
+               substring with zeros until  the length is six.
+
+Examples:
+     "n78-890351" normalizes to "n78890351".  
+     "n78-89035" normalizes to "n78089035".  
+     "n  78890351 " normalizes to  "n78890351".  
+     "   85000002 "  normalizes to  "85000002" 
+     "85-2 "  normalizes to  "85000002" 
+     "2001-000002" normalizes to  "2001000002" 
+     "75-425165//r75" normalizes to "75425165"      
+     "   79139101 /AC/r932" normalizes to "79139101"</pre></td>
+</tr>
+		<tr valign="top">
+<th><strong>uri</strong></th>
+<td width="100%"><a target="_blank" href="http://www.loc.gov/marc/lccn-namespace.html#normalization">http://www.loc.gov/marc/lccn-namespace.html#normalization</a></td>
+</tr>
+	</table></td>
+</tr>
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>namespace-information</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr valign="top">
+<th><strong>description</strong></th>
+<td width="100%"><pre>The LCCN namespace consists of identifiers, one corresponding to every
+assigned LCCN (Library of Congress Control Number). Any LCCN may have various
+forms which all normalize to a single canonical form; only normalized values
+are included in the LCCN namespace.	
+	An LCCN is an identifier assigned by the Library of Congress for a
+metadata record (e.g., bibliographic record, authority record). LCCNs have
+three components: prefix, year, and serial number. The prefix is optional; if
+present, it has one to three lowercase alphabetic characters. (Prefixes are
+maintained in a controlled list.) The year is two or four digits. (For 2000 and
+earlier the year is two digits, for 2001 and later, four digits.) The serial
+number (after normalization) is six digits. (An un-normalized LCCN may have a
+serial number of 1-6 digits, which is left-filled with zeros when normalized.)</pre></td>
+</tr>
+		<tr valign="top">
+<th><strong>uri</strong></th>
+<td width="100%"><a target="_blank" href="http://www.loc.gov/marc/lccn-namespace.html#info">http://www.loc.gov/marc/lccn-namespace.html#info</a></td>
+</tr>
+	</table></td>
+</tr>
+</table>
+<p><a href="OAIHandler?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=info:lccn/">View Dublin Core metadata for this entry</a></p>
+</td></tr>
+<tr valign="top"><td>The "info" URI Registry Prototype is currently managed by the OCLC Office of Research on behalf of <a href="http://www.niso.org">NISO</a>.</td></tr>
+<tr valign="top"><td>
+<a href="http://www.oclc.org/research/software/oai/cat.shtm"><img border="0" src="oaicat_icon.gif" alt="OAICat - An OAI-PMH v2 Repository Framework" width="120" height="60"></a>    <a href="http://www.openarchives.org"><img border="0" src="OA100.gif"></a>
+</td></tr>
+</table>
+</body>
+</html>

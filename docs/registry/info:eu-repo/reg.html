@@ -2,7 +2,7 @@
 <html xmlns:dt="urn:schemas-microsoft-com:datatypes" xmlns:d2="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:str="http://xsltsl.org/string" xmlns:oai="http://www.openarchives.org/OAI/2.0/" xmlns:oai_id="http://www.openarchives.org/OAI/2.0/oai-identifier" xmlns:oai_branding="http://www.openarchives.org/OAI/2.0/branding/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:provenance="http://www.openarchives.org/OAI/2.0/provenance" xmlns:toolkit="http://oai.dlib.vt.edu/OAI/metadata/toolkit">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title> - info:arxiv/</title>
+<title> - info:eu-repo/</title>
 <link href="http://www.oclc.org/common/css/basic_oclc.css" rel="stylesheet" type="text/css">
 </head>
 <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
@@ -12,51 +12,51 @@
 <a href="docs/misc/faq.html">About "info"</a> <span class="divider">|</span> <a href="standards.html">Standards</a> <span class="divider">|</span> <a href="OAIHandler?verb=Identify">Registry ID</a> <span class="divider">|</span> <a href="OAIHandler?verb=ListRecords&amp;metadataPrefix=oai_dc">Registry Entries</a> <span class="divider">|</span> <a href="docs/misc/INFO%20URI%20Registry%20Policy%20Issues%202003-12-03.rtf">Registry Policy</a> <span class="divider">|</span> <a href="http://www.loc.gov/standards/uri/info.html">More Information</a> <span class="divider">|</span> <a href="mailto:jyoung@oclc.org">Contact</a>
 </td></tr>
 <tr valign="top"><td>
-<h3>info:arxiv/</h3>
+<h3>info:eu-repo/</h3>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>info-namespace</strong></th>
-<td width="100%">arxiv</td>
+<td width="100%">eu-repo</td>
 </tr>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>namespace-title</strong></th>
-<td width="100%">Namespace for arXiv.org identifiers </td>
+<td width="100%">Namespace of identifiers used by the European Repository Systems for describing semantic relationships in Compound and Complex documents.</td>
 </tr>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>registration-date</strong></th>
-<td width="100%">2006-02-07</td>
+<td width="100%">2008-05-13</td>
 </tr>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>namespace-authority</strong></th>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>organisation-name</strong></th>
-<td width="100%">arXiv.org e-print archive</td>
+<td width="100%">Confederation of Open Access Repositories (COAR)</td>
 </tr>
 <tr valign="top">
 <th><strong>organisation-address</strong></th>
-<td width="100%">301 College Ave., Ithaca, NY 14850, USA</td>
+<td width="100%">Gottingen State and University Library, Platz der Gottinger Sieben 1, 37073 Gottingen, Germany</td>
 </tr>
 <tr valign="top">
 <th><strong>organisation-uri</strong></th>
-<td width="100%"><a target="_blank" href="http://arxiv.org/">http://arxiv.org/</a></td>
+<td width="100%"><a target="_blank" href="https://www.coar-repositories.org/">https://www.coar-repositories.org/</a></td>
 </tr>
 <tr valign="top">
 <th><strong>contact-person</strong></th>
-<td width="100%">Simeon Warner</td>
+<td width="100%">Controlled Vocabulary Authority Group</td>
 </tr>
 <tr valign="top">
 <th><strong>contact-email</strong></th>
-<td width="100%"><a target="_blank" href="mailto:simeon@cs.cornell.edu">simeon@cs.cornell.edu</a></td>
+<td width="100%"><a target="_blank" href="mailto:coar-vocabularies@sub.uni-goettingen.de">coar-vocabularies@sub.uni-goettingen.de</a></td>
 </tr>
 
 <tr valign="top">
 <th><strong>contact-tel</strong></th>
-<td width="100%">607 254 8605</td>
+<td width="100%"></td>
 </tr>
 <tr valign="top">
 <th><strong>contact-uri</strong></th>
-<td width="100%"></td>
+<td width="100%">https://www.coar-repositories.org/activities/repository-interoperability/ig-controlled-vocabularies-for-repository-assets/</td>
 </tr>
 </table></td>
 </tr>
@@ -65,36 +65,27 @@
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>description</strong></th>
-<td width="100%"><pre>Identifiers in the arxiv namespace are used to identify 'papers' in the 
-arXiv.org e-print repository. The syntax of the identifier is of the form:
+<td width="100%"><pre>Identifiers in the eu-repo namespace are used to identify 
+information assets used in the European Research Libraries. 
+The syntax is of the form:
+  info:eu-repo/_type_/_identifier_
 
-  info:arxiv/&lt;internal_id&gt;
+whereby:
+* _type_ gives an indication of the nature and purpose of 
+the identifier.
+Current values for _type_ include: 'semantics' and 'dai'.  The meaning 
+is explained in the Namespace Information section.
+* _identifier_ is a unique string assigned to the 
+information asset.
+* _identifier_ can be replaced by _subType_/_identifier_
 
-where:
-
-  &lt;internal_id&gt; is the arXiv.org paper identifier
-  &lt;internal_id&gt; = &lt;archive&gt; '/' &lt;papernum&gt;
-
-  &lt;archive&gt; is the archive name with the repository
-  &lt;archive&gt; = &lt;lcletter&gt; *( &lt;lcletter&gt; | '-' )
- 
-  &lt;papernum&gt; is the number of a given paper within the archive
-  &lt;papernum&gt; = 7*&lt;digit&gt;
-
-  &lt;lcletter&gt; = 'a' - 'z'
-  &lt;digit&gt; = '0' - '9'
-
-At present, &lt;papernum&gt; is always 7 digits but this is likely to be 
-increased in the near future. 
-
-A 'paper' in arXiv may include one or more versions of an article or may have 
-been deleted. Each version may be composed a number of files in different 
-formats and a number of disseminations may also be available. As with historical
-use of arXiv's internal identifiers, info: identifiers using the format above 
-identify the compound digital object including all versions.
-
-It is intended to extend this identifier syntax to identify versions and 
-components of papers.</pre></td>
+Examples:
+* info:eu-repo/semantics/descriptiveMetadata
+* info:eu-repo/semantics/objectFile
+* info:eu-repo/semantics/humanStartPage
+* info:eu-repo/dai/nl/12345
+* info:eu-repo/semantics/researchProposal
+</pre></td>
 </tr>
 <tr valign="top">
 <th><strong>uri</strong></th>
@@ -107,10 +98,8 @@ components of papers.</pre></td>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>description</strong></th>
-<td width="100%"><pre>Identifiers in this namespace are case sensitive. At present this means that all
-letters will be lower case.</pre></td>
+<td width="100%"><pre>All identifiers in the eu-repo namespace are case-sensitive.</pre></td>
 </tr>
-
 <tr valign="top">
 <th><strong>uri</strong></th>
 <td width="100%"><a target="_blank" href=""></a></td>
@@ -120,16 +109,30 @@ letters will be lower case.</pre></td>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>identifier-examples</strong></th>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+
 <tr valign="top">
 <th><strong>identifier-example</strong></th>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>native</strong></th>
-<td width="100%">hep-th/9901001</td>
+<td width="100%"></td>
 </tr>
 <tr valign="top">
 <th><strong>info-uri</strong></th>
-<td width="100%">info:arxiv/hep-th/9901001</td>
+<td width="100%">info:eu-repo/semantics/objectFile</td>
+</tr>
+</table></td>
+</tr>
+<tr valign="top">
+<th><strong>identifier-example</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th><strong>native</strong></th>
+<td width="100%"></td>
+</tr>
+<tr valign="top">
+<th><strong>info-uri</strong></th>
+<td width="100%"></td>
 </tr>
 </table></td>
 </tr>
@@ -160,10 +163,100 @@ letters will be lower case.</pre></td>
 </table></td>
 </tr>
 
+<tr valign="top">
+<th><strong>identifier-example</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th><strong>native</strong></th>
+<td width="100%"></td>
+</tr>
+<tr valign="top">
+<th><strong>info-uri</strong></th>
+<td width="100%"></td>
+</tr>
+</table></td>
+</tr>
+<tr valign="top">
+<th><strong>identifier-example</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th><strong>native</strong></th>
+<td width="100%"></td>
+</tr>
+<tr valign="top">
+<th><strong>info-uri</strong></th>
+<td width="100%"></td>
+</tr>
+</table></td>
+</tr>
 </table></td>
 </tr>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>namespace-information</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th><strong>description</strong></th>
+<td width="100%"><pre>Identifiers in the eu-repo namespace are used to identify 
+information assets used in the European Research Libraries.  
+Different types of identifiers are used in the repository,
+including: Semantic  Identifiers, Publication Types and 
+Digital Author Identifiers.
+
+# Identifiers for Semantic terms: Identifiers used to 
+represent properties of assets stored in the repository, or 
+relationships between such assets.  These identifiers are 
+used in RDF or DIDL statements.  These identifiers are of 
+the form 
+info:eu-repo/semantics/_identifier_ 
+whereby _identifier_ is a unique string acorded to a 
+property or type of relationship.
+Official Enumerations: 
+* info:eu-repo/semantics/descriptiveMetadata
+--&gt; Defines the information about the item
+* info:eu-repo/semantics/objectFile
+--&gt; Defines the object item
+* info:eu-repo/semantics/humanStartPage
+--&gt; defines the location used for human beings to start
+
+# Identifiers for publication types: Identifiers to 
+represent the type of publication. These identifiers are of 
+the form info:eu-repo/semantics/_identifier_
+Official Enumerations:
+* info:eu-repo/semantics/annotation
+* info:eu-repo/semantics/article
+* info:eu-repo/semantics/bachelorThesis
+* info:eu-repo/semantics/book
+* info:eu-repo/semantics/bookPart
+* info:eu-repo/semantics/bookReview
+* info:eu-repo/semantics/contributionToPeriodical
+* info:eu-repo/semantics/doctoralThesis
+* info:eu-repo/semantics/researchProposal
+* info:eu-repo/semantics/lecture
+* info:eu-repo/semantics/masterThesis
+* info:eu-repo/semantics/researchPaper
+* info:eu-repo/semantics/patent
+* info:eu-repo/semantics/preprint
+* info:eu-repo/semantics/report
+* info:eu-repo/semantics/studentThesis
+* info:eu-repo/semantics/technicalDocumentation
+
+# Identifiers for Authors: Identifiers that are used 
+to represent the author in a unique way.
+* info:eu-repo/dai/_ISO3166_/_uniqueNationalString_
+Where by: _ISO3166_ is the two letter code for countries.
+http://www.iso.org/iso/country_codes/iso_3166_code_lists/
+Example: 
+* info:eu-repo/dai/nl/12345</pre></td>
+</tr>
+
+<tr valign="top">
+<th><strong>uri</strong></th>
+<td width="100%"><a target="_blank" href="http://purl.org/REP/standards/info-eu-repo">http://purl.org/REP/standards/info-eu-repo</a></td>
+</tr>
+</table></td>
+</tr>
+<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>service-mechanism</strong></th>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>description</strong></th>
@@ -175,17 +268,8 @@ letters will be lower case.</pre></td>
 </tr>
 </table></td>
 </tr>
-<tr xmlns:reg="http://info-uri.info/registry" valign="top">
-<th><strong>service-mechanism</strong></th>
-<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-<tr valign="top">
-<th><strong>uri</strong></th>
-<td width="100%"><a target="_blank" href=""></a></td>
-</tr>
-</table></td>
-</tr>
 </table>
-<p><a href="OAIHandler?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=info:arxiv/">View Dublin Core metadata for this entry</a></p>
+<p><a href="OAIHandler?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=info:eu-repo/">View Dublin Core metadata for this entry</a></p>
 </td></tr>
 <tr valign="top"><td>The "info" URI Registry Prototype is currently managed by the OCLC Office of Research on behalf of <a href="http://www.niso.org">NISO</a>.</td></tr>
 <tr valign="top"><td>

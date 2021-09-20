@@ -2,7 +2,7 @@
 <html xmlns:dt="urn:schemas-microsoft-com:datatypes" xmlns:d2="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:str="http://xsltsl.org/string" xmlns:oai="http://www.openarchives.org/OAI/2.0/" xmlns:oai_id="http://www.openarchives.org/OAI/2.0/oai-identifier" xmlns:oai_branding="http://www.openarchives.org/OAI/2.0/branding/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:provenance="http://www.openarchives.org/OAI/2.0/provenance" xmlns:toolkit="http://oai.dlib.vt.edu/OAI/metadata/toolkit">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title> - info:arxiv/</title>
+<title> - info:bnf/</title>
 <link href="http://www.oclc.org/common/css/basic_oclc.css" rel="stylesheet" type="text/css">
 </head>
 <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
@@ -12,47 +12,47 @@
 <a href="docs/misc/faq.html">About "info"</a> <span class="divider">|</span> <a href="standards.html">Standards</a> <span class="divider">|</span> <a href="OAIHandler?verb=Identify">Registry ID</a> <span class="divider">|</span> <a href="OAIHandler?verb=ListRecords&amp;metadataPrefix=oai_dc">Registry Entries</a> <span class="divider">|</span> <a href="docs/misc/INFO%20URI%20Registry%20Policy%20Issues%202003-12-03.rtf">Registry Policy</a> <span class="divider">|</span> <a href="http://www.loc.gov/standards/uri/info.html">More Information</a> <span class="divider">|</span> <a href="mailto:jyoung@oclc.org">Contact</a>
 </td></tr>
 <tr valign="top"><td>
-<h3>info:arxiv/</h3>
+<h3>info:bnf/</h3>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>info-namespace</strong></th>
-<td width="100%">arxiv</td>
+<td width="100%">bnf</td>
 </tr>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>namespace-title</strong></th>
-<td width="100%">Namespace for arXiv.org identifiers </td>
+<td width="100%">Namespace of identifiers used by the Bibliothèque nationale de France</td>
 </tr>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>registration-date</strong></th>
-<td width="100%">2006-02-07</td>
+<td width="100%"></td>
 </tr>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>namespace-authority</strong></th>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>organisation-name</strong></th>
-<td width="100%">arXiv.org e-print archive</td>
+<td width="100%">Bibliothèque nationale de France</td>
 </tr>
 <tr valign="top">
 <th><strong>organisation-address</strong></th>
-<td width="100%">301 College Ave., Ithaca, NY 14850, USA</td>
+<td width="100%">Quai François Mauriac 75013 PARIS</td>
 </tr>
 <tr valign="top">
 <th><strong>organisation-uri</strong></th>
-<td width="100%"><a target="_blank" href="http://arxiv.org/">http://arxiv.org/</a></td>
+<td width="100%"><a target="_blank" href="http://www.bnf.fr%20">http://www.bnf.fr </a></td>
 </tr>
 <tr valign="top">
 <th><strong>contact-person</strong></th>
-<td width="100%">Simeon Warner</td>
+<td width="100%">Emmanuelle Bermes</td>
 </tr>
 <tr valign="top">
 <th><strong>contact-email</strong></th>
-<td width="100%"><a target="_blank" href="mailto:simeon@cs.cornell.edu">simeon@cs.cornell.edu</a></td>
+<td width="100%"><a target="_blank" href="mailto:emmanuelle.bermes@bnf.fr">emmanuelle.bermes@bnf.fr</a></td>
 </tr>
 
 <tr valign="top">
 <th><strong>contact-tel</strong></th>
-<td width="100%">607 254 8605</td>
+<td width="100%">+33 (0)1 53 79 42 40</td>
 </tr>
 <tr valign="top">
 <th><strong>contact-uri</strong></th>
@@ -65,40 +65,72 @@
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>description</strong></th>
-<td width="100%"><pre>Identifiers in the arxiv namespace are used to identify 'papers' in the 
-arXiv.org e-print repository. The syntax of the identifier is of the form:
+<td width="100%"><pre>An 'info' URI with namespace 'bnf' takes the form:
 
-  info:arxiv/&lt;internal_id&gt;
+info:bnf/&lt;bnf-context&gt;/&lt;sub-context&gt;
 
-where:
+bnf-context
 
-  &lt;internal_id&gt; is the arXiv.org paper identifier
-  &lt;internal_id&gt; = &lt;archive&gt; '/' &lt;papernum&gt;
+bnf-context = ALPHA *(ALPHA / DIGIT )
 
-  &lt;archive&gt; is the archive name with the repository
-  &lt;archive&gt; = &lt;lcletter&gt; *( &lt;lcletter&gt; | '-' )
- 
-  &lt;papernum&gt; is the number of a given paper within the archive
-  &lt;papernum&gt; = 7*&lt;digit&gt;
+i.e. alphanumeric with leading alphabetic character.
 
-  &lt;lcletter&gt; = 'a' - 'z'
-  &lt;digit&gt; = '0' - '9'
+Values of &lt;bnf-context&gt; correspond to naming authorities 
+assigned by the national library of France and registered at
+http://bibnum.bnf.fr/identifiants/bnFInfoURI.html.
 
-At present, &lt;papernum&gt; is always 7 digits but this is likely to be 
-increased in the near future. 
+sub-context
 
-A 'paper' in arXiv may include one or more versions of an article or may have 
-been deleted. Each version may be composed a number of files in different 
-formats and a number of disseminations may also be available. As with historical
-use of arXiv's internal identifiers, info: identifiers using the format above 
-identify the compound digital object including all versions.
+sub-context = sub-context-component *("/" sub-context-component) ["#" component]
 
-It is intended to extend this identifier syntax to identify versions and 
-components of papers.</pre></td>
+sub-context-component
+
+sub-context-component = pchar *(pchar)
+
+The value of &lt;sub-context-component&gt; is an alphabetic string assigned 
+by the national library of France and corresponding to the 
+name of a specific data dictionary. 
+
+component
+
+component = pchar *(pchar) 
+
+The value of &lt;component&gt; is an alphabetic string assigned 
+by the national library of France and corresponding to the 
+name of an element inside a specific data dictionary.
+
+All data dictionaries are declared in the national library 
+of France preservation system documentation. When 
+applicable, they are published at http://bibnum.bnf.fr. 
+Data dictionaries are expressed using a human readable 
+format and can also be formalized according to a machine 
+readable format such as XML schema, RDFS, OWL.
+
+
+pchar (and others)
+
+pchar is as defined in RFC 3986, that is:
+
+pchar = unreserved / pct-encoded / sub-delims / ":" / "@"
+unreserved = ALPHA / DIGIT / "-" / "." / "_" / "~"
+pct-encoded = "%" HEXDIG HEXDIG
+sub-delims  = "!" / "$" / "&amp;" / "'" / "(" / ")" / "*" / "+" / "," / ";" / "="
+
+ALPHA, DIGIT, AND HEXDIG are as defined in RFC 2234: upper 
+or lower case alphabetic (A-Z / a-z), decimal digit (0-9), 
+and hexadecimal digit (DIGIT / "A" / "B" / "C" / "D" / "E" / 
+"F") respectively.
+
+Percent Encoded Characters 
+
+Percent Encoded Characters are used in the rare cases where 
+non US-ASCII characters appears in the URI.
+
+</pre></td>
 </tr>
 <tr valign="top">
 <th><strong>uri</strong></th>
-<td width="100%"><a target="_blank" href=""></a></td>
+<td width="100%"><a target="_blank" href="http://bibnum.bnf.fr/identifiants/bnFInfoURI.html">http://bibnum.bnf.fr/identifiants/bnFInfoURI.html</a></td>
 </tr>
 </table></td>
 </tr>
@@ -107,10 +139,8 @@ components of papers.</pre></td>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>description</strong></th>
-<td width="100%"><pre>Identifiers in this namespace are case sensitive. At present this means that all
-letters will be lower case.</pre></td>
+<td width="100%"><pre>All identifiers in the info:bnf namespace are case-sensitive.</pre></td>
 </tr>
-
 <tr valign="top">
 <th><strong>uri</strong></th>
 <td width="100%"><a target="_blank" href=""></a></td>
@@ -125,11 +155,11 @@ letters will be lower case.</pre></td>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>native</strong></th>
-<td width="100%">hep-th/9901001</td>
+<td width="100%"></td>
 </tr>
 <tr valign="top">
 <th><strong>info-uri</strong></th>
-<td width="100%">info:arxiv/hep-th/9901001</td>
+<td width="100%">info:bnf/spar/structure#set</td>
 </tr>
 </table></td>
 </tr>
@@ -139,27 +169,67 @@ letters will be lower case.</pre></td>
 <tr valign="top">
 <th><strong>native</strong></th>
 <td width="100%"></td>
-</tr>
-<tr valign="top">
-<th><strong>info-uri</strong></th>
-<td width="100%"></td>
-</tr>
-</table></td>
-</tr>
-<tr valign="top">
-<th><strong>identifier-example</strong></th>
-<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-<tr valign="top">
-<th><strong>native</strong></th>
-<td width="100%"></td>
-</tr>
-<tr valign="top">
-<th><strong>info-uri</strong></th>
-<td width="100%"></td>
-</tr>
-</table></td>
 </tr>
 
+<tr valign="top">
+<th><strong>info-uri</strong></th>
+<td width="100%">info:bnf/spar/representation#thumbnail</td>
+</tr>
+</table></td>
+</tr>
+<tr valign="top">
+<th><strong>identifier-example</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th><strong>native</strong></th>
+<td width="100%"></td>
+</tr>
+<tr valign="top">
+<th><strong>info-uri</strong></th>
+<td width="100%">info:bnf/rights/eventType#birth</td>
+</tr>
+</table></td>
+</tr>
+<tr valign="top">
+<th><strong>identifier-example</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th><strong>native</strong></th>
+<td width="100%"></td>
+</tr>
+<tr valign="top">
+<th><strong>info-uri</strong></th>
+<td width="100%"></td>
+</tr>
+</table></td>
+</tr>
+<tr valign="top">
+<th><strong>identifier-example</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th><strong>native</strong></th>
+<td width="100%"></td>
+</tr>
+<tr valign="top">
+<th><strong>info-uri</strong></th>
+<td width="100%"></td>
+</tr>
+</table></td>
+</tr>
+<tr valign="top">
+<th><strong>identifier-example</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+<tr valign="top">
+<th><strong>native</strong></th>
+<td width="100%"></td>
+</tr>
+<tr valign="top">
+<th><strong>info-uri</strong></th>
+<td width="100%"></td>
+</tr>
+</table></td>
+</tr>
 </table></td>
 </tr>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
@@ -167,7 +237,23 @@ letters will be lower case.</pre></td>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>description</strong></th>
-<td width="100%"><pre></pre></td>
+<td width="100%"><pre>The info:bnf is primarily used to assign URIs to classes 
+and properties in data dictionaries that are intended to be 
+expressed in RDF.
+
+These URIs correspond to abstract concepts and they don't 
+need to be actionable or to dereference a resource. The BnF 
+is using another persistent identifier scheme (ARK) for 
+resources that need to be dereferenced such as digital 
+objects, web documents, etc.
+
+The info URIs are meant to be easily readable for ease of 
+use in the system (for instance, to construct a RDF 
+ontology or to query it with SPARQL) so they are composed 
+with semantic elements rather than opaque strings.
+
+More information on the use of identifiers can be found at 
+http://bibnum.bnf.fr/identifiants/index.html</pre></td>
 </tr>
 <tr valign="top">
 <th><strong>uri</strong></th>
@@ -179,13 +265,17 @@ letters will be lower case.</pre></td>
 <th><strong>service-mechanism</strong></th>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
+<th><strong>description</strong></th>
+<td width="100%"><pre></pre></td>
+</tr>
+<tr valign="top">
 <th><strong>uri</strong></th>
-<td width="100%"><a target="_blank" href=""></a></td>
+<td width="100%"><a target="_blank" href="No%20service%20mechanisms%20are%20at%20present%20defined.%20">No service mechanisms are at present defined. </a></td>
 </tr>
 </table></td>
 </tr>
 </table>
-<p><a href="OAIHandler?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=info:arxiv/">View Dublin Core metadata for this entry</a></p>
+<p><a href="OAIHandler?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=info:bnf/">View Dublin Core metadata for this entry</a></p>
 </td></tr>
 <tr valign="top"><td>The "info" URI Registry Prototype is currently managed by the OCLC Office of Research on behalf of <a href="http://www.niso.org">NISO</a>.</td></tr>
 <tr valign="top"><td>

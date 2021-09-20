@@ -2,7 +2,7 @@
 <html xmlns:dt="urn:schemas-microsoft-com:datatypes" xmlns:d2="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:str="http://xsltsl.org/string" xmlns:oai="http://www.openarchives.org/OAI/2.0/" xmlns:oai_id="http://www.openarchives.org/OAI/2.0/oai-identifier" xmlns:oai_branding="http://www.openarchives.org/OAI/2.0/branding/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:provenance="http://www.openarchives.org/OAI/2.0/provenance" xmlns:toolkit="http://oai.dlib.vt.edu/OAI/metadata/toolkit">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title> - info:arxiv/</title>
+<title> - info:nyu/</title>
 <link href="http://www.oclc.org/common/css/basic_oclc.css" rel="stylesheet" type="text/css">
 </head>
 <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
@@ -12,51 +12,51 @@
 <a href="docs/misc/faq.html">About "info"</a> <span class="divider">|</span> <a href="standards.html">Standards</a> <span class="divider">|</span> <a href="OAIHandler?verb=Identify">Registry ID</a> <span class="divider">|</span> <a href="OAIHandler?verb=ListRecords&amp;metadataPrefix=oai_dc">Registry Entries</a> <span class="divider">|</span> <a href="docs/misc/INFO%20URI%20Registry%20Policy%20Issues%202003-12-03.rtf">Registry Policy</a> <span class="divider">|</span> <a href="http://www.loc.gov/standards/uri/info.html">More Information</a> <span class="divider">|</span> <a href="mailto:jyoung@oclc.org">Contact</a>
 </td></tr>
 <tr valign="top"><td>
-<h3>info:arxiv/</h3>
+<h3>info:nyu/</h3>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>info-namespace</strong></th>
-<td width="100%">arxiv</td>
+<td width="100%">nyu</td>
 </tr>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>namespace-title</strong></th>
-<td width="100%">Namespace for arXiv.org identifiers </td>
+<td width="100%">Identifiers for New York University Digital Objects</td>
 </tr>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>registration-date</strong></th>
-<td width="100%">2006-02-07</td>
+<td width="100%"></td>
 </tr>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>namespace-authority</strong></th>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>organisation-name</strong></th>
-<td width="100%">arXiv.org e-print archive</td>
+<td width="100%">New York University</td>
 </tr>
 <tr valign="top">
 <th><strong>organisation-address</strong></th>
-<td width="100%">301 College Ave., Ithaca, NY 14850, USA</td>
+<td width="100%">70 Washington Square South, New York, NY 10012</td>
 </tr>
 <tr valign="top">
 <th><strong>organisation-uri</strong></th>
-<td width="100%"><a target="_blank" href="http://arxiv.org/">http://arxiv.org/</a></td>
+<td width="100%"><a target="_blank" href="http://www.nyu.edu">http://www.nyu.edu</a></td>
 </tr>
 <tr valign="top">
 <th><strong>contact-person</strong></th>
-<td width="100%">Simeon Warner</td>
+<td width="100%">Rasan Rasch</td>
 </tr>
 <tr valign="top">
 <th><strong>contact-email</strong></th>
-<td width="100%"><a target="_blank" href="mailto:simeon@cs.cornell.edu">simeon@cs.cornell.edu</a></td>
+<td width="100%"><a target="_blank" href="mailto:dl-support@nyu.edu">dl-support@nyu.edu</a></td>
 </tr>
 
 <tr valign="top">
 <th><strong>contact-tel</strong></th>
-<td width="100%">607 254 8605</td>
+<td width="100%"></td>
 </tr>
 <tr valign="top">
 <th><strong>contact-uri</strong></th>
-<td width="100%"></td>
+<td width="100%">http://dlib.nyu.edu</td>
 </tr>
 </table></td>
 </tr>
@@ -65,55 +65,60 @@
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>description</strong></th>
-<td width="100%"><pre>Identifiers in the arxiv namespace are used to identify 'papers' in the 
-arXiv.org e-print repository. The syntax of the identifier is of the form:
+<td width="100%"><pre>An  'info' URI with  namespace  'nyu' takes the form:
+  info:nyu/&lt;nyu-info-subspace&gt;/&lt;subspace-specific-string&gt;
 
-  info:arxiv/&lt;internal_id&gt;
+nyu-info-subspace
+  nyu-info-subspace = ALPHA *( ALPHA / DIGIT )
 
-where:
+  i.e. alphanumeric with leading alphabetic character.
 
-  &lt;internal_id&gt; is the arXiv.org paper identifier
-  &lt;internal_id&gt; = &lt;archive&gt; '/' &lt;papernum&gt;
+  Values of nyu-info-subspace are assigned by NYU Libraries. 
 
-  &lt;archive&gt; is the archive name with the repository
-  &lt;archive&gt; = &lt;lcletter&gt; *( &lt;lcletter&gt; | '-' )
- 
-  &lt;papernum&gt; is the number of a given paper within the archive
-  &lt;papernum&gt; = 7*&lt;digit&gt;
+subspace-specific-string
+  subspace-specific-string = 
+    subspace-specific-component *("/" subspace-specific-component) 
 
-  &lt;lcletter&gt; = 'a' - 'z'
-  &lt;digit&gt; = '0' - '9'
+  subspace-specific-component
+    subspace-specific-component = pchar *(pchar) 
 
-At present, &lt;papernum&gt; is always 7 digits but this is likely to be 
-increased in the near future. 
+  pchar (etc.)
+    pchar is as defined in RFC 3986, that is:
+    pchar  = unreserved / pct-encoded / sub-delims / ":" / "@"
+    unreserved    = ALPHA / DIGIT / "-" / "." / "_" / "~"
+    pct-encoded = "%" HEXDIG HEXDIG
+    sub-delims  = "!" / "$" / "&amp;" / "'" / "(" / ")"  / "*" / "+" / "," / ";" / "="
 
-A 'paper' in arXiv may include one or more versions of an article or may have 
-been deleted. Each version may be composed a number of files in different 
-formats and a number of disseminations may also be available. As with historical
-use of arXiv's internal identifiers, info: identifiers using the format above 
-identify the compound digital object including all versions.
+    ALPHA, DIGIT, AND HEXDIG are as defined in RFC 2234: 
+    upper or  lower case alphabetic (A-Z / a-z), decimal digit (0-9), 
+    and hexadecimal digit (DIGIT / "A" / "B" / "C" / "D" / "E" / 
+    "F")  respectively.
 
-It is intended to extend this identifier syntax to identify versions and 
-components of papers.</pre></td>
+    Percent Encoded Characters  
+    No characters in general need to be percent encoded. 
+
+    Acknowledgements: 
+    the text and form of this registration was based on Ray Denenberg's info:lc registration.
+
+Additional information on the info:nyu namespace can be found here:</pre></td>
 </tr>
 <tr valign="top">
 <th><strong>uri</strong></th>
-<td width="100%"><a target="_blank" href=""></a></td>
+<td width="100%"><a target="_blank" href="http://hdl.handle.net/2333.1/v9s4mww5">http://hdl.handle.net/2333.1/v9s4mww5</a></td>
 </tr>
 </table></td>
 </tr>
+
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>identifier-normalization</strong></th>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>description</strong></th>
-<td width="100%"><pre>Identifiers in this namespace are case sensitive. At present this means that all
-letters will be lower case.</pre></td>
+<td width="100%"><pre>All identifiers in the info:nyu namespace are case-sensitive.</pre></td>
 </tr>
-
 <tr valign="top">
 <th><strong>uri</strong></th>
-<td width="100%"><a target="_blank" href=""></a></td>
+<td width="100%"><a target="_blank" href="http://hdl.handle.net/2333.1/v9s4mww5">http://hdl.handle.net/2333.1/v9s4mww5</a></td>
 </tr>
 </table></td>
 </tr>
@@ -125,11 +130,11 @@ letters will be lower case.</pre></td>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>native</strong></th>
-<td width="100%">hep-th/9901001</td>
+<td width="100%"></td>
 </tr>
 <tr valign="top">
 <th><strong>info-uri</strong></th>
-<td width="100%">info:arxiv/hep-th/9901001</td>
+<td width="100%">info:nyu/dl/v1.0/files/xpnvx139</td>
 </tr>
 </table></td>
 </tr>
@@ -142,24 +147,68 @@ letters will be lower case.</pre></td>
 </tr>
 <tr valign="top">
 <th><strong>info-uri</strong></th>
-<td width="100%"></td>
-</tr>
-</table></td>
-</tr>
-<tr valign="top">
-<th><strong>identifier-example</strong></th>
-<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-<tr valign="top">
-<th><strong>native</strong></th>
-<td width="100%"></td>
-</tr>
-<tr valign="top">
-<th><strong>info-uri</strong></th>
-<td width="100%"></td>
+<td width="100%">info:nyu/dl/v1.0/aips/mw6m90b/versions/1</td>
 </tr>
 </table></td>
 </tr>
 
+<tr valign="top">
+<th><strong>identifier-example</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th><strong>native</strong></th>
+<td width="100%"></td>
+</tr>
+<tr valign="top">
+<th><strong>info-uri</strong></th>
+<td width="100%">info:nyu/dl/v1.0/sips/sxksn1k/state
+
+</td>
+</tr>
+</table></td>
+</tr>
+<tr valign="top">
+<th><strong>identifier-example</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th><strong>native</strong></th>
+<td width="100%"></td>
+</tr>
+<tr valign="top">
+<th><strong>info-uri</strong></th>
+<td width="100%">info:nyu/dl/v1.0/files/xpnvx139/fixity
+</td>
+</tr>
+</table></td>
+</tr>
+<tr valign="top">
+<th><strong>identifier-example</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th><strong>native</strong></th>
+<td width="100%"></td>
+</tr>
+<tr valign="top">
+<th><strong>info-uri</strong></th>
+<td width="100%">info:nyu/dl/v1.0/agents/software/droid/versions/4.0.0
+</td>
+</tr>
+</table></td>
+</tr>
+<tr valign="top">
+<th><strong>identifier-example</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th><strong>native</strong></th>
+<td width="100%"></td>
+</tr>
+
+<tr valign="top">
+<th><strong>info-uri</strong></th>
+<td width="100%"></td>
+</tr>
+</table></td>
+</tr>
 </table></td>
 </tr>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
@@ -167,11 +216,11 @@ letters will be lower case.</pre></td>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>description</strong></th>
-<td width="100%"><pre></pre></td>
+<td width="100%"><pre>Identifiers in the info:nyu namespace will be used to identify information assets in New York University systems.  Identifiers will vary by nyu-info-subspace.</pre></td>
 </tr>
 <tr valign="top">
 <th><strong>uri</strong></th>
-<td width="100%"><a target="_blank" href=""></a></td>
+<td width="100%"><a target="_blank" href="http://hdl.handle.net/2333.1/v9s4mww5">http://hdl.handle.net/2333.1/v9s4mww5</a></td>
 </tr>
 </table></td>
 </tr>
@@ -179,13 +228,19 @@ letters will be lower case.</pre></td>
 <th><strong>service-mechanism</strong></th>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
+<th><strong>description</strong></th>
+<td width="100%"><pre>There are no service mechanisms defined for the info:nyu namespace.
+Please refer to the following URI for additional information:
+</pre></td>
+</tr>
+<tr valign="top">
 <th><strong>uri</strong></th>
-<td width="100%"><a target="_blank" href=""></a></td>
+<td width="100%"><a target="_blank" href="http://hdl.handle.net/2333.1/v9s4mww5">http://hdl.handle.net/2333.1/v9s4mww5</a></td>
 </tr>
 </table></td>
 </tr>
 </table>
-<p><a href="OAIHandler?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=info:arxiv/">View Dublin Core metadata for this entry</a></p>
+<p><a href="OAIHandler?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=info:nyu/">View Dublin Core metadata for this entry</a></p>
 </td></tr>
 <tr valign="top"><td>The "info" URI Registry Prototype is currently managed by the OCLC Office of Research on behalf of <a href="http://www.niso.org">NISO</a>.</td></tr>
 <tr valign="top"><td>

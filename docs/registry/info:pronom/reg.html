@@ -2,7 +2,7 @@
 <html xmlns:dt="urn:schemas-microsoft-com:datatypes" xmlns:d2="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:str="http://xsltsl.org/string" xmlns:oai="http://www.openarchives.org/OAI/2.0/" xmlns:oai_id="http://www.openarchives.org/OAI/2.0/oai-identifier" xmlns:oai_branding="http://www.openarchives.org/OAI/2.0/branding/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:provenance="http://www.openarchives.org/OAI/2.0/provenance" xmlns:toolkit="http://oai.dlib.vt.edu/OAI/metadata/toolkit">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title> - info:arxiv/</title>
+<title> - info:pronom/</title>
 <link href="http://www.oclc.org/common/css/basic_oclc.css" rel="stylesheet" type="text/css">
 </head>
 <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
@@ -12,47 +12,46 @@
 <a href="docs/misc/faq.html">About "info"</a> <span class="divider">|</span> <a href="standards.html">Standards</a> <span class="divider">|</span> <a href="OAIHandler?verb=Identify">Registry ID</a> <span class="divider">|</span> <a href="OAIHandler?verb=ListRecords&amp;metadataPrefix=oai_dc">Registry Entries</a> <span class="divider">|</span> <a href="docs/misc/INFO%20URI%20Registry%20Policy%20Issues%202003-12-03.rtf">Registry Policy</a> <span class="divider">|</span> <a href="http://www.loc.gov/standards/uri/info.html">More Information</a> <span class="divider">|</span> <a href="mailto:jyoung@oclc.org">Contact</a>
 </td></tr>
 <tr valign="top"><td>
-<h3>info:arxiv/</h3>
+<h3>info:pronom/</h3>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>info-namespace</strong></th>
-<td width="100%">arxiv</td>
+<td width="100%">pronom</td>
 </tr>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>namespace-title</strong></th>
-<td width="100%">Namespace for arXiv.org identifiers </td>
+<td width="100%">Namespace of PRONOM Unique Identifiers</td>
 </tr>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>registration-date</strong></th>
-<td width="100%">2006-02-07</td>
+<td width="100%">2005-11-30</td>
 </tr>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>namespace-authority</strong></th>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>organisation-name</strong></th>
-<td width="100%">arXiv.org e-print archive</td>
+<td width="100%">The National Archives</td>
 </tr>
 <tr valign="top">
 <th><strong>organisation-address</strong></th>
-<td width="100%">301 College Ave., Ithaca, NY 14850, USA</td>
+<td width="100%">Kew, Richmond, Surrey, UK, TW9 4DU</td>
 </tr>
 <tr valign="top">
 <th><strong>organisation-uri</strong></th>
-<td width="100%"><a target="_blank" href="http://arxiv.org/">http://arxiv.org/</a></td>
+<td width="100%"><a target="_blank" href="http://www.nationalarchives.gov.uk/">http://www.nationalarchives.gov.uk/</a></td>
 </tr>
 <tr valign="top">
 <th><strong>contact-person</strong></th>
-<td width="100%">Simeon Warner</td>
+<td width="100%">Adrian Brown</td>
 </tr>
 <tr valign="top">
 <th><strong>contact-email</strong></th>
-<td width="100%"><a target="_blank" href="mailto:simeon@cs.cornell.edu">simeon@cs.cornell.edu</a></td>
+<td width="100%"><a target="_blank" href="mailto:pronom@nationalarchives.gov.uk">pronom@nationalarchives.gov.uk</a></td>
 </tr>
-
 <tr valign="top">
 <th><strong>contact-tel</strong></th>
-<td width="100%">607 254 8605</td>
+<td width="100%">+44 (0) 20 8392 5257</td>
 </tr>
 <tr valign="top">
 <th><strong>contact-uri</strong></th>
@@ -65,40 +64,40 @@
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>description</strong></th>
-<td width="100%"><pre>Identifiers in the arxiv namespace are used to identify 'papers' in the 
-arXiv.org e-print repository. The syntax of the identifier is of the form:
+<td width="100%"><pre>A PRONOM Unique Identifier (PUID) is composed of two 
+elements, the PUID type, and the actual identifier. The PUID 
+type identifies the class of representation information to 
+which the identifier refers, where each identifier is unique 
+within that class. Thus, both elements are required to 
+construct a unique identifier.
 
-  info:arxiv/&lt;internal_id&gt;
+The syntax may be expressed in formal BNF notation as 
+follows:
 
-where:
+&lt;puid&gt; ::= &lt;puid_type&gt; '/' &lt;identifier&gt;
 
-  &lt;internal_id&gt; is the arXiv.org paper identifier
-  &lt;internal_id&gt; = &lt;archive&gt; '/' &lt;papernum&gt;
+&lt;puid_type&gt; ::= 'fmt'
 
-  &lt;archive&gt; is the archive name with the repository
-  &lt;archive&gt; = &lt;lcletter&gt; *( &lt;lcletter&gt; | '-' )
- 
-  &lt;papernum&gt; is the number of a given paper within the archive
-  &lt;papernum&gt; = 7*&lt;digit&gt;
+&lt;identifier&gt; ::= &lt;fragment&gt; | &lt;identifier&gt; &lt;fragment&gt;
 
-  &lt;lcletter&gt; = 'a' - 'z'
-  &lt;digit&gt; = '0' - '9'
+&lt;fragment&gt; ::= &lt;digit&gt; | &lt;letter&gt; 
 
-At present, &lt;papernum&gt; is always 7 digits but this is likely to be 
-increased in the near future. 
 
-A 'paper' in arXiv may include one or more versions of an article or may have 
-been deleted. Each version may be composed a number of files in different 
-formats and a number of disseminations may also be available. As with historical
-use of arXiv's internal identifiers, info: identifiers using the format above 
-identify the compound digital object including all versions.
+&lt;letter&gt; ::= 'a' – 'z'
 
-It is intended to extend this identifier syntax to identify versions and 
-components of papers.</pre></td>
+&lt;digit&gt; ::= '0' - '9'
+
+The PUID type is expressed as a lowercase alphanumeric 
+string. The only PUID type currently defined is "fmt", which 
+denotes that the identifier relates to a file format. Other 
+types may be defined in the future. The identifier itself is 
+expressed as a lowercase alphanumeric string of arbitrary 
+length. The PUID type and identifier are separated by a 
+forward slash.</pre></td>
 </tr>
 <tr valign="top">
 <th><strong>uri</strong></th>
-<td width="100%"><a target="_blank" href=""></a></td>
+<td width="100%"><a target="_blank" href="http://www.nationalarchives.gov.uk/aboutapps/pronom/pdf/pronom_unique_identifier_scheme.pdf">http://www.nationalarchives.gov.uk/aboutapps/pronom/pdf/pronom_unique_identifier_scheme.pdf</a></td>
 </tr>
 </table></td>
 </tr>
@@ -107,13 +106,11 @@ components of papers.</pre></td>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>description</strong></th>
-<td width="100%"><pre>Identifiers in this namespace are case sensitive. At present this means that all
-letters will be lower case.</pre></td>
+<td width="100%"><pre>The PUID type is case sensitive and must be normalised to lower case.</pre></td>
 </tr>
-
 <tr valign="top">
 <th><strong>uri</strong></th>
-<td width="100%"><a target="_blank" href=""></a></td>
+<td width="100%"><a target="_blank" href="http://www.nationalarchives.gov.uk/aboutapps/pronom/pdf/pronom_unique_identifier_scheme.pdf">http://www.nationalarchives.gov.uk/aboutapps/pronom/pdf/pronom_unique_identifier_scheme.pdf</a></td>
 </tr>
 </table></td>
 </tr>
@@ -125,11 +122,11 @@ letters will be lower case.</pre></td>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>native</strong></th>
-<td width="100%">hep-th/9901001</td>
+<td width="100%">fmt/42</td>
 </tr>
 <tr valign="top">
 <th><strong>info-uri</strong></th>
-<td width="100%">info:arxiv/hep-th/9901001</td>
+<td width="100%">info:pronom/fmt/42</td>
 </tr>
 </table></td>
 </tr>
@@ -159,7 +156,6 @@ letters will be lower case.</pre></td>
 </tr>
 </table></td>
 </tr>
-
 </table></td>
 </tr>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
@@ -167,11 +163,16 @@ letters will be lower case.</pre></td>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>description</strong></th>
-<td width="100%"><pre></pre></td>
+<td width="100%"><pre>The PUID namespace consists of identifiers which correspond to
+entries in the PRONOM technical registry. Every identifier is unique within
+the namespace, and is persistently and unambiguously bound to a single registry
+entry. The PUID type element identifies the type of registry entry (e.g. a file
+format), and the identifier element denotes an instance of that type within the
+registry (e.g. the record for a specific file format).</pre></td>
 </tr>
 <tr valign="top">
 <th><strong>uri</strong></th>
-<td width="100%"><a target="_blank" href=""></a></td>
+<td width="100%"><a target="_blank" href="http://www.nationalarchives.gov.uk/aboutapps/pronom/pdf/pronom_unique_identifier_scheme.pdf">http://www.nationalarchives.gov.uk/aboutapps/pronom/pdf/pronom_unique_identifier_scheme.pdf</a></td>
 </tr>
 </table></td>
 </tr>
@@ -180,12 +181,12 @@ letters will be lower case.</pre></td>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>uri</strong></th>
-<td width="100%"><a target="_blank" href=""></a></td>
+<td width="100%"><a target="_blank" href="N/A">N/A</a></td>
 </tr>
 </table></td>
 </tr>
 </table>
-<p><a href="OAIHandler?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=info:arxiv/">View Dublin Core metadata for this entry</a></p>
+<p><a href="OAIHandler?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=info:pronom/">View Dublin Core metadata for this entry</a></p>
 </td></tr>
 <tr valign="top"><td>The "info" URI Registry Prototype is currently managed by the OCLC Office of Research on behalf of <a href="http://www.niso.org">NISO</a>.</td></tr>
 <tr valign="top"><td>

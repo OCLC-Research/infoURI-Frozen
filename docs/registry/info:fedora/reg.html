@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:dt="urn:schemas-microsoft-com:datatypes" xmlns:d2="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:str="http://xsltsl.org/string" xmlns:oai="http://www.openarchives.org/OAI/2.0/" xmlns:oai_id="http://www.openarchives.org/OAI/2.0/oai-identifier" xmlns:oai_branding="http://www.openarchives.org/OAI/2.0/branding/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:provenance="http://www.openarchives.org/OAI/2.0/provenance" xmlns:toolkit="http://oai.dlib.vt.edu/OAI/metadata/toolkit">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title> - info:fedora/</title>
+<link href="http://www.oclc.org/common/css/basic_oclc.css" rel="stylesheet" type="text/css">
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<center><h2>"info" URI Scheme</h2></center>
+<table width="100%" border="0" cellpadding="0" cellspacing="20">
+<tr valign="top"><td>
+<a href="docs/misc/faq.html">About "info"</a> <span class="divider">|</span> <a href="standards.html">Standards</a> <span class="divider">|</span> <a href="OAIHandler?verb=Identify">Registry ID</a> <span class="divider">|</span> <a href="OAIHandler?verb=ListRecords&amp;metadataPrefix=oai_dc">Registry Entries</a> <span class="divider">|</span> <a href="docs/misc/INFO%20URI%20Registry%20Policy%20Issues%202003-12-03.rtf">Registry Policy</a> <span class="divider">|</span> <a href="http://www.loc.gov/standards/uri/info.html">More Information</a> <span class="divider">|</span> <a href="mailto:jyoung@oclc.org">Contact</a>
+</td></tr>
+<tr valign="top"><td>
+<h3>info:fedora/</h3>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>info-namespace</strong></th>
+<td width="100%">fedora</td>
+</tr>
+        <tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>namespace-title</strong></th>
+<td width="100%">Namespace of Fedora Digital Objects and Disseminations</td>
+</tr>
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>registration-date</strong></th>
+<td width="100%">2004-06-02</td>
+</tr>
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>namespace-authority</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr valign="top">
+<th><strong>organisation-name</strong></th>
+<td width="100%">DuraSpace</td>
+</tr>
+		<tr valign="top">
+<th><strong>organisation-address</strong></th>
+<td width="100%">P.O. Box 7144, Ithaca, NY 14851-7144</td>
+</tr>
+		<tr valign="top">
+<th><strong>organisation-uri</strong></th>
+<td width="100%"><a target="_blank" href="http://duraspace.org/">http://duraspace.org/</a></td>
+</tr>
+		<tr valign="top">
+<th><strong>contact-person</strong></th>
+<td width="100%">Chris Wilper</td>
+</tr>
+		<tr valign="top">
+<th><strong>contact-email</strong></th>
+<td width="100%"><a target="_blank" href="mailto:cwilper@duraspace.org">cwilper@duraspace.org</a></td>
+</tr>
+		<tr valign="top">
+<th><strong>contact-tel</strong></th>
+<td width="100%">1-607-254-8623</td>
+</tr>
+	</table></td>
+</tr>
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>identifier-syntax</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr valign="top">
+<th><strong>description</strong></th>
+<td width="100%"><pre>To identify a digital object:
+  Syntax:
+    "info:fedora/" object-pid
+  Where:
+    "object-pid" is the Fedora PID of the object
+  Examples:
+    info:fedora/example:1
+    info:fedora/example:9876
+
+To identify a dissemination:
+  Syntax:
+    "info:fedora/" object-pid "/" dissem-name
+  Where:
+    "object-pid" is the Fedora PID of the object (or "*" when the
+      URI indicates a dissemination without regard to
+      a particular object).
+    "dissem-name" is either a datastream ID or behavior definition
+      object PID, followed by "/", followed by a method name.
+  Examples:
+    info:fedora/example:3/DS1
+    info:fedora/example:3/example:1/index
+    info:fedora/*/DS1
+    info:fedora/*/example:1/index
+
+Note that datastream ids and method names may consist of XML NCName
+characters.  NCName characters that are not safe to directly encode
+in an "info" uri and must be escaped using one to four escaped UTF-8
+octets per character, each of the form "%" HEXDIG HEXDIG.</pre></td>
+</tr>
+	</table></td>
+</tr>
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>identifier-normalization</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr valign="top">
+<th><strong>description</strong></th>
+<td width="100%"><pre>- Make all characters up to and including the PID lowercase.
+- Un-escape any URI-escaped characters that do not need escaping
+  according the definition of the "info" scheme.
+- Make all remaining escaped octets use UPPERCASE (%ff becomes %FF)</pre></td>
+</tr>
+	</table></td>
+</tr>
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>namespace-information</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr valign="top">
+<th><strong>uri</strong></th>
+<td width="100%"><a target="_blank" href="http://fedora-commons.org/definitions/identifiers/">http://fedora-commons.org/definitions/identifiers/</a></td>
+</tr>
+	</table></td>
+</tr>
+</table>
+<p><a href="OAIHandler?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=info:fedora/">View Dublin Core metadata for this entry</a></p>
+</td></tr>
+<tr valign="top"><td>The "info" URI Registry Prototype is currently managed by the OCLC Office of Research on behalf of <a href="http://www.niso.org">NISO</a>.</td></tr>
+<tr valign="top"><td>
+<a href="http://www.oclc.org/research/software/oai/cat.shtm"><img border="0" src="oaicat_icon.gif" alt="OAICat - An OAI-PMH v2 Repository Framework" width="120" height="60"></a>    <a href="http://www.openarchives.org"><img border="0" src="OA100.gif"></a>
+</td></tr>
+</table>
+</body>
+</html>

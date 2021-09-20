@@ -2,7 +2,7 @@
 <html xmlns:dt="urn:schemas-microsoft-com:datatypes" xmlns:d2="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:str="http://xsltsl.org/string" xmlns:oai="http://www.openarchives.org/OAI/2.0/" xmlns:oai_id="http://www.openarchives.org/OAI/2.0/oai-identifier" xmlns:oai_branding="http://www.openarchives.org/OAI/2.0/branding/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:provenance="http://www.openarchives.org/OAI/2.0/provenance" xmlns:toolkit="http://oai.dlib.vt.edu/OAI/metadata/toolkit">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title> - info:arxiv/</title>
+<title> - info:inchi/</title>
 <link href="http://www.oclc.org/common/css/basic_oclc.css" rel="stylesheet" type="text/css">
 </head>
 <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
@@ -12,47 +12,47 @@
 <a href="docs/misc/faq.html">About "info"</a> <span class="divider">|</span> <a href="standards.html">Standards</a> <span class="divider">|</span> <a href="OAIHandler?verb=Identify">Registry ID</a> <span class="divider">|</span> <a href="OAIHandler?verb=ListRecords&amp;metadataPrefix=oai_dc">Registry Entries</a> <span class="divider">|</span> <a href="docs/misc/INFO%20URI%20Registry%20Policy%20Issues%202003-12-03.rtf">Registry Policy</a> <span class="divider">|</span> <a href="http://www.loc.gov/standards/uri/info.html">More Information</a> <span class="divider">|</span> <a href="mailto:jyoung@oclc.org">Contact</a>
 </td></tr>
 <tr valign="top"><td>
-<h3>info:arxiv/</h3>
+<h3>info:inchi/</h3>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>info-namespace</strong></th>
-<td width="100%">arxiv</td>
+<td width="100%">inchi</td>
 </tr>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>namespace-title</strong></th>
-<td width="100%">Namespace for arXiv.org identifiers </td>
+<td width="100%">Namespace for IUPAC International Chemical Identifiers (InChI)</td>
 </tr>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>registration-date</strong></th>
-<td width="100%">2006-02-07</td>
+<td width="100%">2007-02-19</td>
 </tr>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>namespace-authority</strong></th>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>organisation-name</strong></th>
-<td width="100%">arXiv.org e-print archive</td>
+<td width="100%">IUPAC</td>
 </tr>
 <tr valign="top">
 <th><strong>organisation-address</strong></th>
-<td width="100%">301 College Ave., Ithaca, NY 14850, USA</td>
+<td width="100%">IUPAC Secretariat, P.O. Box 13757, Research Triangle Park, NC 27709</td>
 </tr>
 <tr valign="top">
 <th><strong>organisation-uri</strong></th>
-<td width="100%"><a target="_blank" href="http://arxiv.org/">http://arxiv.org/</a></td>
+<td width="100%"><a target="_blank" href="http://www.iupac.org/">http://www.iupac.org/</a></td>
 </tr>
 <tr valign="top">
 <th><strong>contact-person</strong></th>
-<td width="100%">Simeon Warner</td>
+<td width="100%">IUPAC Secretariat</td>
 </tr>
 <tr valign="top">
 <th><strong>contact-email</strong></th>
-<td width="100%"><a target="_blank" href="mailto:simeon@cs.cornell.edu">simeon@cs.cornell.edu</a></td>
+<td width="100%"><a target="_blank" href="mailto:secretariat@iupac.org">secretariat@iupac.org</a></td>
 </tr>
 
 <tr valign="top">
 <th><strong>contact-tel</strong></th>
-<td width="100%">607 254 8605</td>
+<td width="100%">+1-919-485-8704</td>
 </tr>
 <tr valign="top">
 <th><strong>contact-uri</strong></th>
@@ -65,40 +65,38 @@
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>description</strong></th>
-<td width="100%"><pre>Identifiers in the arxiv namespace are used to identify 'papers' in the 
-arXiv.org e-print repository. The syntax of the identifier is of the form:
+<td width="100%"><pre>An InChI identifier may contain the following characters:
 
-  info:arxiv/&lt;internal_id&gt;
+A-Z
+a-z
+0-9
+()*+,-./;=?@
 
-where:
+i.e. 26 uppercase ("A-Z") and 26 lowercase English letters 
+("a-z") , 10 digits ("0-9"), and 12 punctuation characters 
+("()*+,-./;=?@"). An InChI identifier does not contain 
+whitespace characters.
 
-  &lt;internal_id&gt; is the arXiv.org paper identifier
-  &lt;internal_id&gt; = &lt;archive&gt; '/' &lt;papernum&gt;
+The only character in an InChI identifier that needs to be 
+%-encoded within an "info" URI is the "?" character which 
+should be %-encoded as "%3F", i.e. all instances of "?" 
+should be replaced by the string "%3F".
 
-  &lt;archive&gt; is the archive name with the repository
-  &lt;archive&gt; = &lt;lcletter&gt; *( &lt;lcletter&gt; | '-' )
- 
-  &lt;papernum&gt; is the number of a given paper within the archive
-  &lt;papernum&gt; = 7*&lt;digit&gt;
+An InChIKey identifier may contain the following characters:
 
-  &lt;lcletter&gt; = 'a' - 'z'
-  &lt;digit&gt; = '0' - '9'
+A-Z
+-
 
-At present, &lt;papernum&gt; is always 7 digits but this is likely to be 
-increased in the near future. 
+i.e. 26 uppercase English letters ("A-Z") and one 
+punctuation character ("-"). An InChIKey identifier does not 
+contain whitespace characters.
 
-A 'paper' in arXiv may include one or more versions of an article or may have 
-been deleted. Each version may be composed a number of files in different 
-formats and a number of disseminations may also be available. As with historical
-use of arXiv's internal identifiers, info: identifiers using the format above 
-identify the compound digital object including all versions.
-
-It is intended to extend this identifier syntax to identify versions and 
-components of papers.</pre></td>
+Note in the examples given below that each InChI identifier 
+is followed by its corresponding InChIKey identifier.</pre></td>
 </tr>
 <tr valign="top">
 <th><strong>uri</strong></th>
-<td width="100%"><a target="_blank" href=""></a></td>
+<td width="100%"><a target="_blank" href="http://iupac.org/inchi/">http://iupac.org/inchi/</a></td>
 </tr>
 </table></td>
 </tr>
@@ -107,29 +105,31 @@ components of papers.</pre></td>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>description</strong></th>
-<td width="100%"><pre>Identifiers in this namespace are case sensitive. At present this means that all
-letters will be lower case.</pre></td>
-</tr>
+<td width="100%"><pre>InChI and InChIkey identifiers are case-sensitive.
 
+For information on comparing InChI identifiers see
+http://wwmm.ch.cam.ac.uk/inchifaq/#Comparing%20InChIs</pre></td>
+</tr>
 <tr valign="top">
 <th><strong>uri</strong></th>
-<td width="100%"><a target="_blank" href=""></a></td>
+<td width="100%"><a target="_blank" href="http://iupac.org/inchi/">http://iupac.org/inchi/</a></td>
 </tr>
 </table></td>
 </tr>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
 <th><strong>identifier-examples</strong></th>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+
 <tr valign="top">
 <th><strong>identifier-example</strong></th>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>native</strong></th>
-<td width="100%">hep-th/9901001</td>
+<td width="100%">InChI=1/H20/h1H2/p-1</td>
 </tr>
 <tr valign="top">
 <th><strong>info-uri</strong></th>
-<td width="100%">info:arxiv/hep-th/9901001</td>
+<td width="100%">info:inchi/InChI=1/H20/h1H2/p-1</td>
 </tr>
 </table></td>
 </tr>
@@ -138,11 +138,11 @@ letters will be lower case.</pre></td>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>native</strong></th>
-<td width="100%"></td>
+<td width="100%">InChIKey=PPJWSANORHMICG-REWHXWOFAJ</td>
 </tr>
 <tr valign="top">
 <th><strong>info-uri</strong></th>
-<td width="100%"></td>
+<td width="100%">info:inchi/InChIKey=PPJWSANORHMICG-REWHXWOFAJ</td>
 </tr>
 </table></td>
 </tr>
@@ -151,15 +151,68 @@ letters will be lower case.</pre></td>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>native</strong></th>
-<td width="100%"></td>
+<td width="100%">InChI=1/C2H4O2/C1-2(3)4/h1H3,(H,3,4)/p-1</td>
 </tr>
 <tr valign="top">
 <th><strong>info-uri</strong></th>
-<td width="100%"></td>
-</tr>
-</table></td>
+<td width="100%">info:inchi/InChI=1/C2H4O2/C1-2(3)4/h1H3,(H,3,4)/p-1</td>
 </tr>
 
+</table></td>
+</tr>
+<tr valign="top">
+<th><strong>identifier-example</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th><strong>native</strong></th>
+<td width="100%">InChIKey=KXTGNRBFOXOJFU-XTZPMQCDAN</td>
+</tr>
+<tr valign="top">
+<th><strong>info-uri</strong></th>
+<td width="100%">info:inchi/InChIKey=KXTGNRBFOXOJFU-XTZPMQCDAN</td>
+</tr>
+</table></td>
+</tr>
+<tr valign="top">
+<th><strong>identifier-example</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th><strong>native</strong></th>
+<td width="100%">InChI=1/C31H52N2O23/c1-9-18(43)21(46)22(47)28(51-9)
+53-24(12(5-34)32-10(2)38)25(15(42)7-36)54-29-23(48)
+27(20(45)16(8-37)52-29)56-31(30(49)50)4-13(40)17(33
+-11(3)39)26(55-31)19(44)14(41)6-35/h5,9,12-29,35-37
+,40-48H,4,6-8H2,1-3H3,(H,32,38)(H,33,39)(H,49,50)/t
+9-,12-,13-,14+,15+,16+,17+,18+,19+,20-,21+,22-,23+,
+24+,25+,26+,27-,28-,29-,31-/m0/s1/f/h32-33,49H</td>
+</tr>
+<tr valign="top">
+<th><strong>info-uri</strong></th>
+<td width="100%">info:inchi/InChI=1/C31H52N2O23/c1-9-18(43)21(46)22(
+47)28(51-9)53-24(12(5-34)32-10(2)38)25(15(42)7-36)5
+4-29-23(48)27(20(45)16(8-37)52-29)56-31(30(49)50)4-
+13(40)17(33-11(3)39)26(55-31)19(44)14(41)6-35/h5,9,
+12-29,35-37,40-48H,4,6-8H2,1-3H3,(H,32,38)(H,33,39)
+(H,49,50)/t9-,12-,13-,14+,15+,16+,17+,18+,19+,20-,2
+1+,22-,23+,24+,25+,26+,27-,28-,29-,31-/m0/s1/f/h32-
+33,49H</td>
+</tr>
+</table></td>
+</tr>
+<tr valign="top">
+<th><strong>identifier-example</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<th><strong>native</strong></th>
+<td width="100%">InChIKey=LAQPKDLYOBZWBT-UWVXTVNBDU</td>
+</tr>
+<tr valign="top">
+<th><strong>info-uri</strong></th>
+<td width="100%">info:inchi/InChIKey=LAQPKDLYOBZWBT-UWVXTVNBDU</td>
+</tr>
+
+</table></td>
+</tr>
 </table></td>
 </tr>
 <tr xmlns:reg="http://info-uri.info/registry" valign="top">
@@ -167,11 +220,31 @@ letters will be lower case.</pre></td>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
 <th><strong>description</strong></th>
-<td width="100%"><pre></pre></td>
+<td width="100%"><pre>An InChI (IUPAC International Chemical Identifier) is a 
+string of characters capable of uniquely representing a 
+chemical substance. The identifier is a string of unique 
+characters of indefinite length generated by a publicly 
+available algorithm (http://iupac.org/inchi/). It can be 
+used for both public and private databases of chemical 
+structures. It is extensible and is a non-proprietary 
+identifier which can be used in both printed and electronic 
+databases. The InChI is comprised of a number of layers, 
+depending on the level of detail known about a particular 
+chemical structure.
+
+InChIKey is a fixed-length (25-character) condensed digital 
+representation of the InChI. It consists of a 14-character 
+first block that encodes the molecular skeleton 
+(connectivity); an 8-character second block that encodes 
+proton positions (tautomers), stereochemistry, isotopes, and 
+the reconnected layer; a flag character, indicating the 
+InChI version and the presence/absence of a fixed H layer, 
+isotopes, and stereochemistry; and a final check character.
+</pre></td>
 </tr>
 <tr valign="top">
 <th><strong>uri</strong></th>
-<td width="100%"><a target="_blank" href=""></a></td>
+<td width="100%"><a target="_blank" href="http://iupac.org/inchi/">http://iupac.org/inchi/</a></td>
 </tr>
 </table></td>
 </tr>
@@ -179,13 +252,17 @@ letters will be lower case.</pre></td>
 <th><strong>service-mechanism</strong></th>
 <td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr valign="top">
+<th><strong>description</strong></th>
+<td width="100%"><pre>No service mechanism declared.</pre></td>
+</tr>
+<tr valign="top">
 <th><strong>uri</strong></th>
 <td width="100%"><a target="_blank" href=""></a></td>
 </tr>
 </table></td>
 </tr>
 </table>
-<p><a href="OAIHandler?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=info:arxiv/">View Dublin Core metadata for this entry</a></p>
+<p><a href="OAIHandler?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=info:inchi/">View Dublin Core metadata for this entry</a></p>
 </td></tr>
 <tr valign="top"><td>The "info" URI Registry Prototype is currently managed by the OCLC Office of Research on behalf of <a href="http://www.niso.org">NISO</a>.</td></tr>
 <tr valign="top"><td>

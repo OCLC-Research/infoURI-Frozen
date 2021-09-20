@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:dt="urn:schemas-microsoft-com:datatypes" xmlns:d2="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:str="http://xsltsl.org/string" xmlns:oai="http://www.openarchives.org/OAI/2.0/" xmlns:oai_id="http://www.openarchives.org/OAI/2.0/oai-identifier" xmlns:oai_branding="http://www.openarchives.org/OAI/2.0/branding/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:provenance="http://www.openarchives.org/OAI/2.0/provenance" xmlns:toolkit="http://oai.dlib.vt.edu/OAI/metadata/toolkit">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title> - info:nla/</title>
+<link href="http://www.oclc.org/common/css/basic_oclc.css" rel="stylesheet" type="text/css">
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<center><h2>"info" URI Scheme</h2></center>
+<table width="100%" border="0" cellpadding="0" cellspacing="20">
+<tr valign="top"><td>
+<a href="docs/misc/faq.html">About "info"</a> <span class="divider">|</span> <a href="standards.html">Standards</a> <span class="divider">|</span> <a href="OAIHandler?verb=Identify">Registry ID</a> <span class="divider">|</span> <a href="OAIHandler?verb=ListRecords&amp;metadataPrefix=oai_dc">Registry Entries</a> <span class="divider">|</span> <a href="docs/misc/INFO%20URI%20Registry%20Policy%20Issues%202003-12-03.rtf">Registry Policy</a> <span class="divider">|</span> <a href="http://www.loc.gov/standards/uri/info.html">More Information</a> <span class="divider">|</span> <a href="mailto:jyoung@oclc.org">Contact</a>
+</td></tr>
+<tr valign="top"><td>
+<h3>info:nla/</h3>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>info-namespace</strong></th>
+<td width="100%">nla</td>
+</tr>
+        <tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>namespace-title</strong></th>
+<td width="100%">Namespace of identifiers for the
+National Library of Australia's digital &amp; digitised collections</td>
+</tr>
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>registration-date</strong></th>
+<td width="100%">2004-09-27</td>
+</tr>
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>namespace-authority</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr valign="top">
+<th><strong>organisation-name</strong></th>
+<td width="100%">National Library
+of Australia</td>
+</tr>
+		<tr valign="top">
+<th><strong>organisation-address</strong></th>
+<td width="100%">Parkes Place,
+Canberra, ACT, 2600, Australia</td>
+</tr>
+		<tr valign="top">
+<th><strong>organisation-uri</strong></th>
+<td width="100%"><a target="_blank" href="www.nla.gov.au">www.nla.gov.au</a></td>
+</tr>
+		<tr valign="top">
+<th><strong>contact-person</strong></th>
+<td width="100%">Tony Boston</td>
+</tr>
+		<tr valign="top">
+<th><strong>contact-email</strong></th>
+<td width="100%"><a target="_blank" href="mailto:dsp@nla.gov.au">dsp@nla.gov.au</a></td>
+</tr>
+		<tr valign="top">
+<th><strong>contact-tel</strong></th>
+<td width="100%">+61 2 6262 1111</td>
+</tr>
+	</table></td>
+</tr>
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>identifier-syntax</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr valign="top">
+<th><strong>description</strong></th>
+<td width="100%"><pre>Each identifier starts with &lt;info:nla/collection-id&gt;, where the &lt;collection-id&gt; represents one of the following sub-namespaces. The syntax of the remainder of the identifier following the sub-namespace varies according to the type of object. 
+
+Manuscripts: /ms-&lt;ms collection no.&gt;-&lt;series no.&gt;-&lt;item no.&gt;-&lt;sequence no.&gt;-&lt;tile no.&gt;-&lt;role code&gt; 
+Example: 
+info:nla/ms-ms9-1-s1-e
+which is currently resolvable as:
+http://nla.gov.au/nla.ms-ms9-1-s1-e (examination copy of the first page of the first item in series 1 of the papers of Sir Joseph Banks.) 
+
+
+
+Oral History: /oh-&lt;trc collection no.&gt;-&lt;series no.&gt;-&lt;item no.&gt;-&lt;part no.&gt;-&lt;sequence no.&gt;-&lt;piece no.&gt;-&lt;fragment no.&gt;-&lt;role code&gt; 
+
+Example: 
+info:nla/oh-0234-0003-0001-m
+which is currently resolvable as:
+http://nla.gov.au/nla.oh-0234-0003-0001-m (master recording of the first tape in series 3 of TRC0234) 
+
+Maps: /map-&lt;item no.&gt;-&lt;part no.&gt;-&lt;sequence no.&gt;-&lt;tile no.&gt;-&lt;subTile no.&gt;-&lt;role code&gt; 
+Example: 
+info:nla/map-rm2099-t
+which is currently resolvable as:
+http://nla.gov.au/nla.map-rm2099-t (a thumbnail copy of rare map number 2099) 
+
+Pictures: /pic-&lt;item no.&gt;-&lt;part no.&gt;-&lt;sequence no.&gt;-&lt;role code&gt; 
+
+Example: 
+info:nla/nla.pic-an6729917-t
+which is currently resolvable as:
+http://nla.gov.au/nla.pic-an6729917-t (a thumbnail copy of a single picture from the Ellis Rowan collection) 
+
+Music: /mus-&lt;item no.&gt;-&lt;sequence no.&gt;-&lt;role code&gt; 
+
+Example: 
+info:nla/nla.mus-an7579855-s2 
+which is currently resolvable as:
+http://nla.gov.au/nla.mus-an7579855-s2 (an unnumbered title page that is the second image in the group representing music item 7579855) 
+
+Monographs (gen=General Collection; aus=Australian Collection): /gen-&lt;work no.&gt;-&lt;chapter no.&gt;-&lt;section no.&gt;-&lt;sequence no.&gt;-&lt;role code&gt; .aus-&lt;work no.&gt;-&lt;chapter no.&gt;-&lt;section no.&gt;-&lt;sequence no.&gt;-&lt;role code&gt; 
+
+Example: 
+info:nla/nla.gen-isbn0590353403-2-s1-v
+which is currently resolvable as:
+http://nla.gov.au/nla.gen-isbn0590353403-2-s1-v (a view copy of the first page of chapter 2 the book with this ISBN) 
+
+
+Serials (gen=General Collection; aus=Australian Collection): /gen-&lt;serial identifier&gt;-&lt;issue vol.&gt;-&lt;issue no.&gt;-&lt;issue part&gt;-&lt;issue date&gt;-&lt;subUnit no.&gt;-&lt;sequence no.&gt;-&lt;role code&gt; .aus-&lt;serial identifier&gt;-&lt;issue vol.&gt;-&lt;issue no.&gt;-&lt;issue part&gt;-&lt;issue date&gt;-&lt;subUnit no.&gt;-&lt;sequence no.&gt;-&lt;role code&gt; 
+
+Example: 
+info:nla/nla.aus-issn10399992-s1-v
+which is currently resolvable as:
+http://nla.gov.au/nla.aus-issn10399992-s1-v (a view copy of the first page of the serial with this ISSN) 
+</pre></td>
+</tr>
+
+		<tr valign="top">
+<th><strong>uri</strong></th>
+<td width="100%"><a target="_blank" href=""></a></td>
+</tr>
+	</table></td>
+</tr>
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>identifier-normalization</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr valign="top">
+<th><strong>description</strong></th>
+<td width="100%"><pre>The brackets &lt; &gt; are not part of the identifier itself.</pre></td>
+</tr>
+		<tr valign="top">
+<th><strong>uri</strong></th>
+<td width="100%"><a target="_blank" href="http://www.nla.gov.au/initiatives/nlapi.html">http://www.nla.gov.au/initiatives/nlapi.html</a></td>
+</tr>
+	</table></td>
+</tr>
+	<tr xmlns:reg="http://info-uri.info/registry" valign="top">
+<th><strong>namespace-information</strong></th>
+<td width="100%"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr valign="top">
+<th><strong>description</strong></th>
+<td width="100%"><pre>To identify a born-digital or a digitised object in the managed digital collections of the National Library of Australia, an intelligent identifier has been constructed which utilises a sub-namespace to encode the collection type and, based on the type, rules for accessing component parts of the object.</pre></td>
+</tr>
+		<tr valign="top">
+<th><strong>uri</strong></th>
+<td width="100%"><a target="_blank" href="http://www.nla.gov.au/nla/staffpaper/2002/boston2.html">http://www.nla.gov.au/nla/staffpaper/2002/boston2.html</a></td>
+</tr>
+	</table></td>
+</tr>
+</table>
+<p><a href="OAIHandler?verb=GetRecord&amp;metadataPrefix=oai_dc&amp;identifier=info:nla/">View Dublin Core metadata for this entry</a></p>
+</td></tr>
+<tr valign="top"><td>The "info" URI Registry Prototype is currently managed by the OCLC Office of Research on behalf of <a href="http://www.niso.org">NISO</a>.</td></tr>
+<tr valign="top"><td>
+<a href="http://www.oclc.org/research/software/oai/cat.shtm"><img border="0" src="oaicat_icon.gif" alt="OAICat - An OAI-PMH v2 Repository Framework" width="120" height="60"></a>    <a href="http://www.openarchives.org"><img border="0" src="OA100.gif"></a>
+</td></tr>
+</table>
+</body>
+</html>

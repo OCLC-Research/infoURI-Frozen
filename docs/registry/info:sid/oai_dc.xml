@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?><?xml-stylesheet type="text/xsl" href="infouri.xsl"?><OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd"><responseDate>2021-09-20T15:56:21Z</responseDate><request metadataPrefix="oai_dc" verb="GetRecord" identifier="info:sid/">http://info-uri.info/registry/OAIHandler</request><GetRecord><record><header><identifier>info:sid/</identifier><datestamp>2003-12-17</datestamp></header><metadata><oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+        <dc:title>Namespace of Source Identifiers used in the NISO OpenURL Framework</dc:title>
+        <dc:creator>Pat Stevens</dc:creator>
+        <dc:date>2003-11-10</dc:date>
+        <dc:identifier>http://errol.oclc.org/info-uri.info/info:sid/.reg</dc:identifier>
+		<dc:description>
+The sid namespace facilitates the identification of collections of information assets. A collection of information assets could be an organization, a website, a publisher, or a database.  Identifiers in the sid namespace consist of two parts. The first part is an Internet
+domain name, subdomain name, or host name that is associated with the collection. This
+ensures uniqueness of identifiers. The second, optional, part of an identifier of the sid namespace is a string that may provide further details about the nature of the collection.  The sid namespace was created to accommodate needs in the NISO Z39-88-2004 Standard &quot;The OpenURL Framework for Context-Sensitive Services&quot;.
+</dc:description>
+      </oai_dc:dc></metadata></record></GetRecord></OAI-PMH>
