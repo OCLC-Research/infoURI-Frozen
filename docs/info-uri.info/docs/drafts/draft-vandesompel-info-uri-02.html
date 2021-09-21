@@ -1,0 +1,1557 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>The "info" URI Scheme for Information Assets with Identifiers in Public Namespaces</title>
+<style type="text/css" title="Xml2Rfc (sans serif)">
+a {
+  text-decoration: none
+}
+a:hover {
+  text-decoration: underline
+}
+a:active {
+  text-decoration: underline
+}
+body {
+  
+  color: #000000;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 13px;
+}
+dl {
+  margin-left: 2em;
+}
+h1 {
+  color: #333333;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: helvetica, arial, sans-serif;
+  page-break-after: avoid;
+}
+h1.np {
+  page-break-before: always;
+}
+h2 {
+  color: #000000;
+  font-size: 14px;
+  font-family: helvetica, arial, sans-serif;
+  page-break-after: avoid;
+}
+h3 {
+  color: #000000;
+  font-size: 13px;
+  font-family: helvetica, arial, sans-serif;
+  page-break-after: avoid;
+}
+img {
+  margin-left: 3em;
+}
+li {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+ol {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+p {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+pre {
+  margin-left: 3em;
+  background-color: lightyellow;
+}
+table {
+  margin-left: 2em;
+}
+table.header {
+  width: 66%;
+}
+td.top {
+  vertical-align: top;
+}
+td.topnowrap {
+  vertical-align: top;
+  white-space: nowrap; 
+}
+td.right {
+  text-align: right;
+}
+td.header-l {
+  width: 33%;
+  color: #ffffff;
+  background-color: #666666;
+  font-size: 10px;
+  font-family: arial, helvetica, sans-serif;
+  vertical-align: top
+}
+td.header-r {
+  width: 33%;
+  color: #ffffff;
+  background-color: #666666;
+  font-size: 10px;
+  font-family: arial, helvetica, sans-serif;
+  vertical-align: top;
+}
+thead {
+  display:table-header-group
+}
+.editingmark {
+  background-color: khaki;
+}
+.error {
+  font-size: 14pt;
+  background-color: red;
+}
+.hotText {
+  color:#ffffff;
+  font-weight: normal;
+  text-decoration: none;
+  font-family: chelvetica, arial, sans-serif;
+  font-size: 9px
+}
+.link2 {
+  color:#ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 9px
+}
+.toowide {
+  color: red;
+  font-weight: bold;
+}
+.RFC {
+  color:#666666;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 9px
+}
+.title {
+  color: #990000;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: bold;
+  text-align: right;
+  font-family: helvetica, arial, sans-serif
+}
+.figure {
+  font-weight: bold;
+  text-align: center;
+  font-size: 12px;
+}
+.filename {
+  color: #333333;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: helvetica, arial, sans-serif;
+  text-align: right;
+}
+.warning {
+  font-size: 14pt;
+  background-color: yellow;
+}
+del {
+  color: red;
+  text-decoration: line-through;
+}
+.del {
+  color: red;
+  text-decoration: line-through;
+}
+ins {
+  color: green;
+  text-decoration: underline;
+}
+.ins {
+  color: green;
+  text-decoration: underline;
+}
+
+table.openissue {
+  background-color: khaki;
+  border-width: thin;
+  border-style: solid;
+  border-color: black;
+}
+
+table.closedissue {
+  background-color: white;
+  border-width: thin;
+  border-style: solid;
+  border-color: gray;
+  color: gray; 
+}
+
+.closed-issue {
+  border: solid;
+  border-width: thin;
+  background-color: lime;
+  font-size: small;
+  font-weight: bold;
+}
+
+.open-issue {
+  border: solid;
+  border-width: thin;
+  background-color: red;
+  font-size: small;
+  font-weight: bold;
+}
+
+.editor-issue {
+  border: solid;
+  border-width: thin;
+  background-color: yellow;
+  font-size: small;
+  font-weight: bold;
+}
+
+@media print {
+  .noprint {
+    display: none;
+  }
+}
+</style>
+<link rel="Contents" href="#rfc.toc">
+<link rel="Author" href="#rfc.authors">
+<link rel="Copyright" href="#rfc.copyright">
+<link rel="Chapter" title="1 Introduction" href="#rfc.section.1">
+<link rel="Chapter" title='2 Application of the "info" URI Scheme' href="#rfc.section.2">
+<link rel="Chapter" title='3 The "info" Registry' href="#rfc.section.3">
+<link rel="Chapter" title='4 The "info" URI Scheme' href="#rfc.section.4">
+<link rel="Chapter" title='5 Normalization and Comparison of "info" URIs' href="#rfc.section.5">
+<link rel="Chapter" title="6 Rationale" href="#rfc.section.6">
+<link rel="Chapter" title="7 Security Considerations" href="#rfc.section.7">
+<link rel="Chapter" title="8 IANA Considerations" href="#rfc.section.8">
+<link rel="Chapter" title="9 Acknowledgements" href="#rfc.section.9">
+<meta name="generator" content="http://greenbytes.de/tech/webdav/rfc2629.xslt, Revision 1.1, 2004/07/12 18:53:51, XSLT vendor: libxslt http://xmlsoft.org/XSLT/">
+<meta name="keywords" content="uniform resource identifier, URI, info, resource">
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+<meta name="DC.Creator" content="Van de Sompel, H.">
+<meta name="DC.Creator" content="Hammond, T.">
+<meta name="DC.Creator" content="Neylon, E.">
+<meta name="DC.Creator" content="Weibel, S.">
+<meta name="DC.Identifier" content="urn:ietf:id:draft-vandesompel-info-uri-02">
+<meta name="DC.Date.Issued" scheme="ISO8601" content="2004-07">
+<meta name="DC.Description.Abstract" content='This document defines the "info" Uniform Resource Identifier (URI) scheme for information assets with identifiers in public namespaces. Namespaces participating in the "info" URI scheme are regulated by an "info" Registry mechanism.'>
+</head>
+<body>
+<table summary="link to TOC" class="noprint" style="margin-left: auto; margin-right: 0; float: right; width: 2.5em;">
+<tr><td style="background-color: #000000; text-align: center; vertical-align: middle; height: 2.5em;"><b><span class="RFC"> RFC </span></b></td></tr>
+<tr><td style="background-color: #990000; text-align: center; height: 1.5em;"><a href="#rfc.toc"><b class="link2"> TOC </b></a></td></tr>
+</table>
+<table summary="header information" class="header" border="0" cellpadding="1" cellspacing="1">
+<tr>
+<td class="header-l">Network Working Group </td>
+<td class="header-r">H. Van de Sompel </td>
+</tr>
+<tr>
+<td class="header-l">INTERNET DRAFT </td>
+<td class="header-r">LANL </td>
+</tr>
+<tr>
+<td class="header-l">
+        &lt;draft-vandesompel-info-uri-02&gt;
+       </td>
+<td class="header-r">T. Hammond </td>
+</tr>
+<tr>
+<td class="header-l">
+         Category:
+        Informational </td>
+<td class="header-r">NPG </td>
+</tr>
+<tr>
+<td class="header-l">Expires: January 2005 </td>
+<td class="header-r">E. Neylon </td>
+</tr>
+<tr>
+<td class="header-l"> </td>
+<td class="header-r">Manifest Solutions </td>
+</tr>
+<tr>
+<td class="header-l"> </td>
+<td class="header-r">S. Weibel </td>
+</tr>
+<tr>
+<td class="header-l"> </td>
+<td class="header-r">OCLC </td>
+</tr>
+<tr>
+<td class="header-l"> </td>
+<td class="header-r">July 2004 </td>
+</tr>
+</table>
+<p class="title">The "info" URI Scheme for Information Assets with Identifiers in Public Namespaces<br><span class="filename">draft-vandesompel-info-uri-02</span></p>
+<h1><a name="rfc.status">Status of this Memo</a></h1>
+<p>
+            By submitting this Internet-Draft, I certify that any applicable
+            patent or other IPR claims of which I am aware have been disclosed,
+            and any of which I become aware will be disclosed, in accordance
+            with RFC 3668.
+          </p>
+<p>
+        Internet-Drafts are working documents of the Internet Engineering
+        Task Force (IETF), its areas, and its working groups.
+        Note that other groups may also distribute working documents as
+        Internet-Drafts.
+      </p>
+<p>
+        Internet-Drafts are draft documents valid for a maximum of six months
+        and may be updated, replaced, or obsoleted by other documents at any time.
+        It is inappropriate to use Internet-Drafts as reference material or to cite
+        them other than as "work in progress".
+      </p>
+<p>
+        The list of current Internet-Drafts can be accessed at
+        &lt;<a href="http://www.ietf.org/ietf/1id-abstracts.txt">http://www.ietf.org/ietf/1id-abstracts.txt</a>&gt;.
+      </p>
+<p>
+        The list of Internet-Draft Shadow Directories can be accessed at
+        &lt;<a href="http://www.ietf.org/shadow.html">http://www.ietf.org/shadow.html</a>&gt;.
+      </p>
+<p>
+        This Internet-Draft will expire in January 2005.
+      </p>
+<h1><a name="rfc.copyrightnotice">Copyright Notice</a></h1>
+<p>
+    Copyright (C) The Internet Society (2004). All Rights Reserved.
+  </p>
+<h1>
+<a name="rfc.abstract"></a>Abstract</h1>
+<p>
+This document defines the "info" Uniform Resource Identifier (URI) 
+scheme for information assets with identifiers in public namespaces. 
+Namespaces participating in the "info" URI scheme are regulated by an 
+"info" Registry mechanism. 
+</p>
+<h1>
+<a name="rfc.note.1"></a>Editorial Note</h1>
+<p>
+Any feedback on this draft should be directed to
+&lt;http://info-uri.info/registry/feedback.html&gt;.
+</p>
+<hr class="noprint">
+<table summary="link to TOC" class="noprint" style="margin-left: auto; margin-right: 0; float: right; width: 2.5em;">
+<tr><td style="background-color: #000000; text-align: center; vertical-align: middle; height: 2.5em;"><b><span class="RFC"> RFC </span></b></td></tr>
+<tr><td style="background-color: #990000; text-align: center; height: 1.5em;"><a href="#rfc.toc"><b class="link2"> TOC </b></a></td></tr>
+</table>
+<h1 class="np"><a name="rfc.toc">Table of Contents</a></h1>
+<p>
+<b>1 
+            <a href="#introduction">Introduction</a></b><br>
+
+
+<b> 1.1 
+            <a href="#terminology">Terminology</a></b><br>
+
+
+
+<b> 1.2 
+            <a href="#information%20assets">Information Assets</a></b><br>
+
+
+
+
+
+
+<b>2 
+            <a href="#application">Application of the "info" URI Scheme</a></b><br>
+ 
+ 
+ 
+
+<b>3 
+            <a href="#registry">The "info" Registry</a></b><br>
+ 
+ 
+<b> 3.1 
+            <a href="#management">Management Characteristics of the "info" Registry</a></b><br>
+ 
+
+<b> 3.2 
+            <a href="#functional">Functional Characteristics of the "info" Registry</a></b><br>
+
+ 
+ 
+
+<b> 3.3 
+            <a href="#maintenance">Maintenance of the "info" Registry</a></b><br>
+ 
+ 
+ 
+ 
+ 
+
+ 
+<b>4 
+            <a href="#scheme">The "info" URI Scheme</a></b><br>
+<b> 4.1 
+            <a href="#definition">Definition of "info" URI Syntax</a></b><br>
+ 
+ 
+
+
+
+
+ 
+ 
+ 
+ 
+
+<b> 4.2 
+            <a href="#allowed-chars">Allowed Characters Under the "info" URI Scheme</a></b><br>
+       
+
+<b> 4.3 
+            <a href="#examples">Examples of "info" URIs</a></b><br>
+       
+
+       
+       
+
+
+       
+       
+
+
+       
+       
+
+
+       
+       
+
+
+       
+       
+
+
+       
+<b>5 
+            <a href="#normalization">Normalization and Comparison of "info" URIs</a></b><br>
+       
+       
+       
+
+       
+
+       
+       
+
+       
+
+       
+
+       
+
+       
+
+    
+<b>6 
+            <a href="#rationale">Rationale</a></b><br>
+<b> 6.1 
+            <a href="#why-create">Why Create a New URI Scheme for Identifiers from Public Namespaces?</a></b><br>
+
+    
+<b> 6.2 
+            <a href="#why-not-use">Why Not Use an existing URI Scheme for Identifiers from Public Namespaces?</a></b><br>
+
+    
+<b> 6.3 
+            <a href="#why-not-create">Why Not Create a New URN Namespace ID for Identifiers from Public Namespaces?</a></b><br>
+           
+           
+           
+           
+    
+           
+<b>7 
+            <a href="#security">Security Considerations</a></b><br>
+           
+           
+           
+<b>8 
+            <a href="#iana">IANA Considerations</a></b><br>
+
+           
+    
+<b>9 
+            <a href="#acknowledgements">Acknowledgements</a></b><br>
+           
+           
+<b>10 
+            <a href="#rfc.references">References</a></b><br><b> 10.1 
+            <a href="#rfc.references.1">Normative References</a></b><br><b> 10.2 
+            <a href="#rfc.references.2">Informative References</a></b><br><b>§ 
+            <a href="#rfc.authors">Author's Addresses</a></b><br><b>§ 
+            <a href="#rfc.ipr">Intellectual Property and Copyright Statements</a></b><br></p>
+<hr class="noprint">
+<table summary="link to TOC" class="noprint" style="margin-left: auto; margin-right: 0; float: right; width: 2.5em;"><tr><td style="background-color: #990000; text-align: center; height: 1.5em;"><a href="#rfc.toc"><b class="link2"> TOC </b></a></td></tr></table>
+<h1 class="np">
+<a name="rfc.section.1">1</a> <a name="introduction">Introduction</a>
+</h1>
+<div><a name="rfc.section.1.p.1"></a></div>
+<p>
+This document defines the "info" Uniform Resource Identifier (URI) 
+scheme for information assets that have identifiers in public 
+namespaces but are not part of the URI allocation. By information 
+asset this document intends any information construct
+that has identity within a public namespace. 
+</p>
+<h2>
+<a name="rfc.section.1.1">1.1</a> <a name="terminology">Terminology</a>
+</h2>
+<div><a name="rfc.section.1.1.p.1"></a></div>
+<p>
+In this document the keywords "MUST", "MUST NOT", "SHALL", "SHALL 
+NOT", "SHOULD", "SHOULD NOT", "MAY", and "MAY NOT" are to be 
+interpreted as described in RFC 2119 <a href="#RFC2119" title="Key Words for Use in RFCs to Indicate Requirements Levels">[RFC2119]</a> and indicate 
+requirement levels for compliant implementations.  
+</p>
+<h2>
+<a name="rfc.section.1.2">1.2</a> <a name="information%20assets">Information Assets</a>
+</h2>
+<div><a name="rfc.section.1.2.p.1"></a></div>
+<p>
+There exist many information assets with identifiers in public 
+namespaces that are not referenceable by URI schemes. Examples of 
+such namespaces include Dewey Decimal Classifications <a href="#DEWEY" title="Dewey Decimal Classification">[DEWEY]</a>, 
+Library of Congress Control Numbers <a href="#LCCN" title="Library of Congress Control Number">[LCCN]</a>, NISO Serial Item and 
+Contribution Identifiers <a href="#SICI" title='ANSI/NISO Z39.56-1996 (R2002), "Serial Item and Contribution Identifier (SICI)", ISBN 1-880124-28-9'>[SICI]</a>, NASA Astrophysics Data System 
+Bibcodes <a href="#BIBCODE" title="NASA Astrophysics Data System Bibliographic Code">[BIBCODE]</a>, and National Library of Medicine PubMed 
+identifiers <a href="#PMID" title="PubMed Overview">[PMID]</a>. Other candidate namespaces include Publisher Item 
+Identifiers <a href="#PII" title="Publisher Item Identifier as a means of document identification">[PII]</a>, Online Computer Library Center OCLC Numbers 
+<a href="#OCLCNUM" title="Online Computer Library Center OCLC Control Number">[OCLCNUM]</a>, and NISO OpenURL Framework identifiers <a href="#OFI" title='Draft Standard for Trial Use ANSI/NISO Z39.88, "The OpenURL Framework for Context-Sensitive Services"'>[OFI]</a>.  
+</p>
+<div><a name="rfc.section.1.2.p.2"></a></div>
+<p>
+The "info" URI scheme facilitates the referencing of information 
+assets that have identifiers in such public namespaces by means of 
+URIs. When referencing an information asset by means of its "info" 
+URI, the asset SHALL be considered a "resource" as defined in RFC 
+2396 <a href="#RFC2396" title="Uniform Resource Identifiers (URI): Generic Syntax">[RFC2396]</a> and SHALL enjoy the same common syntactic, semantic 
+and shared language benefits that the URI presentation confers. As 
+such, the "info" URI scheme enables public namespaces that are not 
+part of the URI allocation to be represented within the allocation. 
+The "info" URI scheme thus provides a bridging mechanism to allow 
+public namespaces to become part of the URI allocation. 
+</p>
+<div><a name="rfc.section.1.2.p.3"></a></div>
+<p>
+Namespaces declared under the "info" URI scheme are regulated by an 
+"info" Registry mechanism. The "info" Registry allows a public 
+namespace that is not part of the URI allocation to be declared in a 
+registration process by the organization that manages it (the 
+Namespace Authority). The "info" Registry supports the declaration of 
+public namespaces that are not part of the URI allocation in a manner 
+that facilitates the construction of URIs for information assets 
+without imposing the burdens of independent URI registration and 
+maintenance of resource representations on the Namespace Authority. 
+Information assets identified within a registered namespace SHALL be 
+added or deleted according to the business processes of the Namespace 
+Authority, and yet MAY be referenced within network applications via 
+the "info" URI in an open, standardized way without additional action 
+on the part of the Namespace Authority. 
+</p>
+<div><a name="rfc.section.1.2.p.4"></a></div>
+<p>
+The "info" URI scheme exists primarily for identification purposes.  
+Implementations MUST NOT assume that an "info" URI can be 
+dereferenced to a representation of the resource identified by the 
+URI although Namespace Authorities MAY disclose in the registration 
+record references to service mechanisms pertaining to identifiers 
+from the registered namespace. Applications of the "info" URI scheme 
+are restricted to the identification of information assets and the 
+declaration of normalization rules for comparing identifiers of such 
+information assets regardless of whether any services relating to 
+such information assets are accessible via the Internet. References 
+to such services MAY be disclosed within an "info" registration 
+record but these services SHALL NOT be regarded as authoritative. The 
+"info" URI scheme does not support global resolution methods. 
+</p>
+<hr class="noprint">
+<table summary="link to TOC" class="noprint" style="margin-left: auto; margin-right: 0; float: right; width: 2.5em;"><tr><td style="background-color: #990000; text-align: center; height: 1.5em;"><a href="#rfc.toc"><b class="link2"> TOC </b></a></td></tr></table>
+<h1 class="np">
+<a name="rfc.section.2">2</a> <a name="application">Application of the "info" URI Scheme</a>
+</h1>
+<div><a name="rfc.section.2.p.1"></a></div>
+<p> 
+Public namespaces that are used for the identification of information 
+assets, and that are not part of the URI allocation, MAY be 
+registered as namespaces within the "info" Registry. Namespace 
+Authorities MAY register these namespaces in the "info" Registry, 
+thereby making these namespaces available to applications that need 
+to reference information assets by means of a URI. Registrations of 
+public namespaces that are not part of the URI allocation by parties 
+other than the Namespace Authority SHALL NOT be permitted, thereby 
+insuring against hostile usurpation or inappropriate usage of 
+registered service marks or the public namespaces of others.  
+</p>
+<div><a name="rfc.section.2.p.2"></a></div>
+<p> 
+Registration of a public namespace under the "info" Registry implies 
+no particular functionalities of the identifiers from the registered 
+namespace other than the identification of information assets. No 
+resolution mechanisms can be assumed for the "info" URI scheme, 
+though for any particular namespace there MAY exist mechanisms for 
+resolving identifiers to network services. The definition of such 
+services falls outside the scope of the "info" URI scheme. 
+Registration does not define namespace-specific semantics for 
+identifiers within a registered namespace, though allowable character 
+sets and normalization rules are specified in Sections 4 and 5 so as 
+to ensure that the URIs created using such identifiers are compliant 
+with applications that use URIs. 
+</p>
+<div><a name="rfc.section.2.p.3"></a></div>
+<p> 
+The registration of a public namespace in the "info" Registry SHALL 
+NOT preclude further development of services associated with that 
+namespace which MAY qualify the namespace for additional publication 
+elsewhere within the URI allocation. 
+</p>
+<hr class="noprint">
+<table summary="link to TOC" class="noprint" style="margin-left: auto; margin-right: 0; float: right; width: 2.5em;"><tr><td style="background-color: #990000; text-align: center; height: 1.5em;"><a href="#rfc.toc"><b class="link2"> TOC </b></a></td></tr></table>
+<h1 class="np">
+<a name="rfc.section.3">3</a> <a name="registry">The "info" Registry</a>
+</h1>
+<div><a name="rfc.section.3.p.1"></a></div>
+<p>
+The "info" Registry provides a mechanism for the registration of 
+public namespaces that are used for the identification of 
+information assets, and that are not part of the URI allocation.  
+</p>
+<div><a name="rfc.section.3.p.2"></a></div>
+<p> 
+NISO <a href="#NISO" title="National Information Standards Organization">[NISO]</a>, the National Information Standards Organization, will 
+act as the Maintenance Agency for the "info" Registry, and will 
+delegate the day-to-day operation of the "info" Registry to a 
+Registry Operator. As the Maintenance Agency, NISO will ensure that 
+the Registry Operator operates the "info" Registry in accordance with 
+a publicly articulated policy document established under NISO 
+governance and made available on the "info" website &lt;<a href="http://info-uri.info/">http://info-uri.info/</a>&gt;.
+The "info" Registry policy defines a review process for 
+candidate namespaces and provides measures of quality control and 
+suitability for entry of namespaces.  
+</p>
+<h2>
+<a name="rfc.section.3.1">3.1</a> <a name="management">Management Characteristics of the "info" Registry</a>
+</h2>
+<div><a name="rfc.section.3.1.p.1"></a></div>
+<p> 
+The "info" Registry will be managed according to policies established 
+under the auspices of NISO. All such policies, as well as the 
+namespace declarations in the "info" Registry, will be public. 
+</p>
+<h2>
+<a name="rfc.section.3.2">3.2</a> <a name="functional">Functional Characteristics of the "info" Registry</a>
+</h2>
+<div><a name="rfc.section.3.2.p.1"></a></div>
+<p> 
+The "info" Registry will be publicly accessible and will support 
+discovery (by both humans and machines) of: 
+</p>
+<div><a name="rfc.section.3.2.p.2"></a></div>
+<p>
+</p>
+<ul>       
+<li>string literals identifying the namespaces for which the 
+Registry provides a guarantee of uniqueness and persistence</li>
+<li>names and contact information of Namespace Authorities</li>
+<li>syntax requirements for identifiers maintained in such 
+namespaces</li>
+<li>normalization methodologies for identifiers maintained in such 
+namespaces</li>
+<li>network references to a description of service mechanisms (if 
+any) for identifiers maintained in such namespaces</li>
+<li>ancillary documentation </li>
+</ul>
+<p>       
+</p>
+<div><a name="rfc.section.3.2.p.3"></a></div>
+<p> 
+Registry entries refer to the corresponding "namespace" and 
+"identifier" components which are defined in the ABNF given in 
+Section 4.1 of this document. 
+</p>
+<h2>
+<a name="rfc.section.3.3">3.3</a> <a name="maintenance">Maintenance of the "info" Registry</a>
+</h2>
+<div><a name="rfc.section.3.3.p.1"></a></div>
+<p> 
+The public namespaces that MAY be registered in the "info" Registry 
+will be those of interest to the communities served by NISO and 
+therefore NISO is committed to act as Maintenance Authority for the 
+"info" Registry, and to assign a Registry Operator to operate it. 
+</p>
+<div><a name="rfc.section.3.3.p.2"></a></div>
+<p> 
+NISO, a non-profit association accredited by the American National 
+Standards Institute (ANSI), identifies, develops, maintains, and 
+publishes technical standards to manage information in the digital 
+environment. NISO standards apply technologies to the full range of 
+information-related needs, including retrieval, re-purposing, 
+storage, metadata, and preservation. 
+</p>
+<div><a name="rfc.section.3.3.p.3"></a></div>
+<p> 
+Founded in 1939, incorporated as a not-for-profit education 
+association in 1983, and assuming its current name the following 
+year, NISO draws its support from the communities it serves. The 
+leaders of over 70 organizations in the fields of publishing, 
+libraries, IT and media serve as its voting members. Hundreds of 
+experts and practitioners serve on NISO committees and as officers of 
+the association.  
+</p>
+<div><a name="rfc.section.3.3.p.4"></a></div>
+<p> 
+NISO has been designated by ANSI to represent US interests to the 
+International Organization for Standardization's (ISO) Technical 
+Committee 46 on Information and Documentation. 
+</p>
+<div><a name="rfc.section.3.3.p.5"></a></div>
+<p> 
+The NISO headquarters office is located at: 4733 Bethesda Ave., 
+Bethesda, MD 20814, USA. (For further information, see the NISO 
+website &lt;<a href="http://www.niso.org/">http://www.niso.org/</a>&gt;.) 
+</p> 
+<hr class="noprint">
+<table summary="link to TOC" class="noprint" style="margin-left: auto; margin-right: 0; float: right; width: 2.5em;"><tr><td style="background-color: #990000; text-align: center; height: 1.5em;"><a href="#rfc.toc"><b class="link2"> TOC </b></a></td></tr></table>
+<h1 class="np">
+<a name="rfc.section.4">4</a> <a name="scheme">The "info" URI Scheme</a>
+</h1>
+<h2>
+<a name="rfc.section.4.1">4.1</a> <a name="definition">Definition of "info" URI Syntax</a>
+</h2>
+<div><a name="rfc.section.4.1.p.1"></a></div>
+<p> 
+Note: RFC 2396, "Uniform Resource Identifiers (URI): Generic Syntax" 
+<a href="#RFC2396" title="Uniform Resource Identifiers (URI): Generic Syntax">[RFC2396]</a> is being revised <a href="#2396BIS" title="Uniform Resource Identifiers (URI): Generic Syntax, Internet-Draft (work in progress)">[2396BIS]</a> at the time of this writing. The 
+syntax used in this document follows the revisions made to the 
+generic URI syntax defined in RFC 2396 <a href="#2396BIS" title="Uniform Resource Identifiers (URI): Generic Syntax, Internet-Draft (work in progress)">[2396BIS]</a>. 
+</p>
+<div><a name="rfc.section.4.1.p.2"></a></div>
+<p> 
+The "info" URI syntax presented in this document is generally 
+conformant with the generic URI syntax defined in RFC 2396 [RFC2396]. 
+This specification uses the Augmented Backus-Naur Form (ABNF) 
+notation of RFC 2234 <a href="#RFC2234" title="Augmented BNF for Syntax Specifications: ABNF">[RFC2234]</a> to define the URI. The following core 
+ABNF productions are used by this specification as defined by Section 
+6.1 of RFC 2234: ALPHA, DIGIT, HEXDIG. 
+</p>
+<div><a name="rfc.section.4.1.p.3"></a></div>
+<p> 
+The "info" URI syntax is presented in two parts. Part A contains 
+productions specific to the "info" URI scheme, while Part B contains 
+generic productions from the RFC 2396 revision <a href="#2396BIS" title="Uniform Resource Identifiers (URI): Generic Syntax, Internet-Draft (work in progress)">[2396BIS]</a> which are 
+repeated here both for completeness and for reference. (Although the 
+work on revising RFC 2396 is currently ongoing we intend that the 
+productions presented here will coincide with the final outcome of 
+that work. Nevertheless this BNF is complete in itself.) The 
+following set of productions (Part A) are specific to the "info" URI 
+scheme: 
+</p>
+<div><a name="rfc.figure.u.1"></a></div>
+<pre>; Part A: 
+; productions specific to the "info" URI scheme 
+       
+info-URI        = info-scheme ":" info-identifier [ "#" fragment ] 
+    
+info-scheme     = "info"  
+       
+info-identifier = namespace "/" identifier   
+   
+namespace       = scheme 
+      
+identifier      = *( pchar / "/" ) 
+       
+; Note that "info" URIs containing dot-segments (i.e. segments  
+; whose full content consists of "." or "..") MAY NOT be suitable  
+; for use with applications that perform dot-segment normalization 
+</pre>
+<div><a name="rfc.section.4.1.p.5"></a></div>
+<p> 
+This next set of productions (Part B) are generic productions 
+reproduced from the RFC 2396 revision <a href="#2396BIS" title="Uniform Resource Identifiers (URI): Generic Syntax, Internet-Draft (work in progress)">[2396BIS]</a>: 
+</p>
+<div><a name="rfc.figure.u.2"></a></div>
+<pre>; Part B: 
+; generic productions from the RFC 2396 revision [2396BIS] 
+       
+scheme          = ALPHA *( ALPHA / DIGIT / "+" / "-" / "." ) 
+       
+pchar           = unreserved / pct-encoded / sub-delims / ":" / "@" 
+       
+fragment        = *( pchar / "/" / "?" ) 
+       
+unreserved      = ALPHA / DIGIT / "-" / "." / "_" / "~" 
+       
+pct-encoded     = "%" HEXDIG HEXDIG 
+       
+sub-delims      = "!" / "$" / "&amp;" / "'" / "(" / ")" 
+                  / "*" / "+" / "," / ";" / "=" 
+</pre>
+<div><a name="rfc.section.4.1.p.7"></a></div>
+<p> 
+An "info" URI has an "info-identifier" as its scheme-specific part 
+and MAY take an optional "fragment" component. An "info-identifier" 
+is constructed by appending an "identifier" component to a 
+"namespace" component separated by a slash "/" character. The "info" 
+URI scheme is supportive of hierarchical processing as indicated by 
+the presence of the slash "/" character although the slash "/" 
+character SHOULD NOT be interpreted as a strict hierarchy delimiter.  
+</p>
+<div><a name="rfc.section.4.1.p.8"></a></div>
+<p> 
+Values for the "namespace" component of the "info" URI are name 
+tokens composed of URI scheme characters only (cf. the "scheme" 
+production). They identify the public namespace in which the 
+(unescaped) value for the "identifier" component originates, and are 
+registered in the "info" Registry, which guarantees their uniqueness 
+and persistence. Although the "namespace" component is case-insensitive,
+the canonical form is lowercase and documents that 
+specify values for the "namespace" component SHOULD do so using 
+lowercase letters. An implementation SHOULD accept uppercase letters 
+as equivalent to lowercase in "namespace" names, for the sake of 
+robustness, but SHOULD only generate lowercase "namespace" names, for 
+consistency. 
+</p>
+<div><a name="rfc.section.4.1.p.9"></a></div>
+<p> 
+Values for the "identifier" component of the "info" URI MAY be viewed 
+as being hierarchical strings composed of path segments built from 
+path segment characters (cf. the "pchar" production), the segments 
+being separated by slash "/" characters, although any semantic 
+interpretation of the "/" character as a hierarchy delimiter MUST NOT 
+be assumed. In their originating public namespace, the (unescaped) 
+values for the "identifier" component identify information assets. 
+The values for the "identifier" component MUST be %-escaped as 
+required by this syntax. The "identifier" component SHOULD be treated 
+as case-sensitive, although the "info" Registry MAY record the case-sensitivity
+ of identifiers from particular registered public 
+namespaces. The "info" Registry MAY also disclose additional 
+normalization rules regarding the treatment of punctuation characters 
+and the like. 
+</p>
+<div><a name="rfc.section.4.1.p.10"></a></div>
+<p> 
+Values for the "fragment" component of the "info" URI are strings 
+composed of path segment characters (cf. the "pchar" production) plus 
+the slash "/" character and the question-mark "?" character. No 
+semantic role is assigned to the the slash "/" character and the 
+question-mark "?" character within the "fragment" component. The 
+(unescaped) values for the "fragment" component identify secondary 
+information assets with respect to the primary information asset 
+which is referenced by the "info-identifier". The values for the 
+"fragment" component MUST be %-escaped as required by this syntax. 
+The "fragment" component MUST be treated as being case-sensitive. 
+</p>
+<h2>
+<a name="rfc.section.4.2">4.2</a> <a name="allowed-chars">Allowed Characters Under the "info" URI Scheme</a>
+</h2>
+<div><a name="rfc.section.4.2.p.1"></a></div>
+<p>       
+The "info" URI syntax uses the same set of allowed US-ASCII 
+characters as specified in RFC 2396 <a href="#RFC2396" title="Uniform Resource Identifiers (URI): Generic Syntax">[RFC2396]</a> for a generic URI. An 
+"info" URI string SHOULD be represented as a UNICODE <a href="#UNICODE" title="The Unicode Standard, Version 4.0.0, defined by: The Unicode Standard, Version 4.0">[UNICODE]</a> string 
+and be encoded in UTF-8 <a href="#RFC2279" title="UTF-8, A Transformation Format for Unicode and ISO10646">[RFC2279]</a> form. Reserved characters as well 
+as excluded US-ASCII characters and non-US-ASCII characters MUST be 
+%-escaped before forming the URI. Details of the %-escape encoding 
+can be found in RFC 2396, Section 2.4. 
+</p>
+<h2>
+<a name="rfc.section.4.3">4.3</a> <a name="examples">Examples of "info" URIs</a>
+</h2>
+<div><a name="rfc.section.4.3.p.1"></a></div>
+<p>       
+Some examples of syntactically valid "info" URIs are given below: 
+</p>
+<div><a name="rfc.figure.u.3"></a></div>
+<pre>    a) info:ddc/22/eng//004.678 
+</pre>
+<div><a name="rfc.section.4.3.p.3"></a></div>
+<p>       
+where "ddc" is the "namespace" component for a Dewey Decimal 
+Classification [DEWEY] namespace and "22/eng//004.678" is the 
+"identifier" component for an identifier of an information asset 
+within that namespace. 
+</p>
+<div><a name="rfc.section.4.3.p.4"></a></div>
+<p>       
+The information asset identified by the identifier "22/eng//004.678" 
+in the namespace for (22nd Ed.) English-language Dewey Decimal 
+Classifications is the classification  
+</p>
+<div><a name="rfc.figure.u.4"></a></div>
+<pre>    "Internet" 
+</pre>
+<div><a name="rfc.figure.u.5"></a></div>
+<pre>    b) info:lccn/2002022641 
+</pre>
+<div><a name="rfc.section.4.3.p.7"></a></div>
+<p>       
+where "lccn" is the "namespace" component for a Library of Congress 
+Control Number <a href="#LCCN" title="Library of Congress Control Number">[LCCN]</a> namespace and "2002022641" is the "identifier" 
+component for an identifier of an information asset within that 
+namespace.  
+</p>
+<div><a name="rfc.section.4.3.p.8"></a></div>
+<p>       
+The information asset identified by the identifier "2002022641" in 
+the namespace for Library of Congress Control Numbers is the metadata 
+record 
+</p>
+<div><a name="rfc.figure.u.6"></a></div>
+<pre>    "Newcomer, Eric. Understanding Web services: XML, WSDL, 
+    SOAP, and UDDI. Boston: Addison-Wesley, 2002." 
+</pre>
+<div><a name="rfc.figure.u.7"></a></div>
+<pre>    c) info:sici/0363-0277(19950315)120:5%3C%3E1.0.TX;2-V  
+</pre>
+<div><a name="rfc.section.4.3.p.11"></a></div>
+<p>       
+where "sici" is the "namespace" component for a of Serial Item and 
+Contribution Identifier <a href="#SICI" title='ANSI/NISO Z39.56-1996 (R2002), "Serial Item and Contribution Identifier (SICI)", ISBN 1-880124-28-9'>[SICI]</a> namespace and "0363-0277(19950315)120:5%3C%3E1.0.TX;2-V" is the "identifier" component 
+for an identifier of an information asset in that namespace in %-escaped form, or in unescaped form "0363-0277(19950315)120:5&lt;&gt;1.0.TX;2-V". 
+</p>
+<div><a name="rfc.section.4.3.p.12"></a></div>
+<p>       
+The information asset identified by the identifier "0363-0277(19950315)120:5&lt;&gt;1.0.TX;2-V" in the namespace for Serial Item and 
+Contribution Identifiers is the journal issue 
+</p>
+<div><a name="rfc.figure.u.8"></a></div>
+<pre>    "Library Journal, Vol. 120, no. 5. March 15, 1995." 
+</pre>
+<div><a name="rfc.figure.u.9"></a></div>
+<pre>    d) &lt;rdf:Description about="info:bibcode/2003Icar..163..263Z"/&gt; 
+</pre>
+<div><a name="rfc.section.4.3.p.15"></a></div>
+<p>       
+where "bibcode" is the "namespace" component for a NASA ADS Bibcode 
+<a href="#BIBCODE" title="NASA Astrophysics Data System Bibliographic Code">[BIBCODE]</a> namespace and "2003Icar..163..263Z " is the "identifier" 
+component for an identifier of an information asset within that 
+namespace. This example further shows an application of an "info" URI 
+as the subject of an RDF statement. 
+</p>
+<div><a name="rfc.section.4.3.p.16"></a></div>
+<p>       
+The information asset identified by the identifier 
+"2003Icar..163..263Z" in the namespace for NASA ADS Bibcodes is the 
+metadata record in the ADS system that describes the journal article 
+</p>
+<div><a name="rfc.figure.u.10"></a></div>
+<pre>    "K. Zahnle, P. Schenk, H. Levison and L. Dones, Cratering rates 
+    in the outer Solar System, Icarus, 163 (2003) pp. 263-289." 
+</pre>
+<div><a name="rfc.figure.u.11"></a></div>
+<pre>    e) info:pmid/12376099 
+</pre>
+<div><a name="rfc.section.4.3.p.19"></a></div>
+<p>       
+where "pmid" is the "namespace" component for a PubMed Identifier 
+<a href="#PMID" title="PubMed Overview">[PMID]</a> namespace and "12376099" is the "identifier" component for an 
+identifier of an information asset in that namespace. 
+</p>
+<div><a name="rfc.section.4.3.p.20"></a></div>
+<p>       
+The information asset identified by the identifier "12376099" in the 
+namespace for PubMed Identifiers is the metadata record in the PubMed 
+database that describes the journal article 
+</p>
+<div><a name="rfc.figure.u.12"></a></div>
+<pre>    "Wijesuriya SD, Bristow J, Miller WL. Localization and analysis 
+    of the principal promoter for human tenascin-X. Genomics. 2002 
+    Oct;80(4):443-52."   
+</pre>       
+<hr class="noprint">
+<table summary="link to TOC" class="noprint" style="margin-left: auto; margin-right: 0; float: right; width: 2.5em;"><tr><td style="background-color: #990000; text-align: center; height: 1.5em;"><a href="#rfc.toc"><b class="link2"> TOC </b></a></td></tr></table>
+<h1 class="np">
+<a name="rfc.section.5">5</a> <a name="normalization">Normalization and Comparison of "info" URIs</a>
+</h1>
+<div><a name="rfc.section.5.p.1"></a></div>
+<p>       
+In order to facilitate comparison of "info" URIs, a sequence of 
+normalization steps SHOULD be applied. 
+</p>
+<div><a name="rfc.section.5.p.2"></a></div>
+<p>       
+Since the "info" URI SHOULD be treated as being case-sensitive, a 
+canonical form MAY only be arrived at by consulting the "info" 
+Registry for possible information on the case-sensitivity for 
+identifiers from a registered public namespace, and any case 
+normalization step to apply. The "info" Registry MAY also disclose 
+additional normalization rules regarding the treatment of punctuation 
+characters and the like. 
+</p>
+<div><a name="rfc.section.5.p.3"></a></div>
+<p>       
+The following generic normalization steps SHOULD be applied: 
+</p>
+<div><a name="rfc.figure.u.13"></a></div>
+<pre>     a) Normalize the case of the "scheme" component to be      
+        lowercase
+     b) Normalize the case of the "namespace" component to be      
+        lowercase
+     c) Unescape all unreserved %-escaped characters in the 
+        "namespace" and "identifier" components 
+     d) Normalize the case of any %-escaped characters in the 
+        "namespace" and "identifier" components to be 
+        uppercase 
+</pre>
+<div><a name="rfc.section.5.p.5"></a></div>
+<p>       
+The subsequent namespace-specific normalization steps MAY be applied: 
+</p>
+<div><a name="rfc.figure.u.14"></a></div>
+<pre>     e) Normalize the case of the "identifier" component as 
+        per any rules that may be recorded in the Registry  
+     f) Normalize any punctuation characters in the "identifier" 
+        component as per any rules that may be recorded in the 
+        Registry 
+</pre>
+<div><a name="rfc.section.5.p.7"></a></div>
+<p>       
+Note that "info" URIs containing dot-segments (i.e. segments whose 
+full content consists of "." or "..") MAY NOT be suitable for use 
+with applications that perform dot-segment normalization. 
+</p>
+<div><a name="rfc.section.5.p.8"></a></div>
+<p>       
+The following unnormalized forms of an "info" URI 
+</p>
+<div><a name="rfc.figure.u.15"></a></div>
+<pre>    U1. INFO:PII/S0888-7543(02)96852-7 
+    U2. info:PII/S0888754302968527 
+    U3. info:pii/S0888%2D7543%2802%2996852%2D7 
+    U4. info:pii/s0888-7543(02)96852-7 
+</pre>
+<div><a name="rfc.section.5.p.10"></a></div>
+<p>       
+are normalized to the following respective forms  
+</p>
+<div><a name="rfc.figure.u.16"></a></div>
+<pre>    N1. info:pii/S0888-7543(02)96852-7 
+    N2. info:pii/S0888754302968527 
+    N3. info:pii/S0888-7543(02)96852-7 
+    N4. info:pii/s0888-7543(02)96852-7 
+</pre>
+<div><a name="rfc.section.5.p.12"></a></div>
+<p>       
+If the "info" Registry records the case-sensitivity for identifiers 
+from the "pii" registered public namespace as being case-insensitive 
+and normalized to an uppercase form, then the above URI forms can be 
+reduced to the following forms 
+</p>
+<div><a name="rfc.figure.u.17"></a></div>
+<pre> N1,N3. info:pii/S0888-7543(02)96852-7 
+    N2. info:pii/S0888754302968527 
+</pre>
+<div><a name="rfc.section.5.p.14"></a></div>
+<p>       
+If the "info" Registry further records the treatment of punctuation 
+characters for identifiers from the "pii" registered public namespace 
+as being optional and normalized to a punctuation-free form, then the 
+above URI forms can be reduced to the following unique canonical form 
+</p>
+<div><a name="rfc.figure.u.18"></a></div>
+<pre>    N2. info:pii/S0888754302968527 
+</pre>
+<div><a name="rfc.section.5.p.16"></a></div>
+<p>       
+If the "info" URI includes a "fragment" component, namespace-specific 
+normalization steps MUST NOT be applied to the "fragment" as 
+"fragment" components are specific to the identifier, and not to the 
+namespace. This means that the following two URI forms cannot be 
+reconciled 
+</p>
+<div><a name="rfc.figure.u.19"></a></div>
+<pre>    N2a. info:pii/S0888754302968527#sec4 
+    N2b. info:pii/S0888754302968527#SEC4 
+</pre>    
+<hr class="noprint">
+<table summary="link to TOC" class="noprint" style="margin-left: auto; margin-right: 0; float: right; width: 2.5em;"><tr><td style="background-color: #990000; text-align: center; height: 1.5em;"><a href="#rfc.toc"><b class="link2"> TOC </b></a></td></tr></table>
+<h1 class="np">
+<a name="rfc.section.6">6</a> <a name="rationale">Rationale</a>
+</h1>
+<h2>
+<a name="rfc.section.6.1">6.1</a> <a name="why-create">Why Create a New URI Scheme for Identifiers from Public Namespaces?</a>
+</h2>
+<div><a name="rfc.section.6.1.p.1"></a></div>
+<p>
+Under RFC 2718, "Guidelines for new URL Schemes" <a href="#RFC2718" title="Guidelines for new URL Schemes">[RFC2718]</a>, it is 
+stated that a URI scheme SHOULD have a "demonstrated utility", and in 
+particular SHOULD be applied to "things that cannot be referred to in 
+any other way". The "info" URI scheme allows identifiers within 
+public namespaces, used for the identification of information assets, 
+to be referred to within the URI allocation. Once a namespace is 
+registered in the "info" Registry, the "info" URI scheme enables an 
+information asset with an identifier in that namespace to be 
+referenced by means of a URI.  As a result, the information asset 
+SHALL be considered a resource as defined in RFC 2396 [RFC2396] and 
+SHALL enjoy the same common syntactic, semantic and shared language 
+benefits that the URI presentation confers.  
+</p>
+<h2>
+<a name="rfc.section.6.2">6.2</a> <a name="why-not-use">Why Not Use an existing URI Scheme for Identifiers from Public Namespaces?</a>
+</h2>
+<div><a name="rfc.section.6.2.p.1"></a></div>
+<p>
+Existing URI schemes are not suitable for employment as the "info" 
+URI scheme admits of no global dereference mechanism. While examples 
+of resource identifiers minted under other URI schemes MAY not always 
+be dereferenceable, nevertheless there is always a common expectation 
+that such URIs can be dereferenced by various resolution mechanisms, 
+whether they be location-dependent or location-independent resource 
+identifiers. The "info" URI scheme applies to a class of resource 
+identifiers whose Namespace Authorities MAY or MAY NOT choose to 
+disclose service mechanisms. Nevertheless, Namespace Authorities are 
+encouraged to disclose in the "info" registration record references 
+to any such service mechanisms in order to provide a greater utility 
+to network applications. 
+</p>
+<h2>
+<a name="rfc.section.6.3">6.3</a> <a name="why-not-create">Why Not Create a New URN Namespace ID for Identifiers from Public Namespaces?</a>
+</h2>
+<div><a name="rfc.section.6.3.p.1"></a></div>
+<p>
+RFC 2141 <a href="#RFC2141" title="URN Syntax">[RFC2141]</a> states that "Uniform Resource Names (URNs) are 
+intended to serve as persistent, location-independent, resource 
+identifiers." The "info" URI scheme, on the other hand, does not 
+assert the persistence of the identifiers created under this scheme 
+but rather of the public namespaces grandfathered under this scheme. 
+It exists primarily to disclose the identity of information assets 
+and to facilitate a lightweight registration mechanism for public 
+namespaces of identifiers managed according to the policies and 
+business models of the Namespace Authorities. The "info" URI scheme 
+is neutral with respect to identifier persistence. Moreover, for 
+"info" to operate as a URN NID would require that "info" be 
+constituted as a delegated naming authority. It is not clear that a 
+URN NID would be an appropriate choice for naming authority 
+delegation. 
+</p>
+<div><a name="rfc.section.6.3.p.2"></a></div>
+<p>           
+Further, the "info" URI scheme is not globally dereferenceable in 
+contrast to the specific recommendation given in RFC 1737, 
+"Functional Requirements for Uniform Resource Names" <a href="#RFC1737" title="Functional Requirements for Uniform Resource Names">[RFC1737]</a> that 
+"It is strongly recommended that there be a mapping between the names 
+generated by each naming authority and URLs.". Individual Namespace 
+Authorities registered in the "info" Registry MAY, however, disclose 
+references to service mechanisms and are encouraged to do so. 
+</p>
+<div><a name="rfc.section.6.3.p.3"></a></div>
+<p>           
+An extra consideration is that the "urn" URI syntax explicitly 
+excludes generic URI hierarchy by reserving the slash "/" character. 
+An "info" URI, on the other hand, admits of hierarchical processing, 
+while remaining neutral with respect to supporting actual hierarchy, 
+and thus allows the slash "/" character (as well as more liberally 
+allowing the ampersand "&amp;" and tilde "~" characters). It therefore 
+represents a lower barrier to entry for Namespace Authorities in 
+keeping with its intention of acting as a bridging mechanism to allow 
+public namespaces to become part of the URI allocation. In sum, an 
+"info" URI is more widely supportive of "human transcribability" as 
+discussed in RFC 2396 <a href="#RFC2396" title="Uniform Resource Identifiers (URI): Generic Syntax">[RFC2396]</a> than is a "urn" URI. 
+</p>
+<div><a name="rfc.section.6.3.p.4"></a></div>
+<p>           
+Additionally the "urn" URI syntax does not support "fragment" 
+components as does the "info" URI syntax for indirect identification 
+of secondary resources. 
+</p>           
+<hr class="noprint">
+<table summary="link to TOC" class="noprint" style="margin-left: auto; margin-right: 0; float: right; width: 2.5em;"><tr><td style="background-color: #990000; text-align: center; height: 1.5em;"><a href="#rfc.toc"><b class="link2"> TOC </b></a></td></tr></table>
+<h1 class="np">
+<a name="rfc.section.7">7</a> <a name="security">Security Considerations</a>
+</h1>
+<div><a name="rfc.section.7.p.1"></a></div>
+<p>           
+The "info" URI scheme syntax is subject to the same security 
+considerations as the generic URI syntax described in RFC 2396 
+<a href="#RFC2396" title="Uniform Resource Identifiers (URI): Generic Syntax">[RFC2396]</a>. 
+</p>
+<div><a name="rfc.section.7.p.2"></a></div>
+<p>           
+While some "info" Namespace Authorities MAY choose to disclose 
+service mechanisms, any security considerations resulting from the 
+execution of such services fall outside the scope of this document.  
+It is strongly recommended that the registration record of an "info" 
+namespace include any such considerations. 
+</p>           
+<hr class="noprint">
+<table summary="link to TOC" class="noprint" style="margin-left: auto; margin-right: 0; float: right; width: 2.5em;"><tr><td style="background-color: #990000; text-align: center; height: 1.5em;"><a href="#rfc.toc"><b class="link2"> TOC </b></a></td></tr></table>
+<h1 class="np">
+<a name="rfc.section.8">8</a> <a name="iana">IANA Considerations</a>
+</h1>
+<div><a name="rfc.section.8.p.1"></a></div>
+<p>           
+The IANA registry for URI schemes 
+&lt;<a href="http://www.iana.org/assignments/uri-schemes">http://www.iana.org/assignments/uri-schemes</a>&gt; SHOULD be 
+updated to include an entry for the "info" URI scheme when the "info" URI 
+scheme is accepted for publication as an RFC.  This entry SHOULD
+contain the following values:
+</p>
+<div><a name="rfc.section.8.p.2"></a></div>
+<p>
+</p>
+<dl>       
+<dt style="margin-top: .5em">Scheme Name:</dt>
+<dd>info</dd>
+<dt style="margin-top: .5em">Description:</dt>
+<dd>Information assets with identifiers in public namespaces</dd>
+<dt style="margin-top: .5em">Reference:</dt>
+<dd>(reference to the RFC under which the "info" URI scheme is described)</dd>
+</dl>
+<p>       
+</p>    
+<hr class="noprint">
+<table summary="link to TOC" class="noprint" style="margin-left: auto; margin-right: 0; float: right; width: 2.5em;"><tr><td style="background-color: #990000; text-align: center; height: 1.5em;"><a href="#rfc.toc"><b class="link2"> TOC </b></a></td></tr></table>
+<h1 class="np">
+<a name="rfc.section.9">9</a> <a name="acknowledgements">Acknowledgements</a>
+</h1>
+<div><a name="rfc.section.9.p.1"></a></div>
+<p>           
+The authors acknowledge the contributions of Michael Mealling, 
+Verisign, and Patrick Hochstenbach, Ghent University. 
+</p>           
+<hr class="noprint">
+<table summary="link to TOC" class="noprint" style="margin-left: auto; margin-right: 0; float: right; width: 2.5em;"><tr><td style="background-color: #990000; text-align: center; height: 1.5em;"><a href="#rfc.toc"><b class="link2"> TOC </b></a></td></tr></table>
+<h1 class="np"><a name="rfc.references"><a name="rfc.section.10">10</a> 
+        References
+      </a></h1>
+<h2><a name="rfc.references.1"><a name="rfc.section.10.1">10.1</a> 
+      Normative References</a></h2>
+<table summary="Normative References" border="0" cellpadding="2">
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+
+  <tr>
+<td class="topnowrap"><b><a name="RFC1737">[RFC1737]</a></b></td>
+<td class="top">
+<a title="Xerox Palo Alto Research Center">Masinter, L.</a> and <a title="MIT Laboratory for Computer Science">K. Sollins</a>, "<a href="http://www.ietf.org/rfc/rfc1737.txt">Functional Requirements for Uniform Resource Names</a>", RFC 1737, December 1994.<br>
+Retrieved July 9, 2004 from &lt;http://www.ietf.org/rfc/rfc1737.txt&gt;. 
+</td>
+</tr>
+<tr>
+<td class="topnowrap"><b><a name="RFC2119">[RFC2119]</a></b></td>
+<td class="top">Bradner, S., "<a href="http://www.ietf.org/rfc/rfc2119.txt">Key Words for Use in RFCs to Indicate Requirements Levels</a>", BCP 14, RFC 2119, March 1997.<br>
+Retrieved September 20, 2003 from &lt;http://www.ietf.org/rfc/rfc2119.txt&gt;.
+</td>
+</tr>
+<tr>
+<td class="topnowrap"><b><a name="RFC2141">[RFC2141]</a></b></td>
+<td class="top">
+<a title="AT&amp;T">Moats, R.</a>, "<a href="http://www.ietf.org/rfc/rfc2141.txt">URN Syntax</a>", RFC 2141, May 1997.<br>
+Retrieved July 9, 2004 from &lt;http://www.ietf.org/rfc/rfc2141.txt&gt;. 
+</td>
+</tr>
+<tr>
+<td class="topnowrap"><b><a name="RFC2234">[RFC2234]</a></b></td>
+<td class="top">
+<a title="Internet Mail Consortium">Crocker, D.H.</a> and <a title="Demon Internet Ltd">P. Overell</a>, "<a href="http://www.ietf.org/rfc/rfc2234.txt">Augmented BNF for Syntax Specifications: ABNF</a>", RFC 2234, November 1997.<br>
+Retrieved September 20, 2003 from &lt;http://www.ietf.org/rfc/rfc2234.txt&gt;.
+</td>
+</tr>
+<tr>
+<td class="topnowrap"><b><a name="RFC2279">[RFC2279]</a></b></td>
+<td class="top">Yergeau, F., "<a href="http://www.ietf.org/rfc/rfc2279.txt">UTF-8, A Transformation Format for Unicode and ISO10646</a>", RFC 2279, October 1996.<br>
+Retrieved September 20, 2003 from &lt;http://www.ietf.org/rfc/rfc2279.txt&gt;.
+</td>
+</tr>
+<tr>
+<td class="topnowrap"><b><a name="RFC2396">[RFC2396]</a></b></td>
+<td class="top">
+<a title="World Wide Web Consortium">Berners-Lee, T.</a>, <a title="University of California, Irvine">Fielding, R.T.</a> and <a title="Xerox PARC">L. Masinter</a>, "<a href="http://www.ietf.org/rfc/rfc2396.txt">Uniform Resource Identifiers (URI): Generic Syntax</a>", RFC 2396, August 1998.<br>
+Retrieved September 20, 2003 from &lt;http://www.ietf.org/rfc/rfc2396.txt&gt;.
+</td>
+</tr>
+<tr>
+<td class="topnowrap"><b><a name="RFC2718">[RFC2718]</a></b></td>
+<td class="top">
+<a title="Xerox Corporation, Palo Alto Research Center">Masinter, L.</a>, <a title="Maxware">Alvestrand, H.</a>, <a title="WebTV Networks, Inc.">Zigmond, D.</a> and <a title="UUNET Technologies">R. Petke</a>, "<a href="http://www.ietf.org/rfc/rfc2718.txt">Guidelines for new URL Schemes</a>", RFC 2718, November 1999.<br>
+Retrieved September 20, 2003 from &lt;http://www.ietf.org/rfc/rfc2718.txt&gt;.
+</td>
+</tr>
+<tr>
+<td class="topnowrap"><b><a name="UNICODE">[UNICODE]</a></b></td>
+<td class="top">The Unicode Consortium, "The Unicode Standard, Version 4.0.0,
+defined by: The Unicode Standard, Version 4.0 
+".<br>
+(Reading, MA, Addison-Wesley, 2003). ISBN 0-321-18578-1. 
+</td>
+</tr>
+</table>
+<h2><a name="rfc.references.2"><a name="rfc.section.10.2">10.2</a> 
+      Informative References</a></h2>
+<table summary="Informative References" border="0" cellpadding="2">
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tr>
+<td class="topnowrap"><b><a name="2396BIS">[2396BIS]</a></b></td>
+<td class="top">
+<a title="World Wide Web Consortium">Berners-Lee, T.</a>, <a title="University of California, Irvine">Fielding, R.T.</a> and <a title="Xerox PARC">L. Masinter</a>, "Uniform Resource Identifiers (URI): Generic Syntax,
+Internet-Draft (work in progress)", May 2004.<br>
+Retrieved June 27, 2004 from &lt;http://www.ietf.org/internet-drafts/ draft-fielding-uri-rfc2396bis-05.txt&gt;. 
+</td>
+</tr>
+<tr>
+<td class="topnowrap"><b><a name="BIBCODE">[BIBCODE]</a></b></td>
+<td class="top">"NASA Astrophysics Data System Bibliographic Code".<br>
+Retrieved August 1, 2003 from &lt;http://adsdoc.harvard.edu/abs_doc/help_pages/data.html&gt;.
+</td>
+</tr>
+<tr>
+<td class="topnowrap"><b><a name="DEWEY">[DEWEY]</a></b></td>
+<td class="top">"Dewey Decimal Classification".<br>
+Retrieved September 20, 2003 from &lt;http://www.oclc.org/dewey/&gt;.
+</td>
+</tr>
+<tr>
+<td class="topnowrap"><b><a name="LCCN">[LCCN]</a></b></td>
+<td class="top">"Library of Congress Control Number".<br>
+Retrieved August 1, 2003 from &lt;http://lcweb.loc.gov/marc/lccn_structure.html&gt;.
+</td>
+</tr>
+<tr>
+<td class="topnowrap"><b><a name="NISO">[NISO]</a></b></td>
+<td class="top">"National Information Standards Organization".<br>
+Retrieved August 1, 2003 from &lt;http://www.niso.org/&gt;.
+</td>
+</tr>
+<tr>
+<td class="topnowrap"><b><a name="OCLCNUM">[OCLCNUM]</a></b></td>
+<td class="top">"Online Computer Library Center OCLC Control Number".<br>
+Retrieved November 25, 2003 from &lt;http://www.oclc.org/bibformats/en/fixedfield/oclc.shtm&gt;.
+</td>
+</tr>
+<tr>
+<td class="topnowrap"><b><a name="OFI">[OFI]</a></b></td>
+<td class="top">"Draft Standard for Trial Use ANSI/NISO Z39.88, "The OpenURL Framework for Context-Sensitive Services"".<br>
+Retrieved September 20, 2003 from &lt;http://library.caltech.edu/openurl/Public_Comments.htm&gt;.
+</td>
+</tr>
+<tr>
+<td class="topnowrap"><b><a name="PII">[PII]</a></b></td>
+<td class="top">"Publisher Item Identifier as a means of document identification ".<br>
+Retrieved September 25, 2003 from &lt;http://www.elsevier.nl/inca/homepage/about/pii/&gt;.
+</td>
+</tr>
+<tr>
+<td class="topnowrap"><b><a name="PMID">[PMID]</a></b></td>
+<td class="top">"PubMed Overview".<br>
+Retrieved September 25, 2003 from &lt;http://www.ncbi.nlm.nih.gov/entrez/query/static/ overview.html&gt;.
+</td>
+</tr>
+<tr>
+<td class="topnowrap"><b><a name="SICI">[SICI]</a></b></td>
+<td class="top">"ANSI/NISO Z39.56-1996 (R2002), "Serial Item and Contribution Identifier (SICI)", ISBN 1-880124-28-9".<br>
+Retrieved September 25, 2003 from &lt;http://www.niso.org/standards/resources/Z39-56-1996.pdf&gt;.
+</td>
+</tr>
+</table>
+<hr class="noprint">
+<table summary="link to TOC" class="noprint" style="margin-left: auto; margin-right: 0; float: right; width: 2.5em;"><tr><td style="background-color: #990000; text-align: center; height: 1.5em;"><a href="#rfc.toc"><b class="link2"> TOC </b></a></td></tr></table>
+<h1 class="np">
+<a name="rfc.authors"></a>Author's Addresses</h1>
+<table summary="Authors" width="99%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td> </td>
+<td>Herbert Van de Sompel</td>
+</tr>
+<tr>
+<td> </td>
+<td>Los Alamos National Laboratory</td>
+</tr>
+<tr>
+<td> </td>
+<td>Research Library, MS-P362<br>PO Box 1663<br>
+</td>
+</tr>
+<tr>
+<td> </td>
+<td>Los Alamos, NM 87545-1362</td>
+</tr>
+<tr>
+<td> </td>
+<td>USA</td>
+</tr>
+<tr>
+<td class="right"><b>EMail: </b></td>
+<td><a>herbertv@lanl.gov</a></td>
+</tr>
+<tr>
+<td> </td>
+<td></td>
+</tr>
+<tr>
+<td> </td>
+<td>Tony Hammond</td>
+</tr>
+<tr>
+<td> </td>
+<td>Nature Publishing Group</td>
+</tr>
+<tr>
+<td> </td>
+<td>Macmillan House<br>4 Crinan Street<br>
+</td>
+</tr>
+<tr>
+<td> </td>
+<td>London, N1 9XW</td>
+</tr>
+<tr>
+<td> </td>
+<td>UK</td>
+</tr>
+<tr>
+<td class="right"><b>EMail: </b></td>
+<td><a>t.hammond@nature.com</a></td>
+</tr>
+<tr>
+<td> </td>
+<td></td>
+</tr>
+<tr>
+<td> </td>
+<td>Eamonn Neylon</td>
+</tr>
+<tr>
+<td> </td>
+<td>Manifest Solutions</td>
+</tr>
+<tr>
+<td> </td>
+<td>Bicester, Oxfordshire OX26 2HX</td>
+</tr>
+<tr>
+<td> </td>
+<td>UK</td>
+</tr>
+<tr>
+<td class="right"><b>EMail: </b></td>
+<td><a>eneylon@manifestsolutions.com</a></td>
+</tr>
+<tr>
+<td> </td>
+<td></td>
+</tr>
+<tr>
+<td> </td>
+<td>Stuart L. Weibel</td>
+</tr>
+<tr>
+<td> </td>
+<td>OCLC Online Computer Library Center, Inc.</td>
+</tr>
+<tr>
+<td> </td>
+<td>6565 Frantz Road<br>
+</td>
+</tr>
+<tr>
+<td> </td>
+<td>Dublin, OH 43017-3395</td>
+</tr>
+<tr>
+<td> </td>
+<td>USA</td>
+</tr>
+<tr>
+<td class="right"><b>EMail: </b></td>
+<td><a>weibel@oclc.org</a></td>
+</tr>
+<tr>
+<td> </td>
+<td></td>
+</tr>
+</table>
+<hr class="noprint">
+<table summary="link to TOC" class="noprint" style="margin-left: auto; margin-right: 0; float: right; width: 2.5em;"><tr><td style="background-color: #990000; text-align: center; height: 1.5em;"><a href="#rfc.toc"><b class="link2"> TOC </b></a></td></tr></table>
+<h1 class="np"><a name="rfc.ipr">Intellectual Property Statement</a></h1>
+<p>
+          The IETF takes no position regarding the validity or scope of any
+          Intellectual Property Rights or other rights that might be claimed to
+          pertain to the implementation or use of the technology described in
+          this document or the extent to which any license under such rights
+          might or might not be available; nor does it represent that it has
+          made any independent effort to identify any such rights.  Information
+          on the procedures with respect to rights in RFC documents
+          can be found in BCP 78 and BCP 79.
+        </p>
+<p>
+          Copies of IPR disclosures made to the IETF Secretariat and any
+          assurances of licenses to be made available, or the result of an
+          attempt made to obtain a general license or permission for the use
+          of such proprietary rights by implementers or users of this
+          specification can be obtained from the IETF on-line IPR repository 
+          at &lt;<a href="http://www.ietf.org/ipr">http://www.ietf.org/ipr</a>&gt;.
+        </p>
+<p>
+          The IETF invites any interested party to bring to its attention any
+          copyrights, patents or patent applications, or other proprietary
+          rights that may cover technology that may be required to implement
+          this standard. Please address the information to the IETF at
+          <a href="mailto:ietf-ipr@ietf.org">ietf-ipr@ietf.org</a>.
+        </p>
+<h1><a name="rfc.disclaimer">Disclaimer of Validity</a></h1>
+<p>
+        This document and the information contained herein are provided on an
+        "AS IS" basis and THE CONTRIBUTOR, THE ORGANIZATION HE/SHE REPRESENTS
+        OR IS SPONSORED BY (IF ANY), THE INTERNET SOCIETY AND THE INTERNET
+        ENGINEERING TASK FORCE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED,
+        INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE 
+        INFORMATION HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED 
+        WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+      </p>
+<h1><a name="rfc.copyright">Copyright Statement</a></h1>
+<p>
+          Copyright (C) The Internet Society (2004).
+          This document is subject to the rights, licenses and restrictions
+          contained in BCP 78, and except as set forth therein, the authors
+          retain all their rights.
+        </p>
+<h1>Acknowledgement</h1>
+<p>
+      Funding for the RFC Editor function is currently provided by the
+      Internet Society.
+    </p>
+</body>
+</html>
